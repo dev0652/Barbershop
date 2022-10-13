@@ -54,3 +54,20 @@ body {
 .link:hover {
 	color: #FF6C00;
 }
+
+
+/* Paragraphs */
+
+.sup-heading {}
+
+/* Line */
+
+.with-line::before {
+	display: inline-block;
+	margin: 0 20px 8px 0;
+	height: 3px;
+	content: " ";
+	text-shadow: none;
+	background-color: #999;
+	width: 60px;
+}
