@@ -43,3 +43,14 @@ body {
 	color: #fff;
 	background: #FF6C00;
 }
+
+/* Links */
+
+.link {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.link:hover {
+	color: #FF6C00;
+}
