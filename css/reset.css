@@ -1,0 +1,24 @@
+/* Reset */
+
+:root {
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* For markup ul's: */
+
+.markup-list {
+	list-style: none;
+}
