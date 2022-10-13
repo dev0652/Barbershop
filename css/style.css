@@ -20,3 +20,26 @@ body {
 	font-size: 20px;
 	margin: auto;
 }
+
+/* Buttons */
+
+.button {
+	text-transform: uppercase;
+	background-color: transparent;
+	border: 1px solid #FF6C00;
+	border-radius: 25px;
+}
+
+.button.dark-bg {
+	color: #fff;
+}
+
+.button.light-bg {
+	color: #303030;
+}
+
+.button:hover,
+.button:focus {
+	color: #fff;
+	background: #FF6C00;
+}
