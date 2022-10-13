@@ -1,0 +1,22 @@
+/* Global values */
+
+:root {
+	font-family: "Open Sans", sans-serif;
+
+	/* Color variables	 */
+	--accent: #FF6C00;
+	--darker: #303030;
+	--dark: #555555;
+	--light: #9DA4BD;
+	--light-transp: rgba(157, 164, 189, 0.6);
+	--bg-dark: #191C26;
+}
+
+body {
+	width: 1600px;
+	padding: 55px 131px;
+	color: var(--text-dark);
+	background-color: #fff;
+	font-size: 20px;
+	margin: auto;
+}
