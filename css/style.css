@@ -190,6 +190,10 @@ h2.title {
 	padding: 20px 24px;
 }
 
+.stat:nth-child(odd) {
+	margin-top: -30px;
+}
+
 .stat-number {
 	font-weight: 700;
 	font-size: 42px;
