@@ -1,0 +1,67 @@
+/* Color variables	 */
+
+:root {
+	--accent: #FF6C00;
+	--darker: #303030;
+	--dark: #555555;
+	--light: #9DA4BD;
+	--light-transp: rgba(157, 164, 189, 0.6);
+	--bg-dark: #191C26;
+	--bg-light: #F7F7F7;
+}
+
+/* Colors */
+
+.title,
+.button,
+.name,
+.sup-heading,
+.link,
+.stat {
+	color: var(--darker);
+}
+
+.section.dark {
+	color: var(--dark);
+}
+
+.section.light {
+	color: var(--light);
+}
+
+.header .link,
+.dark .title,
+.dark .button {
+	color: #fff;
+}
+
+.link:hover,
+.position,
+.stat-number:after {
+	color: var(--accent);
+}
+
+.button:hover,
+.button:focus {
+	color: #fff;
+	background: var(--accent);
+}
+
+.barbers {
+	background-color: var(--bg-light);
+}
+
+/* Hero */
+
+.hero,
+.footer {
+	color: var(--light);
+}
+
+.dark .sup-heading {
+	color: rgba(157, 164, 189, 0.6);
+}
+
+.contact-us {
+	background-color: var(--bg-dark);
+}

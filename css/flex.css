@@ -1,67 +1,27 @@
-/* Flex */
-
-.page,
-.header,
-.header-nav,
-.section,
-.price-cards,
-.price-labels,
-.group-41,
-.footer,
-.policies {
+/* body {
 	display: flex;
-}
-
-.page,
-.skills,
-.pricing {
 	flex-direction: column;
-}
+} */
 
-.header,
-.footer,
-.skills,
-.pricing {
-	align-items: center;
-}
-
-.header,
-.footer {
-	justify-content: space-between;
-}
-
-.page {
-	gap: 180px;
-}
-
-.header-nav {
-	gap: 50px;
-}
-
-.section {
-	gap: 144px;
-}
-
-.skills,
-.pricing {
-	gap: 0;
-}
-
-.group-41 {
-	gap: 131px;
-}
-
-.price-cards,
-.price-labels {
+.flex,
+.price-list li {
+	display: flex;
 	gap: 30px;
 }
 
-.contacts {
-	flex-direction: row-reverse;
+.space-between,
+.price-list li {
 	justify-content: space-between;
-	gap: 100px;
 }
 
-.policies {
-	gap: 80px;
+.justify-center {
+	justify-content: center;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.wrap {
+	flex-wrap: wrap;
 }

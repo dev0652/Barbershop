@@ -2,22 +2,15 @@
 
 :root {
 	font-family: "Open Sans", sans-serif;
-
-	/* Color variables	 */
-	--accent: #FF6C00;
-	--darker: #303030;
-	--dark: #555555;
-	--light: #9DA4BD;
-	--light-transp: rgba(157, 164, 189, 0.6);
-	--bg-dark: #191C26;
 }
 
 body {
 	width: 1600px;
-	padding: 55px 131px;
 	color: var(--text-dark);
 	background-color: #fff;
-	font-size: 20px;
+	font-size: 18px;
+	line-height: calc(30/18);
+	letter-spacing: 0.02em;
 	margin: auto;
 }
 
@@ -26,22 +19,9 @@ body {
 .button {
 	text-transform: uppercase;
 	background-color: transparent;
-	border: 1px solid #FF6C00;
+	border: 1px solid var(--accent);
 	border-radius: 25px;
-}
-
-.button.dark-bg {
-	color: #fff;
-}
-
-.button.light-bg {
-	color: #303030;
-}
-
-.button:hover,
-.button:focus {
-	color: #fff;
-	background: #FF6C00;
+	padding: 12px 20px;
 }
 
 /* Links */
@@ -49,25 +29,224 @@ body {
 .link {
 	text-decoration: none;
 	font-weight: 600;
+	font-size: 16px;
 }
 
-.link:hover {
-	color: #FF6C00;
+/* Headings */
+
+.title {
+	font-family: 'Raleway';
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	margin-bottom: 20px;
 }
 
+h1.title {
+	font-size: 72px;
+	line-height: calc(85/72);
+}
+
+h2.title {
+	font-size: 42px;
+	line-height: calc(49/42);
+}
 
 /* Paragraphs */
 
-.sup-heading {}
+.sup-heading {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15/11);
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.name {
+	line-height: calc(25/18);
+}
+
+.position {
+	font-size: 14px;
+	line-height: calc(19/14);
+}
 
 /* Line */
 
-.with-line::before {
+.prefix::before {
 	display: inline-block;
 	margin: 0 20px 8px 0;
-	height: 3px;
+	height: 1px;
 	content: " ";
 	text-shadow: none;
 	background-color: #999;
 	width: 60px;
+}
+
+/* Hero */
+
+.hero {
+	height: 680px;
+	padding: 0 215px;
+}
+
+/* Hero sidebar */
+
+.hero-left {
+	width: 155px;
+	padding-top: 32px;
+}
+
+.hero-left .follow-us {
+	/* writing-mode: sideways-rl; */
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	/* align-self: flex-start; */
+}
+
+/* Hero main */
+
+.hero-right {
+	width: 1070px;
+	background-image: url('../img/slider/slider-overlay.jpg');
+	background-size: cover;
+
+	padding: 40px 17px 40px 100px;
+}
+
+/* Hero header  */
+
+/* Hero main & slider */
+
+/* Sections other than Hero */
+
+.section {
+	padding: 120px 215px;
+}
+
+/* About */
+
+/* Services and prices */
+
+.services {
+	/* background-color: #111319; */
+	background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)), url('../img/services-and-prices.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Price-list */
+
+/* https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css */
+
+.price-list {
+	-webkit-columns: 2;
+	-moz-columns: 2;
+	columns: 2;
+	column-gap: 30px;
+
+	background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%), linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+	background-repeat: no-repeat;
+	background-position: left, right;
+	background-size: 570px 100%, 570px 100%;
+
+	margin: 44px 0;
+}
+
+.price-list li {
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+	padding: 10px 20px;
+}
+
+.price-list li:first-child,
+.price-list li:nth-child(5) {
+	padding-top: 20px;
+}
+
+.price-list li:last-child,
+.price-list li:nth-child(4) {
+	padding-bottom: 20px;
+}
+
+/* Price-list solid leader */
+
+/* span {} */
+
+
+/* Why us */
+
+.stat {
+	background-color: #F7F7F7;
+	width: 170px;
+	height: 133px;
+	text-align: center;
+	padding: 20px 24px;
+}
+
+.stat-number {
+	font-weight: 700;
+	font-size: 42px;
+	line-height: calc(57/42);
+	letter-spacing: 0.05em;
+	margin-bottom: 6px;
+}
+
+.stat-number:after {
+	content: "+";
+	font-size: 16px;
+	vertical-align: top;
+}
+
+.stat-name {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15/11);
+}
+
+/* Our barbers */
+
+.team-card {
+	text-align: center;
+}
+
+/* Gallery */
+
+.gallery-items {
+	margin-top: 44px;
+}
+
+/* Contact us */
+
+.contact-us {
+	padding-top: 130px;
+
+	background-image: linear-gradient(rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url(../img/contacts/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: right, right;
+}
+
+/* Online-booking */
+
+.booking {
+	width: 50%;
+}
+
+/* Contacts */
+
+.contacts {
+	padding-left: 100px;
+}
+
+.contacts-list {
+	margin-top: 40px;
+	margin-bottom: 70px;
+}
+
+/* Footer */
+
+.footer {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15/11);
 }
