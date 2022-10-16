@@ -21,7 +21,8 @@
 	color: var(--darker);
 }
 
-.section.dark {
+.section.dark,
+.smaller {
 	color: var(--dark);
 }
 

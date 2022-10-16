@@ -61,6 +61,12 @@ h2.title {
 	text-transform: uppercase;
 }
 
+.smaller {
+	margin: 20px 0 42px;
+	font-size: 14px;
+	line-height: calc(26/14);
+}
+
 .name {
 	line-height: calc(25/18);
 }
