@@ -2,11 +2,13 @@
 
 :root {
 	font-family: "Open Sans", sans-serif;
+	background-color: #E5E5E5;
 }
 
 body {
 	width: 1600px;
 	color: var(--text-dark);
+
 	background-color: #fff;
 	font-size: 18px;
 	line-height: calc(30/18);
