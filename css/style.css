@@ -17,11 +17,13 @@ body {
 /* Buttons */
 
 .button {
+	letter-spacing: 0.09em;
 	text-transform: uppercase;
 	background-color: transparent;
 	border: 1px solid var(--accent);
 	border-radius: 25px;
 	padding: 12px 20px;
+	min-width: 160px;
 }
 
 /* Links */
@@ -30,6 +32,17 @@ body {
 	text-decoration: none;
 	font-weight: 600;
 	font-size: 16px;
+}
+
+.follow-us .link {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15/11);
+	letter-spacing: 0.2em;
+}
+
+.follow-us {
+	margin-bottom: 100px;
 }
 
 /* Headings */
@@ -78,14 +91,36 @@ h2.title {
 
 /* Line */
 
+.prefix {
+	/* position: relative; */
+	/* max-width: 500px; */
+	/* margin-left: 100px; */
+	display: flex;
+	/* width: 70%; */
+	/* margin: 20px auto; */
+	/* line-height: 1em; */
+}
+
 .prefix::before {
-	display: inline-block;
-	margin: 0 20px 8px 0;
-	height: 1px;
-	content: " ";
-	text-shadow: none;
-	background-color: #999;
+	content: '';
+	/* flex-grow: 1; */
 	width: 60px;
+	margin-right: 20px;
+	background: linear-gradient(to right, var(--current), var(--current));
+	background-size: 100% 1px;
+	background-position: 0% 55%;
+	background-repeat: repeat-x;
+}
+
+.dddddd {
+	position: absolute;
+	width: 1px;
+	height: 60px;
+	left: 875px;
+	top: 807px;
+
+	background: #303030;
+	transform: rotate(90deg);
 }
 
 /* Hero */
@@ -99,14 +134,18 @@ h2.title {
 
 .hero-left {
 	width: 155px;
-	padding-top: 32px;
+	padding: 32px 0 40px;
 }
 
-.hero-left .follow-us {
+.vertical {
 	/* writing-mode: sideways-rl; */
-	writing-mode: vertical-rl;
-	transform: rotate(180deg);
-	/* align-self: flex-start; */
+	/* writing-mode: vertical-rl;
+	transform: rotate(180deg); */
+	/* align-self: baseline; */
+}
+
+.vertical {
+	transform: rotate(-90deg);
 }
 
 /* Hero main */
@@ -122,6 +161,10 @@ h2.title {
 /* Hero header  */
 
 /* Hero main & slider */
+
+.hero-sub-heading {
+	width: 360px;
+}
 
 /* Sections other than Hero */
 
@@ -220,6 +263,20 @@ h2.title {
 	text-align: center;
 }
 
+.name {
+	line-height: calc(25/18);
+	margin-bottom: 8px;
+}
+
+.position {
+	font-size: 14px;
+	line-height: calc(19/14);
+}
+
+.social-icons {
+	margin-bottom: 50px;
+}
+
 /* Gallery */
 
 .gallery-items {
@@ -240,6 +297,60 @@ h2.title {
 
 .booking {
 	width: 50%;
+	padding-right: 30px;
+}
+
+.booking .button {
+	display: inline-block;
+}
+
+.booking-form {
+	margin-bottom: 44px;
+}
+
+.narrow {
+	width: 50%;
+}
+
+.booking-form input::placeholder {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15/11);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	vertical-align: text-top;
+}
+
+.narrow::placeholder:after {
+	content: '*';
+}
+
+input[type]::-webkit-input-placeholder:after {
+	content: '*';
+}
+
+.booking-form input:hover::placeholder,
+.booking-form input:focus::placeholder {
+	color: #fff;
+}
+
+input.narrow {
+	padding: 0 0 8px;
+}
+
+input.wide {
+	padding: 0 0 60px;
+}
+
+.booking-form input {
+	border: none;
+	border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+}
+
+.booking-form input:hover,
+.booking-form input:focus {
+	border: none;
+	border-bottom: 1px solid #fff;
 }
 
 /* Contacts */
@@ -253,10 +364,35 @@ h2.title {
 	margin-bottom: 70px;
 }
 
+.contacts-list li {
+	line-height: calc(30/18);
+	margin-bottom: 20px;
+}
+
+.contacts-list li:first-child a {
+	font-weight: 700;
+}
+
+.contacts-list .link {
+	font-size: 18px;
+	font-weight: 400;
+}
+
 /* Footer */
 
 .footer {
 	font-weight: 600;
 	font-size: 11px;
 	line-height: calc(15/11);
+}
+
+
+/* ******** */
+
+.border-red {
+	border: .5px solid red;
+}
+
+.border-green {
+	border: .5px solid green;
 }

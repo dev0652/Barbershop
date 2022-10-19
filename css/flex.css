@@ -9,9 +9,34 @@
 	gap: 30px;
 }
 
+.column {
+	flex-direction: column;
+}
+
+.hero {
+	gap: 0;
+}
+
+.hero-right {
+	gap: 184px;
+}
+
+.social-icons {
+	gap: 10px;
+}
+
+.booking,
+.booking-form {
+	gap: 44px;
+}
+
 .space-between,
 .price-list li {
 	justify-content: space-between;
+}
+
+.space-around {
+	justify-content: space-around;
 }
 
 .justify-center {
@@ -20,6 +45,10 @@
 
 .align-center {
 	align-items: center;
+}
+
+.align-end {
+	align-items: flex-end;
 }
 
 .wrap {

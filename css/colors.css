@@ -17,8 +17,10 @@
 .name,
 .sup-heading,
 .link,
-.stat {
+.stat,
+.follow-us {
 	color: var(--darker);
+	--current: var(--darker);
 }
 
 .section.dark,
@@ -26,13 +28,23 @@
 	color: var(--dark);
 }
 
-.section.light {
+.hero,
+.footer,
+.section.light,
+.contacts,
+.contacts-list .link {
 	color: var(--light);
+}
+
+.dark .sup-heading {
+	color: var(--light-transp);
+	--current: var(--light-transp);
 }
 
 .header .link,
 .dark .title,
-.dark .button {
+.dark .button,
+.contacts .sup-heading {
 	color: #fff;
 }
 
@@ -52,17 +64,11 @@
 	background-color: var(--bg-light);
 }
 
-/* Hero */
-
-.hero,
-.footer {
-	color: var(--light);
-}
-
-.dark .sup-heading {
-	color: rgba(157, 164, 189, 0.6);
-}
-
-.contact-us {
+.contact-us,
+.booking input {
 	background-color: var(--bg-dark);
+}
+
+.booking-form input::placeholder {
+	color: rgba(157, 164, 189, 0.4);
 }
