@@ -34,15 +34,12 @@ body {
 	font-size: 16px;
 }
 
-.follow-us .link {
+.follow-us .link,
+.copyright {
 	font-weight: 600;
 	font-size: 11px;
 	line-height: calc(15/11);
 	letter-spacing: 0.2em;
-}
-
-.follow-us {
-	margin-bottom: 100px;
 }
 
 /* Headings */
@@ -51,15 +48,7 @@ body {
 	font-family: 'Raleway';
 	font-weight: 700;
 	letter-spacing: 0.05em;
-
-
 }
-
-/* ! remove */
-.large-gap .title {
-	margin-bottom: 0;
-}
-
 
 h1.title {
 	font-size: 72px;
@@ -83,8 +72,8 @@ h2.title {
 .smaller {
 	font-size: 14px;
 	line-height: calc(26/14);
-	/* Additional margin (42-20) */
-	margin-bottom: 22px;
+	/* Additional margin */
+	margin-bottom: calc(42px - 20px);
 }
 
 .name {
@@ -267,7 +256,7 @@ h2.title {
 	background-position: right, right;
 }
 
-/* Online-booking */
+/* Left half - Online-booking */
 
 .booking {
 	width: 50%;
@@ -277,6 +266,7 @@ h2.title {
 .field {
 	border: none;
 	border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+	outline: none;
 }
 
 .field:hover,
@@ -310,7 +300,7 @@ h2.title {
 	content: '*';
 }
 
-/* Contacts */
+/* Right half - Contacts */
 
 .contacts {
 	padding-left: 100px;
@@ -325,10 +315,12 @@ address {
 .contacts-list {
 	margin-top: 40px;
 	margin-bottom: 70px;
+	margin-left: 43px;
 }
 
 .contacts-list li {
 	line-height: calc(30/18);
+	/* padding-left: 16px; */
 }
 
 .contacts-list .link {
@@ -342,22 +334,30 @@ address {
 
 /* Address block icons */
 
-.address {
-	list-style-image: url('../img/contacts-icons/map-pin.png');
+.contacts-list li::before {
+	margin-left: -28px;
+	position: relative;
+	top: 5px;
+	left: -16px;
 }
 
-.telephone {
-	list-style-image: url('../img/contacts-icons/phone.png');
+.address::before {
+	content: url('../img/contacts-icons/map-pin.png');
 }
 
-.email {
-	list-style-image: url('../img/contacts-icons/mail.svg');
+.telephone::before {
+	content: url('../img/contacts-icons/phone.png');
 }
 
+.email::before {
+	content: url('../img/contacts-icons/mail.png');
+}
 
 /* Footer */
 
 .footer {
+	padding: 56px 215px;
+
 	font-weight: 600;
 	font-size: 11px;
 	line-height: calc(15/11);
