@@ -65,10 +65,28 @@
 }
 
 .contact-us,
-.booking input {
+.field {
 	background-color: var(--bg-dark);
 }
 
-.booking-form input::placeholder {
+.field,
+.field::placeholder {
 	color: rgba(157, 164, 189, 0.4);
+}
+
+.field:hover,
+.field:focus,
+.field:hover::placeholder,
+.field:focus::placeholder {
+	color: #fff;
+}
+
+/* ******** */
+
+.border-red {
+	border: .5px solid red;
+}
+
+.border-green {
+	border: .5px solid green;
 }

@@ -51,8 +51,15 @@ body {
 	font-family: 'Raleway';
 	font-weight: 700;
 	letter-spacing: 0.05em;
-	margin-bottom: 20px;
+
+
 }
+
+/* ! remove */
+.large-gap .title {
+	margin-bottom: 0;
+}
+
 
 h1.title {
 	font-size: 72px;
@@ -70,14 +77,14 @@ h2.title {
 	font-weight: 600;
 	font-size: 11px;
 	line-height: calc(15/11);
-	margin-bottom: 20px;
 	text-transform: uppercase;
 }
 
 .smaller {
-	margin: 20px 0 42px;
 	font-size: 14px;
 	line-height: calc(26/14);
+	/* Additional margin (42-20) */
+	margin-bottom: 22px;
 }
 
 .name {
@@ -89,17 +96,7 @@ h2.title {
 	line-height: calc(19/14);
 }
 
-/* Line */
-
-.prefix {
-	/* position: relative; */
-	/* max-width: 500px; */
-	/* margin-left: 100px; */
-	display: flex;
-	/* width: 70%; */
-	/* margin: 20px auto; */
-	/* line-height: 1em; */
-}
+/* Prefix (thin line before sup-headings and follow-us links in hero sidebar) */
 
 .prefix::before {
 	content: '';
@@ -112,17 +109,6 @@ h2.title {
 	background-repeat: repeat-x;
 }
 
-.dddddd {
-	position: absolute;
-	width: 1px;
-	height: 60px;
-	left: 875px;
-	top: 807px;
-
-	background: #303030;
-	transform: rotate(90deg);
-}
-
 /* Hero */
 
 .hero {
@@ -130,7 +116,7 @@ h2.title {
 	padding: 0 215px;
 }
 
-/* Hero sidebar */
+/* Hero - sidebar */
 
 .hero-left {
 	width: 155px;
@@ -148,7 +134,7 @@ h2.title {
 	transform: rotate(-90deg);
 }
 
-/* Hero main */
+/* Hero - main/slider */
 
 .hero-right {
 	width: 1070px;
@@ -156,14 +142,6 @@ h2.title {
 	background-size: cover;
 
 	padding: 40px 17px 40px 100px;
-}
-
-/* Hero header  */
-
-/* Hero main & slider */
-
-.hero-sub-heading {
-	width: 360px;
 }
 
 /* Sections other than Hero */
@@ -198,7 +176,7 @@ h2.title {
 	background-position: left, right;
 	background-size: 570px 100%, 570px 100%;
 
-	margin: 44px 0;
+	/* margin: 44px 0; */
 }
 
 .price-list li {
@@ -279,10 +257,6 @@ h2.title {
 
 /* Gallery */
 
-.gallery-items {
-	margin-top: 44px;
-}
-
 /* Contact us */
 
 .contact-us {
@@ -300,19 +274,30 @@ h2.title {
 	padding-right: 30px;
 }
 
-.booking .button {
-	display: inline-block;
+.field {
+	border: none;
+	border-bottom: 1px solid rgba(157, 164, 189, 0.4);
 }
 
-.booking-form {
-	margin-bottom: 44px;
+.field:hover,
+.field:focus {
+	border-bottom: 1px solid #fff;
 }
 
-.narrow {
+.field.narrow {
+	/* padding: 0 0 8px; */
+	height: 30px;
 	width: 50%;
 }
 
-.booking-form input::placeholder {
+.field.wide {
+	font-family: "Open Sans";
+	resize: none;
+	/* padding: 0 0 60px; */
+	height: 76px;
+}
+
+.field::placeholder {
 	font-weight: 600;
 	font-size: 11px;
 	line-height: calc(15/11);
@@ -321,42 +306,20 @@ h2.title {
 	vertical-align: text-top;
 }
 
-.narrow::placeholder:after {
+.field.narrow::placeholder:after {
 	content: '*';
-}
-
-input[type]::-webkit-input-placeholder:after {
-	content: '*';
-}
-
-.booking-form input:hover::placeholder,
-.booking-form input:focus::placeholder {
-	color: #fff;
-}
-
-input.narrow {
-	padding: 0 0 8px;
-}
-
-input.wide {
-	padding: 0 0 60px;
-}
-
-.booking-form input {
-	border: none;
-	border-bottom: 1px solid rgba(157, 164, 189, 0.4);
-}
-
-.booking-form input:hover,
-.booking-form input:focus {
-	border: none;
-	border-bottom: 1px solid #fff;
 }
 
 /* Contacts */
 
 .contacts {
 	padding-left: 100px;
+}
+
+/* Address block */
+
+address {
+	font-style: normal;
 }
 
 .contacts-list {
@@ -366,11 +329,6 @@ input.wide {
 
 .contacts-list li {
 	line-height: calc(30/18);
-	margin-bottom: 20px;
-}
-
-.contacts-list li:first-child a {
-	font-weight: 700;
 }
 
 .contacts-list .link {
@@ -378,21 +336,29 @@ input.wide {
 	font-weight: 400;
 }
 
+.address .link {
+	font-weight: 700;
+}
+
+/* Address block icons */
+
+.address {
+	list-style-image: url('../img/contacts-icons/map-pin.png');
+}
+
+.telephone {
+	list-style-image: url('../img/contacts-icons/phone.png');
+}
+
+.email {
+	list-style-image: url('../img/contacts-icons/mail.svg');
+}
+
+
 /* Footer */
 
 .footer {
 	font-weight: 600;
 	font-size: 11px;
 	line-height: calc(15/11);
-}
-
-
-/* ******** */
-
-.border-red {
-	border: .5px solid red;
-}
-
-.border-green {
-	border: .5px solid green;
 }

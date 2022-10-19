@@ -28,7 +28,7 @@
 		<section class="hero dark flex">
 
 			<!-- Hero sidebar -->
-			<aside class="hero-left flex column space-between align-center border-red">
+			<aside class="hero-left flex column space-between align-center">
 
 				<!-- Logo -->
 				<a class="link logo" href="">
@@ -91,12 +91,12 @@
 				<!-- <div> -->
 				<!-- TODO: Slider -->
 
-				<div>
+				<div class="flex column regular-gap">
 					<p class="sup-heading prefix">
 						A hair salon for men in Kyiv
 					</p>
 					<h1 class="title">BarberShop</h1>
-					<p class="hero-sub-heading">
+					<p class="sub-heading">
 						We are experts in trendy men’s haircuts.<br>
 						We work quickly, carefully and with style.
 					</p>
@@ -109,6 +109,7 @@
 
 		<!-- About -->
 		<section class="section flex" id="about">
+
 			<!-- Pictures -->
 			<div class="about-left">
 				<ul class="markup-list flex">
@@ -125,11 +126,10 @@
 				</ul>
 			</div>
 
-			<div class="about-right">
-				<p class="sup-heading prefix">
-					About
-				</p>
-				<h2 class="title"> Best Barbershop in your city </h2>
+			<div class="about-right flex column regular-gap">
+
+				<p class="sup-heading prefix">About</p>
+				<h2 class="title">Best Barbershop in your city</h2>
 				<p>
 					If you want to add more confidence to your image, you should definitely visit us.
 				</p>
@@ -141,9 +141,11 @@
 					Therefore, we are always ready to improve everyone who comes to us!
 				</p>
 
-				<button type="button" class="button light-bg">
-					Online-booking
-				</button>
+				<div>
+					<button type="button" class="button light-bg">
+						Online-booking
+					</button>
+				</div>
 			</div>
 		</section>
 
@@ -151,67 +153,70 @@
 
 		<section class="section services dark" id="services">
 
-			<p class="sup-heading prefix">
-				Spend your time with the best masters
-			</p>
-			<h2 class="title"> Services and prices </h2>
+			<div class="flex column regular-gap">
+
+				<p class="sup-heading prefix">
+					Spend your time with the best masters
+				</p>
 
 
-			<div class="price-list-container">
-				<ul class="markup-list price-list">
+				<div class="price-list-container flex column large-gap">
 
+					<h2 class="title"> Services and prices </h2>
 
-					<li>
-						<span class="service">
-							Men’s haircut
-						</span>
-						<span class="price">
-							from 300 uah.
-						</span>
-					</li>
-					<li>
-						<span class="service">Beard trim</span>
-						<span class="price">from 300 uah.</span>
-					</li>
-					<li>
-						<span class="service">Mustache trim</span>
-						<span class="price">from 200 uah.</span>
-					</li>
-					<li>
-						<span class="service">Straight razor shave</span>
-						<span class="price">from 200 uah.</span>
-					</li>
+					<ul class="markup-list price-list">
 
-					<li>
-						<span class="service">Trainee’s haircut</span>
-						<span class="price">from 50 uah.</span>
-					</li>
-					<li>
-						<span class="service">Haircut under the nozzle</span>
-						<span class="price">from 200 uah.</span>
-					</li>
-					<li>
-						<span class="service">Children’s haircut (0-12 y.o.)</span>
-						<span class="price">from 300 uah.</span>
-					</li>
-					<li>
-						<span class="service">Camouflage of gray hair</span>
-						<span class="price">from 200 uah.</span>
-					</li>
-				</ul>
+						<li>
+							<span class="service">
+								Men’s haircut
+							</span>
+							<span class="price">
+								from 300 uah.
+							</span>
+						</li>
+						<li>
+							<span class="service">Beard trim</span>
+							<span class="price">from 300 uah.</span>
+						</li>
+						<li>
+							<span class="service">Mustache trim</span>
+							<span class="price">from 200 uah.</span>
+						</li>
+						<li>
+							<span class="service">Straight razor shave</span>
+							<span class="price">from 200 uah.</span>
+						</li>
+
+						<li>
+							<span class="service">Trainee’s haircut</span>
+							<span class="price">from 50 uah.</span>
+						</li>
+						<li>
+							<span class="service">Haircut under the nozzle</span>
+							<span class="price">from 200 uah.</span>
+						</li>
+						<li>
+							<span class="service">Children’s haircut (0-12 y.o.)</span>
+							<span class="price">from 300 uah.</span>
+						</li>
+						<li>
+							<span class="service">Camouflage of gray hair</span>
+							<span class="price">from 200 uah.</span>
+						</li>
+					</ul>
+
+					<div class="flex justify-center">
+						<button type="button" class="button">
+							Online-booking
+						</button>
+					</div>
+
+				</div>
 			</div>
-
-
-			<div class="flex justify-center">
-				<button type="button" class="button">
-					Online-booking
-				</button>
-			</div>
-
-
 		</section>
 
 		<!-- * Why us -->
+
 		<section class="section why-us flex" id="why-us">
 
 
@@ -235,7 +240,7 @@
 			</ul>
 
 
-			<div>
+			<div class="flex column regular-gap">
 				<p class="sup-heading prefix">
 					Old traditional school
 				</p>
@@ -250,117 +255,129 @@
 		</section>
 
 		<!-- * Our barbers -->
+
 		<section class="section barbers" id="barbers">
 
-			<p class="sup-heading prefix">
-				For true enjoyers of the atmosphere
-			</p>
-			<h2 class="title"> Our barbers </h2>
+			<div class="flex column regular-gap">
+				<p class="sup-heading prefix">
+					For true enjoyers of the atmosphere
+				</p>
 
-			<ul class="markup-list flex team-cards">
+				<div class="flex column large-gap">
 
-				<li class="team-card flex column align-center">
-					<img src="./img/barbers/img1.jpg" width="" alt="">
-					<div class="caption">
-						<p class="name">John Smith</p>
-						<p class="position">Extreme Barber</p>
-					</div>
-					<ul class="markup-list flex social-icons">
-						<li class="social-icon">
-							<img src="./img/social/instagram.png" alt="">
+					<h2 class="title"> Our barbers </h2>
+
+					<ul class="markup-list flex team-cards">
+
+						<li class="team-card flex column align-center">
+							<img src="./img/barbers/img1.jpg" width="" alt="">
+							<div class="caption">
+								<p class="name">John Smith</p>
+								<p class="position">Extreme Barber</p>
+							</div>
+							<ul class="markup-list flex social-icons">
+								<li class="social-icon">
+									<img src="./img/social/instagram.png" alt="">
+								</li>
+								<li class="social-icon">
+									<img src="./img/social/twitter.png" alt="">
+								</li>
+								<li class="social-icon"><img src="./img/social/facebook.png" alt="">
+								</li>
+								<li class="social-icon">
+									<img src="./img/social/linkedin.png" alt="">
+								</li>
+							</ul>
 						</li>
-						<li class="social-icon">
-							<img src="./img/social/twitter.png" alt="">
+						<li class="team-card flex column align-center">
+							<img src="./img/barbers/img2.jpg" width="" alt="">
+							<div class="caption">
+								<p class="name">Michele Doe</p>
+								<p class="position">Extreme Barber</p>
+							</div>
+							<ul class="markup-list flex social-icons">
+								<li class="social-icon">
+									<img src="./img/social/instagram.png" alt="">
+								</li>
+								<li class="social-icon">
+									<img src="./img/social/twitter.png" alt="">
+								</li>
+								<li class="social-icon"><img src="./img/social/facebook.png" alt="">
+								</li>
+								<li class="social-icon">
+									<img src="./img/social/linkedin.png" alt="">
+								</li>
+							</ul>
 						</li>
-						<li class="social-icon"><img src="./img/social/facebook.png" alt="">
-						</li>
-						<li class="social-icon">
-							<img src="./img/social/linkedin.png" alt="">
+						<li class="team-card flex column align-center">
+							<img src="./img/barbers/img3.jpg" width="" alt="">
+							<div class="caption">
+								<p class="name">Alan Black</p>
+								<p class="position">Extreme Barber</p>
+							</div>
+							<ul class="markup-list flex social-icons">
+								<li class="social-icon">
+									<img src="./img/social/instagram.png" alt="">
+								</li>
+								<li class="social-icon">
+									<img src="./img/social/twitter.png" alt="">
+								</li>
+								<li class="social-icon"><img src="./img/social/facebook.png" alt="">
+								</li>
+								<li class="social-icon">
+									<img src="./img/social/linkedin.png" alt="">
+								</li>
+							</ul>
 						</li>
 					</ul>
-				</li>
-				<li class="team-card flex column align-center">
-					<img src="./img/barbers/img2.jpg" width="" alt="">
-					<div class="caption">
-						<p class="name">Michele Doe</p>
-						<p class="position">Extreme Barber</p>
-					</div>
-					<ul class="markup-list flex social-icons">
-						<li class="social-icon">
-							<img src="./img/social/instagram.png" alt="">
-						</li>
-						<li class="social-icon">
-							<img src="./img/social/twitter.png" alt="">
-						</li>
-						<li class="social-icon"><img src="./img/social/facebook.png" alt="">
-						</li>
-						<li class="social-icon">
-							<img src="./img/social/linkedin.png" alt="">
-						</li>
-					</ul>
-				</li>
-				<li class="team-card flex column align-center">
-					<img src="./img/barbers/img3.jpg" width="" alt="">
-					<div class="caption">
-						<p class="name">Alan Black</p>
-						<p class="position">Extreme Barber</p>
-					</div>
-					<ul class="markup-list flex social-icons">
-						<li class="social-icon">
-							<img src="./img/social/instagram.png" alt="">
-						</li>
-						<li class="social-icon">
-							<img src="./img/social/twitter.png" alt="">
-						</li>
-						<li class="social-icon"><img src="./img/social/facebook.png" alt="">
-						</li>
-						<li class="social-icon">
-							<img src="./img/social/linkedin.png" alt="">
-						</li>
-					</ul>
-				</li>
-			</ul>
-
+				</div>
+			</div>
 		</section>
 
 		<!-- * Gallery -->
+
 		<section class="section gallery" id="gallery">
 
-			<p class="sup-heading prefix">
-				In Latin, "barba" means "beard"
-			</p>
+			<div class="flex column large-gap">
 
-			<ul class="markup-list flex gallery-items">
-				<li><img src="./img/gallerry/rectangle25.jpg" width="" alt=""></li>
-				<li><img src="./img/gallerry/rectangle26.jpg" width="" alt=""></li>
-				<li><img src="./img/gallerry/rectangle27.jpg" width="" alt=""></li>
-				<li><img src="./img/gallerry/rectangle28.jpg" width="" alt=""></li>
-			</ul>
+				<p class="sup-heading prefix">
+					In Latin, "barba" means "beard"
+				</p>
 
+				<ul class="markup-list flex">
+					<li><img src="./img/gallerry/rectangle25.jpg" width="" alt=""></li>
+					<li><img src="./img/gallerry/rectangle26.jpg" width="" alt=""></li>
+					<li><img src="./img/gallerry/rectangle27.jpg" width="" alt=""></li>
+					<li><img src="./img/gallerry/rectangle28.jpg" width="" alt=""></li>
+				</ul>
+			</div>
 		</section>
 
 		<!-- * Contact us -->
+
 		<section class="section contact-us dark flex" id="contact-us">
 
 			<!-- Online-booking -->
-			<div class="booking flex column">
+			<div class="booking flex column large-gap">
 
 				<h2 class="title">
 					Online-booking
 				</h2>
 
-				<form class="booking-form flex column">
+				<form class="booking-form flex column large-gap">
+
 					<div class="flex">
-						<input type="text" class="narrow" id="name" placeholder="Name">
-						<input type="tel" class="narrow" id="phone" placeholder="Phone">
+						<input type="text" class="field narrow" id="name" placeholder="Name">
+						<input type="tel" class="field narrow" id="phone" placeholder="Phone">
 					</div>
 
-					<input type="text" class="wide" id="message" placeholder="Message">
+					<textarea class="field wide" name="message" id="message" placeholder="Message"></textarea>
 				</form>
 
 				<div>
 					<button type="submit" class="button">Send</button>
 				</div>
+
 			</div>
 
 			<!-- Contacts -->
@@ -370,31 +387,38 @@
 					Contacts
 				</h2>
 
-				<ul class="markup-list contacts-list">
-					<li>
-						<a class="link" href="">
-							st. Vasilkivska, 7A
-							<br>
-							Kyiv, 08132
-						</a>
-					</li>
-					<li>
-						<a class="link" href="tel:+380441111111">
-							+38 044 111 11 11
-						</a>
-					</li>
-					<li>
-						<a class="link" href="mailto:barbershop@email.com">
-							barbershop@email.com
-						</a>
-					</li>
-				</ul>
-				<p class="sup-heading prefix">
-					Working hours
-				</p>
-				<p>
-					Every day from 9:00 to 22:00
-				</p>
+				<address>
+					<ul class="markup-list contacts-list flex column regular-gap">
+						<li class="address">
+							<a class="link" href="">
+								st. Vasilkivska, 7A
+								<br>
+								Kyiv, 08132
+							</a>
+						</li>
+						<li class="telephone">
+							<a class="link" href="tel:+380441111111">
+								+38 044 111 11 11
+							</a>
+						</li>
+						<li class="email">
+							<a class="link" href="mailto:barbershop@email.com">
+								barbershop@email.com
+							</a>
+						</li>
+					</ul>
+				</address>
+
+
+				<div class="flex column regular-gap">
+					<p class="sup-heading prefix">
+						Working hours
+					</p>
+					<p>
+						Every day from 9:00 to 22:00
+					</p>
+				</div>
+
 			</div>
 
 		</section>
