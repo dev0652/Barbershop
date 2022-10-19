@@ -1,6 +1,6 @@
-/* Color variables	 */
-
 :root {
+	background-color: #E5E5E5;
+	/* Color variables	 */
 	--accent: #FF6C00;
 	--darker: #303030;
 	--dark: #555555;
@@ -11,6 +11,10 @@
 }
 
 /* Colors */
+
+body {
+	background-color: #fff;
+}
 
 .title,
 .button,
@@ -41,13 +45,6 @@
 	--current: var(--light-transp);
 }
 
-.header .link,
-.dark .title,
-.dark .button,
-.contacts .sup-heading {
-	color: #fff;
-}
-
 .link:hover,
 .position,
 .stat-number:after {
@@ -60,7 +57,8 @@
 	background: var(--accent);
 }
 
-.barbers {
+.barbers,
+.stat {
 	background-color: var(--bg-light);
 }
 
@@ -74,6 +72,10 @@
 	color: rgba(157, 164, 189, 0.4);
 }
 
+.header .link,
+.dark .title,
+.dark .button,
+.contacts .sup-heading,
 .field:hover,
 .field:focus,
 .field:hover::placeholder,
