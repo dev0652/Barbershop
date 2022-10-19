@@ -6,8 +6,10 @@
 	--dark: #555555;
 	--light: #9DA4BD;
 	--light-transp: rgba(157, 164, 189, 0.6);
+	--price-leader: rgba(157, 164, 189, 0.12);
 	--bg-dark: #191C26;
 	--bg-light: #F7F7F7;
+
 }
 
 /* Colors */
@@ -83,18 +85,4 @@ body {
 .field,
 .field::placeholder {
 	color: rgba(157, 164, 189, 0.4);
-}
-
-/* ******** */
-
-.border-red {
-	border: .5px solid red;
-}
-
-.border-green {
-	border: .5px solid green;
-}
-
-.bg {
-	background-color: antiquewhite;
 }

@@ -4,8 +4,7 @@
 } */
 
 .flex,
-.prefix,
-.price-list li {
+.prefix {
 	display: flex;
 }
 
@@ -13,8 +12,7 @@
 	flex-direction: column;
 }
 
-.space-between,
-.price-list li {
+.space-between {
 	justify-content: space-between;
 }
 
@@ -44,8 +42,7 @@
 
 /* Gap values */
 
-.flex,
-.price-list li {
+.flex {
 	gap: 30px;
 }
 
@@ -67,4 +64,16 @@
 
 .social-icons {
 	gap: 10px;
+}
+
+/* Individual rules */
+
+.price-list li {
+	display: flex;
+	/* justify-content: space-between; */
+	gap: 10px;
+}
+
+.price-leader {
+	flex-grow: 1;
 }
