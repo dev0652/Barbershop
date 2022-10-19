@@ -278,24 +278,18 @@ h2.title {
 }
 
 .field.wide {
-	font-family: "Open Sans";
-	resize: none;
-	/* padding: 0 0 60px; */
 	height: 76px;
+	resize: none;
 }
 
 .field::placeholder {
+	font-family: "Open Sans";
 	font-weight: 600;
 	font-size: 11px;
 	line-height: calc(15/11);
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	vertical-align: text-top;
-}
-
-/* ! Check this */
-.field.narrow::placeholder:after {
-	content: '*';
 }
 
 /* Right half - Contacts */
