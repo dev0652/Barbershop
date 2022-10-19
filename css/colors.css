@@ -16,6 +16,17 @@ body {
 	background-color: #fff;
 }
 
+.header .link,
+.dark .title,
+.dark .button,
+.contacts .sup-heading,
+.field:hover,
+.field:focus,
+.field:hover::placeholder,
+.field:focus::placeholder {
+	color: #fff;
+}
+
 .title,
 .button,
 .name,
@@ -35,6 +46,7 @@ body {
 .hero,
 .footer,
 .section.light,
+.price-list,
 .contacts,
 .contacts-list .link {
 	color: var(--light);
@@ -46,6 +58,7 @@ body {
 }
 
 .link:hover,
+.link:focus,
 .position,
 .stat-number:after {
 	color: var(--accent);
@@ -70,17 +83,6 @@ body {
 .field,
 .field::placeholder {
 	color: rgba(157, 164, 189, 0.4);
-}
-
-.header .link,
-.dark .title,
-.dark .button,
-.contacts .sup-heading,
-.field:hover,
-.field:focus,
-.field:hover::placeholder,
-.field:focus::placeholder {
-	color: #fff;
 }
 
 /* ******** */
