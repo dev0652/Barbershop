@@ -42,6 +42,7 @@ body {
 	letter-spacing: 0.2em;
 }
 
+
 /* Headings */
 
 .title {
@@ -89,7 +90,6 @@ h2.title {
 
 .prefix::before {
 	content: '';
-	/* flex-grow: 1; */
 	width: 60px;
 	margin-right: 20px;
 	background: linear-gradient(to right, var(--current), var(--current));
@@ -109,14 +109,13 @@ h2.title {
 
 .hero-left {
 	width: 155px;
-	padding: 32px 0 40px;
+	padding: 32px 31px 40px 0;
 }
 
-.vertical {
-	/* writing-mode: sideways-rl; */
-	/* writing-mode: vertical-rl;
-	transform: rotate(180deg); */
-	/* align-self: baseline; */
+.cnt {
+	width: 69px;
+	height: 100%;
+	padding-bottom: 120px;
 }
 
 .vertical {
@@ -164,8 +163,6 @@ h2.title {
 	background-repeat: no-repeat;
 	background-position: left, right;
 	background-size: 570px 100%, 570px 100%;
-
-	/* margin: 44px 0; */
 }
 
 .price-list li {
@@ -186,9 +183,6 @@ h2.title {
 }
 
 /* Price-list solid leader */
-
-/* span {} */
-
 
 /* Why us */
 

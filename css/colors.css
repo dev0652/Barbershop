@@ -90,3 +90,7 @@
 .border-green {
 	border: .5px solid green;
 }
+
+.bg {
+	background-color: antiquewhite;
+}

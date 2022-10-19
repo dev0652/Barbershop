@@ -9,6 +9,41 @@
 	display: flex;
 }
 
+.column {
+	flex-direction: column;
+}
+
+.space-between,
+.price-list li {
+	justify-content: space-between;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-end {
+	justify-content: end;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.align-end {
+	align-items: end;
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+/* Gap values */
+
 .flex,
 .price-list li {
 	gap: 30px;
@@ -32,33 +67,4 @@
 
 .social-icons {
 	gap: 10px;
-}
-
-.column {
-	flex-direction: column;
-}
-
-.space-between,
-.price-list li {
-	justify-content: space-between;
-}
-
-.space-around {
-	justify-content: space-around;
-}
-
-.justify-center {
-	justify-content: center;
-}
-
-.align-center {
-	align-items: center;
-}
-
-.align-end {
-	align-items: flex-end;
-}
-
-.wrap {
-	flex-wrap: wrap;
 }
