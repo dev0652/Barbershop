@@ -24,6 +24,11 @@ body {
 	min-width: 160px;
 }
 
+.button:hover,
+.button:focus {
+	cursor: pointer;
+}
+
 /* Links */
 
 .link {
