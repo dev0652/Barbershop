@@ -1,4 +1,4 @@
-/* Global values */
+/* ---------- Global values ---------- */
 
 :root {
 	font-family: "Open Sans", sans-serif;
@@ -12,7 +12,7 @@ body {
 	margin: auto;
 }
 
-/* Buttons */
+/* ---------- Buttons ---------- */
 
 .button {
 	letter-spacing: 0.09em;
@@ -29,7 +29,7 @@ body {
 	cursor: pointer;
 }
 
-/* Links */
+/* ---------- Links ---------- */
 
 .link {
 	text-decoration: none;
@@ -46,7 +46,7 @@ body {
 }
 
 
-/* Headings */
+/* ---------- Headings ---------- */
 
 .title {
 	font-family: 'Raleway';
@@ -64,7 +64,7 @@ h2.title {
 	line-height: calc(49/42);
 }
 
-/* Paragraphs */
+/* ---------- Paragraphs ---------- */
 
 .sup-heading {
 	font-weight: 600;
@@ -101,14 +101,14 @@ h2.title {
 	background-repeat: repeat-x;
 }
 
-/* Hero */
+/* ---------- Hero ---------- */
 
 .hero {
 	height: 680px;
 	padding: 0 215px;
 }
 
-/* Hero - sidebar */
+/* ---------- Hero - sidebar ---------- */
 
 .hero-left {
 	width: 155px;
@@ -125,7 +125,7 @@ h2.title {
 	transform: rotate(-90deg);
 }
 
-/* Hero - main/slider */
+/* ---------- Hero - main/slider ---------- */
 
 .hero-right {
 	width: 1070px;
@@ -135,15 +135,15 @@ h2.title {
 	padding: 40px 17px 40px 100px;
 }
 
-/* Sections other than Hero */
+/* ---------- Sections other than Hero ---------- */
 
 .section {
 	padding: 120px 215px;
 }
 
-/* About */
+/* ---------- About ---------- */
 
-/* Services and prices */
+/* ---------- Services and prices ---------- */
 
 .services {
 	background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)), url('../img/services-and-prices.jpg');
@@ -151,7 +151,7 @@ h2.title {
 	background-size: cover;
 }
 
-/* Price-list */
+/* ---------- Price-list ---------- */
 
 /* https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css */
 
@@ -184,7 +184,7 @@ h2.title {
 	padding-bottom: 20px;
 }
 
-/* Price-list solid leader */
+/* ---------- Price-list solid leader ---------- */
 
 .price-leader {
 	background: linear-gradient(to right, var(--price-leader), var(--price-leader));
@@ -193,7 +193,7 @@ h2.title {
 	background-position: bottom 6px left;
 }
 
-/* Why us */
+/* ---------- Why us ---------- */
 
 .stat {
 	width: 170px;
@@ -226,7 +226,7 @@ h2.title {
 	line-height: calc(15/11);
 }
 
-/* Our barbers */
+/* ---------- Our barbers ---------- */
 
 .team-card {
 	text-align: center;
@@ -246,9 +246,9 @@ h2.title {
 	margin-bottom: 50px;
 }
 
-/* Gallery */
+/* ---------- Gallery ---------- */
 
-/* Contact us */
+/* ---------- Contact us ---------- */
 
 .contact-us {
 	padding-top: 130px;
@@ -258,7 +258,7 @@ h2.title {
 	background-position: right, right;
 }
 
-/* Left half - Online-booking */
+/* ---------- Left half - Online-booking ---------- */
 
 .booking {
 	width: 50%;
@@ -296,13 +296,13 @@ h2.title {
 	resize: none;
 }
 
-/* Right half - Contacts */
+/* ---------- Right half - Contacts ---------- */
 
 .contacts {
 	padding-left: 100px;
 }
 
-/* Address block */
+/* ---------- Address block ---------- */
 
 address {
 	font-style: normal;
@@ -329,7 +329,7 @@ address {
 	font-weight: 700;
 }
 
-/* Address block icons */
+/* ---------- Address block icons ---------- */
 
 .contacts-list li::before {
 	margin-left: -28px;
@@ -350,7 +350,7 @@ address {
 	content: url('../img/contacts-icons/mail.png');
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
 
 .footer {
 	padding: 56px 215px;
