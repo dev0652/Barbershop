@@ -1,5 +1,8 @@
+/* COLORS */
+
 :root {
 	background-color: #E5E5E5;
+
 	/* Color variables	 */
 	--accent: #FF6C00;
 	--darker: #303030;
@@ -9,10 +12,7 @@
 	--price-leader: rgba(157, 164, 189, 0.12);
 	--bg-dark: #191C26;
 	--bg-light: #F7F7F7;
-
 }
-
-/* Colors */
 
 body {
 	background-color: #fff;
@@ -77,7 +77,7 @@ body {
 	background-color: var(--bg-light);
 }
 
-.contact-us,
+.bg-dark,
 .field {
 	background-color: var(--bg-dark);
 }
