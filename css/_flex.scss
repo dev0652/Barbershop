@@ -75,6 +75,7 @@
 .price-list li {
 	display: flex;
 	gap: var(--list-spacing);
+	align-items: baseline;
 }
 
 .price-leader {

@@ -189,13 +189,9 @@ h2.title {
 	}
 }
 
-/* Underline/leader between service name and price */
-
 .price-leader {
-	background: linear-gradient(to right, var(--price-leader), var(--price-leader));
-	background-repeat: no-repeat;
-	background-size: 100% 1px;
-	background-position: bottom 6px left;
+	background-color: var(--price-leader);
+	height: 1px;
 }
 
 /* ---------- Why us ---------- */
