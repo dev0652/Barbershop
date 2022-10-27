@@ -39,16 +39,23 @@
 
 /* Gap values */
 
+:root {
+	--standard-gap: 30px;
+	--regular-spacing: 20px;
+	--large-spacing: 44px;
+	--list-spacing: 10px;
+}
+
 .flex {
-	gap: 30px;
+	gap: var(--standard-gap);
 }
 
-.regular-gap {
-	gap: 20px;
+.regular-spacing {
+	gap: var(--regular-spacing);
 }
 
-.large-gap {
-	gap: 44px;
+.large-spacing {
+	gap: var(--large-spacing);
 }
 
 .hero {
@@ -67,8 +74,7 @@
 
 .price-list li {
 	display: flex;
-	/* justify-content: space-between; */
-	gap: 10px;
+	gap: var(--list-spacing);
 }
 
 .price-leader {
