@@ -160,9 +160,10 @@ h2.title {
 
 /* ---------- Price-list ---------- */
 
-/* https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css */
+.price-list-wrapper {
 
-.price-list {
+	/* https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css */
+
 	-webkit-columns: 2;
 	-moz-columns: 2;
 	columns: 2;
@@ -173,26 +174,22 @@ h2.title {
 	background-position: left, right;
 	background-size: 570px 100%, 570px 100%;
 
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.price-list {
+
 	& li {
 		margin: 0 20px;
 
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
-
-		&:first-child,
-		&:nth-child(5) {
-			padding-top: 30px;
-		}
-
-		&:last-child,
-		&:nth-child(4) {
-			padding-bottom: 30px;
-		}
 	}
 }
 
-/* ---------- Price-list solid leader ---------- */
+/* Underline/leader between service name and price */
 
 .price-leader {
 	background: linear-gradient(to right, var(--price-leader), var(--price-leader));
