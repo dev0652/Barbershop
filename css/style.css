@@ -14,14 +14,27 @@ body {
   list-style: none;
 }
 
-/* Reset CSS */
+/* CSS Normalize */
 :root {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
   -moz-tab-size: 4;
   -o-tab-size: 4;
      tab-size: 4;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 * {
@@ -29,10 +42,32 @@ body {
   padding: 0;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
 }
 
 /* Remove markers in markup ul's: */
@@ -227,13 +262,9 @@ body {
   padding: 12px 20px;
   min-width: 160px;
 }
-.button:hover, .button:focus {
-  cursor: pointer;
-}
 
 /* ---------- Links ---------- */
 .link {
-  text-decoration: none;
   font-weight: 600;
   font-size: 16px;
 }
@@ -431,7 +462,6 @@ h2.title {
 .field {
   border: none;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
-  outline: none;
 }
 .field::-moz-placeholder {
   font-family: "Open Sans";

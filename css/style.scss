@@ -32,17 +32,11 @@ body {
 	border-radius: 25px;
 	padding: 12px 20px;
 	min-width: 160px;
-
-	&:hover,
-	&:focus {
-		cursor: pointer;
-	}
 }
 
 /* ---------- Links ---------- */
 
 .link {
-	text-decoration: none;
 	font-weight: 600;
 	font-size: 16px;
 }
@@ -268,7 +262,6 @@ h2.title {
 .field {
 	border: none;
 	border-bottom: 1px solid rgba(157, 164, 189, 0.4);
-	outline: none;
 
 	&::placeholder {
 		font-family: "Open Sans";
