@@ -394,10 +394,10 @@ h2.title {
   padding: 10px 20px;
 }
 .price-list li:first-child, .price-list li:nth-child(5) {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 .price-list li:last-child, .price-list li:nth-child(4) {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 /* ---------- Price-list solid leader ---------- */

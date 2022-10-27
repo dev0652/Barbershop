@@ -155,8 +155,6 @@ h2.title {
 .services {
 	background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)), url('../img/services-and-prices.jpg');
 	background-repeat: no-repeat;
-	// background-position: center;
-	// 	background-size: contain;
 	background-size: cover;
 }
 
@@ -183,12 +181,12 @@ h2.title {
 
 		&:first-child,
 		&:nth-child(5) {
-			padding-top: 20px;
+			padding-top: 30px;
 		}
 
 		&:last-child,
 		&:nth-child(4) {
-			padding-bottom: 20px;
+			padding-bottom: 30px;
 		}
 	}
 }
