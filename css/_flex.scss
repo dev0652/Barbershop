@@ -1,40 +1,39 @@
 /* FLEX */
 
-.flex,
-.prefix {
+.flex {
 	display: flex;
-}
 
-.column {
-	flex-direction: column;
-}
+	&.column {
+		flex-direction: column;
+	}
 
-.space-between {
-	justify-content: space-between;
-}
+	&.space-between {
+		justify-content: space-between;
+	}
 
-.space-around {
-	justify-content: space-around;
-}
+	&.space-around {
+		justify-content: space-around;
+	}
 
-.justify-center {
-	justify-content: center;
-}
+	&.justify-center {
+		justify-content: center;
+	}
 
-.justify-end {
-	justify-content: end;
-}
+	&.justify-end {
+		justify-content: end;
+	}
 
-.align-center {
-	align-items: center;
-}
+	&.align-center {
+		align-items: center;
+	}
 
-.align-end {
-	align-items: end;
-}
+	&.align-end {
+		align-items: end;
+	}
 
-.wrap {
-	flex-wrap: wrap;
+	&.wrap {
+		flex-wrap: wrap;
+	}
 }
 
 /* Gap values */
@@ -71,6 +70,10 @@
 }
 
 /* Individual rules */
+
+.prefix {
+	display: flex;
+}
 
 .price-list li {
 	display: flex;

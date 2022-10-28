@@ -53,6 +53,8 @@ button,
 [type=reset],
 [type=submit] {
   cursor: pointer;
+  font-family: inherit;
+  text-align: center;
 }
 
 :focus {
@@ -76,40 +78,31 @@ button,
 }
 
 /* FLEX */
-.flex,
-.prefix {
+.flex {
   display: flex;
 }
-
-.column {
+.flex.column {
   flex-direction: column;
 }
-
-.space-between {
+.flex.space-between {
   justify-content: space-between;
 }
-
-.space-around {
+.flex.space-around {
   justify-content: space-around;
 }
-
-.justify-center {
+.flex.justify-center {
   justify-content: center;
 }
-
-.justify-end {
+.flex.justify-end {
   justify-content: end;
 }
-
-.align-center {
+.flex.align-center {
   align-items: center;
 }
-
-.align-end {
+.flex.align-end {
   align-items: end;
 }
-
-.wrap {
+.flex.wrap {
   flex-wrap: wrap;
 }
 
@@ -146,6 +139,10 @@ button,
 }
 
 /* Individual rules */
+.prefix {
+  display: flex;
+}
+
 .price-list li {
   display: flex;
   gap: var(--list-spacing);
