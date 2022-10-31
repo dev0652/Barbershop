@@ -1,4 +1,14 @@
-/* FLEX */
+/* Utility classes */
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+/* For flex-boxes */
 
 .flex {
 	display: flex;
@@ -36,15 +46,6 @@
 	}
 }
 
-/* Gap values */
-
-:root {
-	--standard-gap: 30px;
-	--regular-spacing: 20px;
-	--large-spacing: 44px;
-	--list-spacing: 10px;
-}
-
 .flex {
 	gap: var(--standard-gap);
 }
@@ -57,30 +58,12 @@
 	gap: var(--large-spacing);
 }
 
-.hero {
-	gap: 0;
+/* For testing */
+
+.outline {
+	outline: auto;
 }
 
-.hero-main {
-	gap: 184px;
-}
-
-.social-icons {
-	gap: 10px;
-}
-
-/* Individual rules */
-
-.prefix {
-	display: flex;
-}
-
-.price-list li {
-	display: flex;
-	gap: var(--list-spacing);
-	align-items: baseline;
-}
-
-.price-leader {
-	flex-grow: 1;
+.frame {
+	outline: 1px solid beige;
 }

@@ -1,26 +1,66 @@
-/* ---------- Global values ---------- */
+@import "normalize.scss";
+@import "variables.scss";
+@import "utilities.scss";
+
+/* ---------- Common ---------- */
 
 :root {
 	font-family: "Open Sans", sans-serif;
 }
 
 body {
-	// width: 1600px;
 	font-size: 18px;
 	line-height: calc(30/18);
 	letter-spacing: 0.02em;
-	// margin: 0 auto;
+	background-color: var(--bg-default);
 }
 
-/* Remove markers in markup ul's: */
-
-.markup-list {
-	list-style: none;
+.container {
+	width: (1170px + 15px + 15px);
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-@import "normalize.scss";
-@import "flex.scss";
-@import "colors.scss";
+.bg-dark {
+	background-color: var(--bg-dark);
+}
+
+/* ---------- Links ---------- */
+
+.link {
+	font-weight: 600;
+	font-size: 16px;
+	color: var(--darker);
+
+	.header & {
+		color: var(--contrast);
+	}
+
+	.contacts-list & {
+		color: var(--light);
+	}
+
+	&:hover,
+	&:focus {
+		color: var(--accent);
+	}
+}
+
+.follow-us {
+	--color: var(--darker);
+	color: var(--color);
+	--current: var(--color);
+}
+
+.follow-us .link,
+.copyright {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15/11);
+	letter-spacing: 0.2em;
+}
 
 /* ---------- Buttons ---------- */
 
@@ -32,23 +72,18 @@ body {
 	border-radius: 25px;
 	padding: 12px 20px;
 	min-width: 160px;
+	color: var(--darker);
+
+	&:hover,
+	&:focus {
+		color: var(--contrast);
+		background: var(--accent);
+	}
+
+	.dark & {
+		color: var(--contrast);
+	}
 }
-
-/* ---------- Links ---------- */
-
-.link {
-	font-weight: 600;
-	font-size: 16px;
-}
-
-.follow-us .link,
-.copyright {
-	font-weight: 600;
-	font-size: 11px;
-	line-height: calc(15/11);
-	letter-spacing: 0.2em;
-}
-
 
 /* ---------- Headings ---------- */
 
@@ -56,6 +91,11 @@ body {
 	font-family: 'Raleway';
 	font-weight: 700;
 	letter-spacing: 0.05em;
+	color: var(--darker);
+
+	.dark & {
+		color: var(--contrast);
+	}
 }
 
 h1.title {
@@ -73,24 +113,43 @@ h2.title {
 	font-size: 11px;
 	line-height: calc(15/11);
 	text-transform: uppercase;
+	--color: var(--darker);
+	color: var(--color);
+	--current: var(--color);
+
+	.dark & {
+		color: var(--light-transp);
+		--current: var(--light-transp);
+	}
+
+	.contacts & {
+		color: var(--contrast);
+	}
 }
 
 /* Prefix (thin line before sup-headings and follow-us links in hero sidebar) */
 
-.prefix::before {
-	content: '';
-	width: 60px;
-	margin-right: 20px;
-	background: linear-gradient(to right, var(--current), var(--current));
-	background-size: 100% 1px;
-	background-position: 0% 55%;
-	background-repeat: repeat-x;
+.prefix {
+	display: flex;
+	// color: inherit;
+
+	&::before {
+		content: '';
+		width: 60px;
+		margin-right: 20px;
+		background: linear-gradient(to right, var(--current), var(--current));
+		background-size: 100% 1px;
+		background-position: 0% 55%;
+		background-repeat: repeat-x;
+	}
 }
 
 /* ---------- Hero ---------- */
 
 .hero {
 	height: 680px;
+	gap: 0;
+	color: var(--light);
 }
 
 /* Hero sidebar */
@@ -114,10 +173,12 @@ h2.title {
 
 .hero-main {
 	width: 1070px;
+
 	background-image: url('../img/slider/slider-overlay.jpg');
 	background-size: cover;
 
 	padding: 40px 17px 40px 100px;
+	gap: 184px;
 }
 
 /* ---------- Sections other than Hero ---------- */
@@ -126,19 +187,19 @@ h2.title {
 	// padding: 120px 215px;
 	padding-top: 120px;
 	padding-bottom: 120px;
-}
 
-.section.half-sized {
-	padding-top: 130px;
-	width: 50%;
-}
+	&.dark {
+		color: var(--dark);
+	}
 
-.container {
-	width: (1170px + 15px + 15px);
-	padding-left: 15px;
-	padding-right: 15px;
-	margin-left: auto;
-	margin-right: auto;
+	&.light {
+		color: var(--light);
+	}
+
+	&.half-sized {
+		padding-top: 130px;
+		width: 50%;
+	}
 }
 
 /* ---------- About ---------- */
@@ -148,6 +209,7 @@ h2.title {
 	line-height: calc(26/14);
 	/* Additional margin */
 	margin-bottom: calc(42px - 20px);
+	color: var(--dark);
 }
 
 /* ---------- Services and prices ---------- */
@@ -161,7 +223,6 @@ h2.title {
 /* ---------- Price-list ---------- */
 
 .price-list-wrapper {
-
 	/* https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css */
 
 	-webkit-columns: 2;
@@ -179,9 +240,13 @@ h2.title {
 }
 
 .price-list {
+	color: var(--light);
 
 	& li {
 		margin: 0 20px;
+		display: flex;
+		gap: var(--list-spacing);
+		align-items: baseline;
 
 		&:not(:last-child) {
 			margin-bottom: 20px;
@@ -192,6 +257,8 @@ h2.title {
 .price-leader {
 	background-color: var(--price-leader);
 	height: 1px;
+
+	flex-grow: 1;
 }
 
 /* ---------- Why us ---------- */
@@ -201,6 +268,8 @@ h2.title {
 	height: 133px;
 	text-align: center;
 	padding: 20px 24px;
+	color: var(--darker);
+	background-color: var(--bg-light);
 
 	&:nth-child(odd) {
 		margin-top: -30px;
@@ -217,6 +286,7 @@ h2.title {
 	&:after {
 		content: "+";
 		font-size: 16px;
+		color: var(--accent);
 		vertical-align: top;
 	}
 }
@@ -236,15 +306,18 @@ h2.title {
 .name {
 	line-height: calc(25/18);
 	margin-bottom: 8px;
+	color: var(--darker);
 }
 
 .position {
 	font-size: 14px;
 	line-height: calc(19/14);
+	color: var(--accent);
 }
 
 .social-icons {
 	margin-bottom: 50px;
+	gap: 10px;
 }
 
 /* ---------- Contact us ---------- */
@@ -252,10 +325,16 @@ h2.title {
 /* Left block - Online-booking */
 
 .field {
+	font-size: inherit;
+	background-color: inherit;
+	color: rgba(157, 164, 189, 0.4);
+
 	border: none;
 	border-bottom: 1px solid rgba(157, 164, 189, 0.4);
 
 	&::placeholder {
+		color: inherit;
+
 		font-family: "Open Sans";
 		font-weight: 600;
 		font-size: 11px;
@@ -266,11 +345,11 @@ h2.title {
 
 	&:hover,
 	&:focus {
-		border-bottom: 1px solid #fff;
+		color: var(--contrast);
+		border-color: var(--contrast);
 	}
 
 	&.narrow {
-		/* padding: 0 0 8px; */
 		height: 30px;
 		width: 50%;
 	}
@@ -301,6 +380,7 @@ h2.title {
 
 .contacts {
 	padding-left: 100px;
+	color: var(--light);
 }
 
 /* Address block */
@@ -354,7 +434,7 @@ address {
 
 .footer {
 	padding: 56px 215px;
-
+	color: var(--light);
 	font-weight: 600;
 	font-size: 11px;
 	line-height: calc(15/11);
