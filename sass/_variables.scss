@@ -1,0 +1,30 @@
+/* Color variables */
+
+$accent: #FF6C00;
+$contrast: #fff;
+
+$darker: #303030;
+$dark: #555555;
+$light: #9DA4BD;
+
+$light-transp: rgba(157, 164, 189, 0.6);
+$price-leader: rgba(157, 164, 189, 0.12);
+
+$bg-default: #fff;
+$bg-dark: #191C26;
+$bg-light: #F7F7F7;
+
+
+/* Flex gap values */
+
+$regular-gap: 30px;
+$regular-spacing: 20px;
+$large-spacing: 44px;
+$list-spacing: 10px;
+
+
+/* Variables for flex-basis calculation */
+
+$items-per-row: 3;
+$spacing: $regular-gap;
+$number-of-gaps: $items-per-row - 1;

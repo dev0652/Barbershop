@@ -1,6 +1,6 @@
-@import "normalize.scss";
-@import "variables.scss";
-@import "utilities.scss";
+@import "../../_sass/normalize";
+@import "variables";
+@import "../../_sass/utilities";
 
 /* ---------- Common ---------- */
 
@@ -12,7 +12,7 @@ body {
 	font-size: 18px;
 	line-height: calc(30/18);
 	letter-spacing: 0.02em;
-	background-color: var(--bg-default);
+	background-color: $bg-default;
 }
 
 .container {
@@ -24,7 +24,7 @@ body {
 }
 
 .bg-dark {
-	background-color: var(--bg-dark);
+	background-color: $bg-dark;
 }
 
 /* ---------- Links ---------- */
@@ -32,26 +32,26 @@ body {
 .link {
 	font-weight: 600;
 	font-size: 16px;
-	color: var(--darker);
+	color: $darker;
 
 	.header & {
-		color: var(--contrast);
+		color: $contrast;
 	}
 
 	.contacts-list & {
-		color: var(--light);
+		color: $light;
 	}
 
 	&:hover,
 	&:focus {
-		color: var(--accent);
+		color: $accent;
 	}
 }
 
 .follow-us {
-	--color: var(--darker);
-	color: var(--color);
-	--current: var(--color);
+	$color: $darker;
+	--current: $color;
+	color: $color;
 }
 
 .follow-us .link,
@@ -68,20 +68,20 @@ body {
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
 	background-color: transparent;
-	border: 1px solid var(--accent);
+	border: 1px solid $accent;
 	border-radius: 25px;
 	padding: 12px 20px;
 	min-width: 160px;
-	color: var(--darker);
+	color: $darker;
 
 	&:hover,
 	&:focus {
-		color: var(--contrast);
-		background: var(--accent);
+		color: $contrast;
+		background: $accent;
 	}
 
 	.dark & {
-		color: var(--contrast);
+		color: $contrast;
 	}
 }
 
@@ -91,10 +91,10 @@ body {
 	font-family: 'Raleway';
 	font-weight: 700;
 	letter-spacing: 0.05em;
-	color: var(--darker);
+	color: $darker;
 
 	.dark & {
-		color: var(--contrast);
+		color: $contrast;
 	}
 }
 
@@ -113,17 +113,17 @@ h2.title {
 	font-size: 11px;
 	line-height: calc(15/11);
 	text-transform: uppercase;
-	--color: var(--darker);
-	color: var(--color);
-	--current: var(--color);
+	$color: $darker;
+	color: $color;
+	--current: $color;
 
 	.dark & {
-		color: var(--light-transp);
-		--current: var(--light-transp);
+		color: $light-transp;
+		--current: $light-transp;
 	}
 
 	.contacts & {
-		color: var(--contrast);
+		color: $contrast;
 	}
 }
 
@@ -149,7 +149,7 @@ h2.title {
 .hero {
 	height: 680px;
 	gap: 0;
-	color: var(--light);
+	color: $light;
 }
 
 /* Hero sidebar */
@@ -189,11 +189,11 @@ h2.title {
 	padding-bottom: 120px;
 
 	&.dark {
-		color: var(--dark);
+		color: $dark;
 	}
 
 	&.light {
-		color: var(--light);
+		color: $light;
 	}
 
 	&.half-sized {
@@ -209,7 +209,7 @@ h2.title {
 	line-height: calc(26/14);
 	/* Additional margin */
 	margin-bottom: calc(42px - 20px);
-	color: var(--dark);
+	color: $dark;
 }
 
 /* ---------- Services and prices ---------- */
@@ -241,12 +241,12 @@ h2.title {
 }
 
 .price-list {
-	color: var(--light);
+	color: $light;
 
 	& li {
 		margin: 0 20px;
 		display: flex;
-		gap: var(--list-spacing);
+		gap: $list-spacing;
 		align-items: baseline;
 
 		&:not(:last-child) {
@@ -256,7 +256,7 @@ h2.title {
 }
 
 .price-leader {
-	background-color: var(--price-leader);
+	background-color: $price-leader;
 	height: 1px;
 
 	flex-grow: 1;
@@ -269,8 +269,8 @@ h2.title {
 	height: 133px;
 	text-align: center;
 	padding: 20px 24px;
-	color: var(--darker);
-	background-color: var(--bg-light);
+	color: $darker;
+	background-color: $bg-light;
 
 	&:nth-child(odd) {
 		margin-top: -30px;
@@ -287,7 +287,7 @@ h2.title {
 	&:after {
 		content: "+";
 		font-size: 16px;
-		color: var(--accent);
+		color: $accent;
 		vertical-align: top;
 	}
 }
@@ -307,13 +307,13 @@ h2.title {
 .name {
 	line-height: calc(25/18);
 	margin-bottom: 8px;
-	color: var(--darker);
+	color: $darker;
 }
 
 .position {
 	font-size: 14px;
 	line-height: calc(19/14);
-	color: var(--accent);
+	color: $accent;
 }
 
 .social-icons {
@@ -346,8 +346,8 @@ h2.title {
 
 	&:hover,
 	&:focus {
-		color: var(--contrast);
-		border-color: var(--contrast);
+		color: $contrast;
+		border-color: $contrast;
 	}
 
 	&.narrow {
@@ -381,7 +381,7 @@ h2.title {
 
 .contacts {
 	padding-left: 100px;
-	color: var(--light);
+	color: $light;
 }
 
 /* Address block */
@@ -435,7 +435,7 @@ address {
 
 .footer {
 	padding: 56px 215px;
-	color: var(--light);
+	color: $light;
 	font-weight: 600;
 	font-size: 11px;
 	line-height: calc(15/11);

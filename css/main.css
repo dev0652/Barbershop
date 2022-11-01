@@ -56,42 +56,30 @@ button,
   overflow: hidden;
 }
 
-/* Remove markers in markup ul's: */
+.no-end-spacing {
+  /* Remove extra space after images */
+  display: block;
+}
+
 .markup-list {
   list-style: none;
 }
 
 /* Color variables */
-:root {
-  /* Color variables	 */
-  --accent: #FF6C00;
-  --contrast: #fff;
-  --darker: #303030;
-  --dark: #555555;
-  --light: #9DA4BD;
-  --light-transp: rgba(157, 164, 189, 0.6);
-  --price-leader: rgba(157, 164, 189, 0.12);
-  --bg-default: #fff;
-  --bg-dark: #191C26;
-  --bg-light: #F7F7F7;
-}
-
 /* Flex gap values */
-:root {
-  --standard-gap: 30px;
-  --regular-spacing: 20px;
-  --large-spacing: 44px;
-  --list-spacing: 10px;
-}
-
 /* Variables for flex-basis calculation */
-:root {
-  --items-per-row: 3;
-  --spacing: var(--regular-gap);
-  --number-of-gaps: var(--items-per-row) - 1;
+/* Utility classes */
+/* Colors */
+.black {
+  color: black;
 }
 
-/* Utility classes */
+.white {
+  color: white;
+}
+
+/* Background */
+/* Letter case */
 .uppercase {
   text-transform: uppercase;
 }
@@ -100,7 +88,7 @@ button,
   text-transform: lowercase;
 }
 
-/* For flex-boxes */
+/* Flex-boxes */
 .flex {
   display: flex;
 }
@@ -129,8 +117,8 @@ button,
   flex-wrap: wrap;
 }
 
-.flex {
-  gap: var(--standard-gap);
+.regular-gap {
+  gap: var(--regular-gap);
 }
 
 .regular-spacing {
@@ -141,13 +129,13 @@ button,
   gap: var(--large-spacing);
 }
 
-/* For testing */
+/* Testing */
 .outline {
   outline: auto;
 }
 
 .frame {
-  outline: 1px solid beige;
+  outline: 1px solid steelblue;
 }
 
 /* ---------- Common ---------- */
@@ -159,7 +147,7 @@ body {
   font-size: 18px;
   line-height: 1.6666666667;
   letter-spacing: 0.02em;
-  background-color: var(--bg-default);
+  background-color: #fff;
 }
 
 .container {
@@ -171,29 +159,28 @@ body {
 }
 
 .bg-dark {
-  background-color: var(--bg-dark);
+  background-color: #191C26;
 }
 
 /* ---------- Links ---------- */
 .link {
   font-weight: 600;
   font-size: 16px;
-  color: var(--darker);
+  color: #303030;
 }
 .header .link {
-  color: var(--contrast);
+  color: #fff;
 }
 .contacts-list .link {
-  color: var(--light);
+  color: #9DA4BD;
 }
 .link:hover, .link:focus {
-  color: var(--accent);
+  color: #FF6C00;
 }
 
 .follow-us {
-  --color: var(--darker);
-  color: var(--color);
-  --current: var(--color);
+  --current: $color;
+  color: #303030;
 }
 
 .follow-us .link,
@@ -209,18 +196,18 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   background-color: transparent;
-  border: 1px solid var(--accent);
+  border: 1px solid #FF6C00;
   border-radius: 25px;
   padding: 12px 20px;
   min-width: 160px;
-  color: var(--darker);
+  color: #303030;
 }
 .button:hover, .button:focus {
-  color: var(--contrast);
-  background: var(--accent);
+  color: #fff;
+  background: #FF6C00;
 }
 .dark .button {
-  color: var(--contrast);
+  color: #fff;
 }
 
 /* ---------- Headings ---------- */
@@ -228,10 +215,10 @@ body {
   font-family: "Raleway";
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: var(--darker);
+  color: #303030;
 }
 .dark .title {
-  color: var(--contrast);
+  color: #fff;
 }
 
 h1.title {
@@ -249,16 +236,15 @@ h2.title {
   font-size: 11px;
   line-height: 1.3636363636;
   text-transform: uppercase;
-  --color: var(--darker);
-  color: var(--color);
-  --current: var(--color);
+  color: #303030;
+  --current: $color;
 }
 .dark .sup-heading {
-  color: var(--light-transp);
-  --current: var(--light-transp);
+  color: rgba(157, 164, 189, 0.6);
+  --current: $light-transp;
 }
 .contacts .sup-heading {
-  color: var(--contrast);
+  color: #fff;
 }
 
 /* Prefix (thin line before sup-headings and follow-us links in hero sidebar) */
@@ -279,7 +265,7 @@ h2.title {
 .hero {
   height: 680px;
   gap: 0;
-  color: var(--light);
+  color: #9DA4BD;
 }
 
 /* Hero sidebar */
@@ -313,10 +299,10 @@ h2.title {
   padding-bottom: 120px;
 }
 .section.dark {
-  color: var(--dark);
+  color: #555555;
 }
 .section.light {
-  color: var(--light);
+  color: #9DA4BD;
 }
 .section.half-sized {
   padding-top: 130px;
@@ -329,7 +315,7 @@ h2.title {
   line-height: 1.8571428571;
   /* Additional margin */
   margin-bottom: 22px;
-  color: var(--dark);
+  color: #555555;
 }
 
 /* ---------- Services and prices ---------- */
@@ -356,12 +342,12 @@ h2.title {
 }
 
 .price-list {
-  color: var(--light);
+  color: #9DA4BD;
 }
 .price-list li {
   margin: 0 20px;
   display: flex;
-  gap: var(--list-spacing);
+  gap: 10px;
   align-items: baseline;
 }
 .price-list li:not(:last-child) {
@@ -369,7 +355,7 @@ h2.title {
 }
 
 .price-leader {
-  background-color: var(--price-leader);
+  background-color: rgba(157, 164, 189, 0.12);
   height: 1px;
   flex-grow: 1;
 }
@@ -380,8 +366,8 @@ h2.title {
   height: 133px;
   text-align: center;
   padding: 20px 24px;
-  color: var(--darker);
-  background-color: var(--bg-light);
+  color: #303030;
+  background-color: #F7F7F7;
 }
 .stat:nth-child(odd) {
   margin-top: -30px;
@@ -397,7 +383,7 @@ h2.title {
 .stat-number:after {
   content: "+";
   font-size: 16px;
-  color: var(--accent);
+  color: #FF6C00;
   vertical-align: top;
 }
 
@@ -415,13 +401,13 @@ h2.title {
 .name {
   line-height: 1.3888888889;
   margin-bottom: 8px;
-  color: var(--darker);
+  color: #303030;
 }
 
 .position {
   font-size: 14px;
   line-height: 1.3571428571;
-  color: var(--accent);
+  color: #FF6C00;
 }
 
 .social-icons {
@@ -466,8 +452,8 @@ h2.title {
   text-transform: uppercase;
 }
 .field:hover, .field:focus {
-  color: var(--contrast);
-  border-color: var(--contrast);
+  color: #fff;
+  border-color: #fff;
 }
 .field.narrow {
   height: 30px;
@@ -495,7 +481,7 @@ h2.title {
 
 .contacts {
   padding-left: 100px;
-  color: var(--light);
+  color: #9DA4BD;
 }
 
 /* Address block */
@@ -543,8 +529,8 @@ address {
 /* ---------- Footer ---------- */
 .footer {
   padding: 56px 215px;
-  color: var(--light);
+  color: #9DA4BD;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.3636363636;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */
