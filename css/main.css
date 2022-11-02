@@ -180,9 +180,7 @@ body {
 }
 
 .follow-us {
-  --color: $darker;
-  --current: var(--color);
-  color: var(--color);
+  color: #303030;
 }
 
 .follow-us .link,
@@ -238,14 +236,10 @@ h2.title {
   font-size: 11px;
   line-height: 1.3636363636;
   text-transform: uppercase;
-  --color: $darker;
-  color: var(--color);
-  --current: var(--color);
+  color: #303030;
 }
 .dark .sup-heading {
-  --color: $light-transp;
-  color: var(--color);
-  --current: var(--color);
+  color: rgba(157, 164, 189, 0.6);
 }
 .contacts .sup-heading {
   color: #fff;
@@ -259,10 +253,10 @@ h2.title {
   content: "";
   width: 60px;
   margin-right: 20px;
+  background: linear-gradient(to right, currentColor, currentColor);
   background-size: 100% 1px;
-  background-position: 0% 55%;
+  background-position: 0% 51%;
   background-repeat: repeat-x;
-  background: linear-gradient(to right, var(--current), var(--current));
 }
 
 /* ---------- Hero ---------- */

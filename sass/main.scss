@@ -53,9 +53,7 @@ body {
 }
 
 .follow-us {
-	--color: $darker;
-	--current: var(--color);
-	color: var(--color);
+	color: $darker;
 }
 
 .follow-us .link,
@@ -117,15 +115,10 @@ h2.title {
 	font-size: 11px;
 	line-height: calc(15/11);
 	text-transform: uppercase;
-
-	--color: $darker;
-	color: var(--color);
-	--current: var(--color);
+	color: $darker;
 
 	.dark & {
-		--color: $light-transp;
-		color: var(--color);
-		--current: var(--color);
+		color: $light-transp;
 	}
 
 	.contacts & {
@@ -141,13 +134,13 @@ h2.title {
 	&::before {
 		content: '';
 		width: 60px;
-		margin-right: 20px;
+		margin-right: $regular-spacing;
+
+		background: linear-gradient(to right, currentColor, currentColor);
 
 		background-size: 100% 1px;
-		background-position: 0% 55%;
+		background-position: 0% 51%;
 		background-repeat: repeat-x;
-
-		background: linear-gradient(to right, var(--current), var(--current));
 	}
 }
 
