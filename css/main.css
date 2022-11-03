@@ -26,6 +26,7 @@ html {
   padding: 0;
 }
 
+/* My rules */
 a {
   background-color: transparent;
   text-decoration: none;
@@ -43,26 +44,6 @@ button,
 
 :focus {
   outline: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  z-index: -1;
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  border: none;
-  overflow: hidden;
-}
-
-.no-end-spacing {
-  /* Remove extra space after images */
-  display: block;
-}
-
-.markup-list {
-  list-style: none;
 }
 
 /* Color variables */
@@ -124,6 +105,27 @@ button,
 }
 .flex.large-spacing {
   gap: 44px;
+}
+
+/* Other */
+.visually-hidden {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.no-end-spacing {
+  /* Remove extra space after images */
+  display: block;
+}
+
+.markup-list {
+  list-style: none;
 }
 
 /* Testing */
