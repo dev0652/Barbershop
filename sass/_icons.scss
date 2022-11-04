@@ -7,28 +7,21 @@
 
 	.contacts & {
 
-		.link:hover & {
-			fill: none;
-		}
+		fill: transparent;
+		stroke: currentColor;
 	}
 }
 
-#icon-envelope {
-	height: 16px;
+.social-icon {
+	width: 20px;
+	height: 20px;
+
+	.footer & {
+		fill: $contrast;
+	}
 }
 
-.social-link {
-
-	& .icon {
-		width: 20px;
-		height: 20px;
-
-		.footer & {
-			fill: $contrast;
-		}
-	}
-
-	&:hover .icon {
-		fill: $accent;
-	}
+.contacts-icon {
+	width: 24px;
+	height: 24px;
 }

@@ -217,6 +217,10 @@ h2.title {
 		padding-top: 130px;
 		width: 50%;
 	}
+
+	&.services {
+		padding: 0px;
+	}
 }
 
 /* ---------- About ---------- */
@@ -233,13 +237,21 @@ h2.title {
 /* ---------- Services and prices ---------- */
 
 .services {
-	// max-width: 1600px;
 	// margin: 0 auto;
 
-	background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)), url('../img/services-and-prices.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	.overlay {
+		max-width: 1600px;
+		// padding: 120px 215px;
+		padding-top: 120px;
+		padding-bottom: 120px;
+		margin: 0 auto;
+
+		background-color: $bg-dark;
+		background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)), url('../img/services-and-prices.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
 }
 
 /* ---------- Price-list ---------- */
@@ -321,6 +333,10 @@ h2.title {
 
 /* ---------- Our barbers ---------- */
 
+.barbers {
+	background-color: $bg-light;
+}
+
 .team-card {
 	text-align: center;
 }
@@ -337,9 +353,28 @@ h2.title {
 	color: $accent;
 }
 
-.social-icons {
-	margin-bottom: 50px;
-	gap: 10px;
+// Social media links block in each team card
+.social-links {
+	margin-top: $regular-gap;
+	gap: $list-spacing;
+}
+
+/* Social media links */
+/* (icons styled separately) */
+
+.social-link {
+	display: block;
+	border-radius: 50%;
+	overflow: hidden;
+	padding: 12px;
+
+	color: $darker;
+	background-color: $bg-default;
+
+	&:hover,
+	&:focus {
+		color: $accent;
+	}
 }
 
 /* ---------- Contact us ---------- */
@@ -410,6 +445,13 @@ h2.title {
 	color: $light;
 }
 
+.contacts-link {
+	display: flex;
+	// outline: auto;
+	align-items: center;
+	gap: $list-icon-spacing;
+}
+
 /* Address block */
 
 address {
@@ -423,7 +465,6 @@ address {
 
 	& li {
 		line-height: calc(30/18);
-		/* padding-left: 16px; */
 		position: relative;
 
 		/* Address block icons */

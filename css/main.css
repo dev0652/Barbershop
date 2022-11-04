@@ -146,23 +146,22 @@ button,
   display: block;
   fill: currentColor;
 }
-.link:hover .contacts .icon {
-  fill: none;
+.contacts .icon {
+  fill: transparent;
+  stroke: currentColor;
 }
 
-#icon-envelope {
-  height: 16px;
-}
-
-.social-link .icon {
+.social-icon {
   width: 20px;
   height: 20px;
 }
-.footer .social-link .icon {
+.footer .social-icon {
   fill: #fff;
 }
-.social-link:hover .icon {
-  fill: #FF6C00;
+
+.contacts-icon {
+  width: 24px;
+  height: 24px;
 }
 
 /* ---------- Common ---------- */
@@ -348,6 +347,9 @@ h2.title {
   padding-top: 130px;
   width: 50%;
 }
+.section.services {
+  padding: 0px;
+}
 
 /* ---------- About ---------- */
 .description {
@@ -359,7 +361,12 @@ h2.title {
 }
 
 /* ---------- Services and prices ---------- */
-.services {
+.services .overlay {
+  max-width: 1600px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin: 0 auto;
+  background-color: #191C26;
   background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)), url("../img/services-and-prices.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -434,6 +441,10 @@ h2.title {
 }
 
 /* ---------- Our barbers ---------- */
+.barbers {
+  background-color: #F7F7F7;
+}
+
 .team-card {
   text-align: center;
 }
@@ -450,9 +461,23 @@ h2.title {
   color: #FF6C00;
 }
 
-.social-icons {
-  margin-bottom: 50px;
+.social-links {
+  margin-top: 30px;
   gap: 10px;
+}
+
+/* Social media links */
+/* (icons styled separately) */
+.social-link {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 12px;
+  color: #303030;
+  background-color: #fff;
+}
+.social-link:hover, .social-link:focus {
+  color: #FF6C00;
 }
 
 /* ---------- Contact us ---------- */
@@ -524,6 +549,12 @@ h2.title {
   color: #9DA4BD;
 }
 
+.contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 /* Address block */
 address {
   font-style: normal;
@@ -536,7 +567,6 @@ address {
 }
 .contacts-list li {
   line-height: 1.6666666667;
-  /* padding-left: 16px; */
   position: relative;
   /* Address block icons */
 }
