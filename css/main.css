@@ -159,11 +159,6 @@ button,
   fill: #fff;
 }
 
-.contacts-icon {
-  width: 24px;
-  height: 24px;
-}
-
 /* ---------- Common ---------- */
 :root {
   font-family: "Open Sans", sans-serif;
@@ -549,12 +544,6 @@ h2.title {
   color: #9DA4BD;
 }
 
-.contacts-link {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
 /* Address block */
 address {
   font-style: normal;
@@ -568,32 +557,20 @@ address {
 .contacts-list li {
   line-height: 1.6666666667;
   position: relative;
-  /* Address block icons */
 }
-.contacts-list li::before {
-  margin-left: -28px;
-  position: absolute;
-  top: 4px;
-  left: -16px;
-}
-.contacts-list .link {
+
+/* Address block icons */
+.contacts-link {
   font-size: 18px;
   font-weight: 400;
+  display: flex;
+  outline: auto;
+  align-items: center;
+  gap: 16px;
 }
-.contacts-list .address .link {
+
+.address-link {
   font-weight: 700;
-}
-
-.address::before {
-  content: url("../img/contacts-icons/map-pin.png");
-}
-
-.telephone::before {
-  content: url("../img/contacts-icons/phone.png");
-}
-
-.email::before {
-  content: url("../img/contacts-icons/mail.png");
 }
 
 /* ---------- Footer ---------- */
