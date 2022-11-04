@@ -1,0 +1,34 @@
+/* SVG icons */
+
+.icon {
+	display: block;
+	// fill: $icon-inactive;
+	fill: currentColor;
+
+	.contacts & {
+
+		.link:hover & {
+			fill: none;
+		}
+	}
+}
+
+#icon-envelope {
+	height: 16px;
+}
+
+.social-link {
+
+	& .icon {
+		width: 20px;
+		height: 20px;
+
+		.footer & {
+			fill: $contrast;
+		}
+	}
+
+	&:hover .icon {
+		fill: $accent;
+	}
+}

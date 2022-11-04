@@ -1,6 +1,7 @@
 @import "../../_sass/normalize";
 @import "variables";
 @import "../../_sass/utilities";
+@import "icons";
 
 /* ---------- Common ---------- */
 
@@ -49,6 +50,22 @@ body {
 	&:hover,
 	&:focus {
 		color: $accent;
+	}
+
+	&.social {
+		height: 44px;
+		width: 44px;
+		border: none;
+		padding: 12px;
+		border-radius: 50%;
+
+		background-color: white;
+
+		&:hover,
+		&:focus {
+			color: $contrast;
+			background-color: $accent;
+		}
 	}
 }
 

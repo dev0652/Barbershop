@@ -47,6 +47,7 @@ button,
 }
 
 /* Color variables */
+/* SVG */
 /* Flex gap values */
 /* Variables for flex-basis calculation */
 /* Utility classes */
@@ -140,6 +141,30 @@ button,
   outline: 1px solid steelblue;
 }
 
+/* SVG icons */
+.icon {
+  display: block;
+  fill: currentColor;
+}
+.link:hover .contacts .icon {
+  fill: none;
+}
+
+#icon-envelope {
+  height: 16px;
+}
+
+.social-link .icon {
+  width: 20px;
+  height: 20px;
+}
+.footer .social-link .icon {
+  fill: #fff;
+}
+.social-link:hover .icon {
+  fill: #FF6C00;
+}
+
 /* ---------- Common ---------- */
 :root {
   font-family: "Open Sans", sans-serif;
@@ -182,6 +207,18 @@ body {
 }
 .link:hover, .link:focus {
   color: #FF6C00;
+}
+.link.social {
+  height: 44px;
+  width: 44px;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: white;
+}
+.link.social:hover, .link.social:focus {
+  color: #fff;
+  background-color: #FF6C00;
 }
 
 .follow-us {
