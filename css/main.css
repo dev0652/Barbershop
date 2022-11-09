@@ -42,6 +42,10 @@ button,
   text-align: center;
 }
 
+address {
+  font-style: normal;
+}
+
 :focus {
   outline: none;
 }
@@ -98,6 +102,14 @@ button,
 }
 
 /* Other */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
 .visually-hidden {
   position: absolute;
   z-index: -1;
@@ -139,24 +151,6 @@ button,
 
 .lowercase {
   text-transform: lowercase;
-}
-
-/* SVG icons */
-.icon {
-  display: block;
-  fill: currentColor;
-}
-.contacts .icon {
-  fill: transparent;
-  stroke: currentColor;
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
-}
-.footer .social-icon {
-  fill: #fff;
 }
 
 /* ---------- Common ---------- */
@@ -201,18 +195,6 @@ body {
 }
 .link:hover, .link:focus {
   color: #FF6C00;
-}
-.link.social {
-  height: 44px;
-  width: 44px;
-  border: none;
-  padding: 12px;
-  border-radius: 50%;
-  background-color: white;
-}
-.link.social:hover, .link.social:focus {
-  color: #fff;
-  background-color: #FF6C00;
 }
 
 .follow-us {
@@ -338,12 +320,13 @@ h2.title {
 .section.light {
   color: #9DA4BD;
 }
-.section.half-sized {
-  padding-top: 130px;
-  width: 50%;
-}
-.section.services {
+.section.with-overlay {
   padding: 0px;
+}
+
+.overlay {
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* ---------- About ---------- */
@@ -356,8 +339,7 @@ h2.title {
 }
 
 /* ---------- Services and prices ---------- */
-.services .overlay {
-  max-width: 1600px;
+.overlay-services {
   padding-top: 120px;
   padding-bottom: 120px;
   margin: 0 auto;
@@ -462,20 +444,46 @@ h2.title {
 }
 
 /* Social media links */
-/* (icons styled separately) */
 .social-link {
-  display: block;
-  border-radius: 50%;
-  overflow: hidden;
-  padding: 12px;
   color: #303030;
   background-color: #fff;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .social-link:hover, .social-link:focus {
   color: #FF6C00;
 }
 
+/* SVG icons */
+.icon {
+  fill: currentColor;
+}
+.contacts .icon {
+  fill: transparent;
+  stroke: currentColor;
+}
+
 /* ---------- Contact us ---------- */
+.overlay-contacts {
+  background-color: #191C26;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../img/contacts/bg.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.contacts-container {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.half-sized {
+  width: 50%;
+}
+
 /* Left block - Online-booking */
 .field {
   font-size: inherit;
@@ -525,39 +533,19 @@ h2.title {
 }
 
 /* Right block - Contacts */
-.relative {
-  position: relative;
-}
-
-.contacts-bg-wrapper {
-  background-image: linear-gradient(rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../img/contacts/bg.jpg");
-  background-position: right;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .contacts {
   padding-left: 100px;
   color: #9DA4BD;
 }
 
-/* Address block */
-address {
-  font-style: normal;
-}
-
 .contacts-list {
   margin-top: 40px;
   margin-bottom: 70px;
-  margin-left: 43px;
 }
 .contacts-list li {
   line-height: 1.6666666667;
 }
 
-/* Address block icons */
 .contacts-list li::marker {
   background-image: url("../img/icons/symbol-defs.svg#icon-map-pin");
 }
@@ -566,13 +554,17 @@ address {
   font-size: 18px;
   font-weight: 400;
   display: flex;
-  outline: auto;
   align-items: center;
   gap: 16px;
 }
 
 .address-link {
   font-weight: 700;
+}
+
+.email-link {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 /* ---------- Footer ---------- */
