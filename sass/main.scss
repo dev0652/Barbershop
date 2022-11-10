@@ -168,25 +168,23 @@ h2.title {
 
 .header {
 	// background-color: $dark;
-}
-
-.header {
 	position: fixed;
+	padding-top: 40px;
 	// position: sticky;
 	top: 0;
 	left: 0;
 	z-index: 10;
-
 	width: 100%;
+	padding-right: 17px;
 }
 
-.header-main {
-	padding-left: 100px;
-	padding-right: 17px;
-	// width: 100%;
-	flex-grow: 1;
-	outline: auto;
-}
+// .header-main {
+// 	padding-left: 100px;
+// 	padding-right: 17px;
+// 	// width: 100%;
+// 	flex-grow: 1;
+// 	outline: auto;
+// }
 
 /* ---------- Hero ---------- */
 
@@ -447,6 +445,10 @@ h2.title {
 .icon {
 	// display: block;
 	fill: currentColor;
+
+	&.icon-logo {
+		fill: $darker;
+	}
 
 	.contacts & {
 		fill: transparent;
