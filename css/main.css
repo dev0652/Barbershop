@@ -177,8 +177,13 @@ body {
   background-color: #191C26;
 }
 
+/* Flex gap values */
 .flex {
   gap: 30px;
+}
+
+.zero-gap {
+  gap: 0;
 }
 
 /* ---------- Links ---------- */
@@ -277,16 +282,36 @@ h2.title {
   background-repeat: repeat-x;
 }
 
+/* White "sidebar" in header and hero */
+.sidebar {
+  color: #303030;
+  width: 100px;
+  color: #555555;
+}
+
+/* ---------- Header ---------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.header-main {
+  padding-left: 100px;
+  padding-right: 17px;
+  flex-grow: 1;
+  outline: auto;
+}
+
 /* ---------- Hero ---------- */
 .hero {
   height: 680px;
-  gap: 0;
   color: #9DA4BD;
 }
 
-/* Hero sidebar */
 .hero-sidebar {
-  width: 155px;
   padding: 32px 31px 40px 0;
 }
 
@@ -300,13 +325,49 @@ h2.title {
   transform: rotate(-90deg);
 }
 
-/* Hero - main/slider */
 .hero-main {
-  width: 1070px;
-  background-image: url("../img/slider/slider-overlay.jpg");
-  background-size: cover;
-  padding: 40px 17px 40px 100px;
+  flex-grow: 1;
   gap: 184px;
+  position: relative;
+  padding: 0 20px 40px 100px;
+  background-color: #555555;
+  background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../img/slider/slider-img3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-pagination {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.slider-pagination-item {
+  width: 8px;
+  height: 2px;
+  background-color: currentColor;
+}
+.slider-pagination-item.active {
+  width: 18px;
+  background-color: #fff;
+}
+
+.slider-buttons {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  display: flex;
+  gap: 24px;
+}
+
+.slider-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
 }
 
 /* ---------- Sections other than Hero ---------- */

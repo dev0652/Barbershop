@@ -7,38 +7,80 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Barbershop</title>
 
-	<!-- ---------- CSS ---------- -->
-	<link rel="stylesheet" href="./css/main.min.css">
-
 	<!-- ---------- Fonts ---------- -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Open+Sans:wght@400;600;700&display=swap"
 		rel="stylesheet" />
+
+	<!-- ---------- CSS ---------- -->
+	<link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
+	<!-- ---------- Header ---------- -->
+	<header class="header" data-header>
 
-	<!-- <header>
+		<div class="container flex zero-gap">
 
-	</header> -->
+			<!-- Header sidebar with logo -->
+			<div class="sidebar">
+
+				<a class="link logo" href="./index.html"
+					aria-label="Barbershop logo: an old-fashioned razor-blade surrounded with text 'Gallery, Store & More'.">
+					<svg class="icon icon-logo" width="68" height="56">
+						<use href="./img/icons/symbol-defs.svg#icon-logo"></use>
+					</svg>
+				</a>
+
+			</div>
+
+			<div class="header-main flex space-between align-center">
+
+				<!-- Header navigation -->
+				<nav>
+					<ul class="markup-list flex header-nav">
+						<li>
+							<a class="link" href="#about">About</a>
+						</li>
+						<li>
+							<a class="link" href="#services">Services and prices</a>
+						</li>
+						<li>
+							<a class="link" href="#barbers">Barbers</a>
+						</li>
+						<li>
+							<a class="link" href="#contact-us">Contacts</a>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- Header contacts & button -->
+				<div class="header-contacts flex align-center">
+					<a class="link" href="tel:+380441111111">
+						+38 044 111 11 11
+					</a>
+
+					<button type="button" class="button">
+						Online-booking
+					</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</header>
 
 	<main>
-
 		<!-- ---------- Hero ---------- -->
-		<section class="hero dark flex container">
+		<section class="hero dark flex container zero-gap">
 
 			<!-- Hero sidebar -->
-			<aside class="hero-sidebar flex justify-end ">
+			<aside class="sidebar hero-sidebar flex justify-end ">
 
-				<div class="sidebar-content flex column space-between align-center">
-					<!-- Logo -->
-					<a class="link logo" href="./index.html"
-						aria-label="Site logo with an old-fashioned razor-blade and text 'Gallery, Store & More'.">
-						<svg class="icon icon-logo" width="69" height="55">
-							<use href="./img/icons/symbol-defs.svg#icon-logo"></use>
-						</svg>
-					</a>
+				<div class="sidebar-content flex column space-between justify-end">
 
 					<!-- Social media links - header -->
 					<ul class="markup-list flex follow-us prefix vertical">
@@ -57,44 +99,7 @@
 
 			</aside>
 
-			<div class="hero-main flex column">
-
-				<!-- Hero header -->
-				<header class="header flex space-between align-center">
-
-					<!-- Header navigation -->
-					<nav>
-						<ul class="markup-list flex header-nav">
-							<li>
-								<a class="link" href="#about">About</a>
-							</li>
-							<li>
-								<a class="link" href="#services">Services and prices</a>
-							</li>
-							<li>
-								<a class="link" href="#barbers">Barbers</a>
-							</li>
-							<li>
-								<a class="link" href="#contact-us">Contacts</a>
-							</li>
-						</ul>
-					</nav>
-
-					<!-- Header contacts & button -->
-					<div class="header-contacts flex align-center">
-
-						<a class="link" href="tel:+380441111111">
-							+38 044 111 11 11
-						</a>
-
-						<button type="button" class="button">
-							Online-booking
-						</button>
-
-					</div>
-				</header>
-
-				<!-- TODO: Slider -->
+			<div class="hero-main flex column justify-center">
 
 				<div class="flex column regular-spacing">
 					<p class="sup-heading prefix">
@@ -106,6 +111,21 @@
 						We work quickly, carefully and with style.
 					</p>
 				</div>
+
+				<!-- Slider pagination -->
+				<ul class="slider-pagination markup-list">
+					<li class="slider-pagination-item active"></li>
+					<li class="slider-pagination-item"></li>
+					<li class="slider-pagination-item"></li>
+				</ul>
+
+				<!-- Slider buttons -->
+				<ul class="slider-buttons markup-list">
+					<li><button class="slider-button" type="button">Back</button></li>
+					<li><button class="slider-button" type="button">Forward</button></li>
+				</ul>
+
+
 			</div>
 		</section>
 
