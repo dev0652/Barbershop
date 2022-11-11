@@ -54,6 +54,7 @@ address {
 /* SVG */
 /* Flex gap values */
 /* Variables for flex-basis calculation */
+/* Positioning */
 /* Utility classes */
 /* Remove markers in semantic ul's and ol's */
 .markup-list {
@@ -295,9 +296,12 @@ h2.title {
   padding-top: 40px;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1;
   width: 100%;
   padding-right: 17px;
+}
+.header.no-transparency {
+  background-color: rgba(48, 48, 48, 0.6117647059);
 }
 
 /* ---------- Hero ---------- */
@@ -333,7 +337,7 @@ h2.title {
 
 .slider-pagination {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 15px);
   right: 20px;
   display: flex;
   flex-direction: column;

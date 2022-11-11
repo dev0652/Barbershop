@@ -3,10 +3,9 @@
 $accent: #FF6C00;
 $contrast: #fff;
 
-$darker: #303030;
 $dark: #555555;
+$darker: #303030;
 $light: #9DA4BD;
-$red: red;
 
 $light-transp: rgba(157, 164, 189, 0.6);
 $price-leader: rgba(157, 164, 189, 0.12);
@@ -32,3 +31,8 @@ $list-icon-spacing: 16px;
 $items-per-row: 3;
 $spacing: $regular-gap;
 $number-of-gaps: $items-per-row - 1;
+
+/* Positioning */
+
+$z-header: 1;
+// $z-modal:

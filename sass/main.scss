@@ -173,10 +173,16 @@ h2.title {
 	// position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 10;
+	z-index: $z-header;
 	width: 100%;
 	padding-right: 17px;
+
+	&.no-transparency {
+		background-color: #3030309c;
+	}
 }
+
+
 
 // .header-main {
 // 	padding-left: 100px;
@@ -226,7 +232,7 @@ h2.title {
 
 .slider-pagination {
 	position: absolute;
-	top: 50%;
+	top: calc(50% - 15px);
 	right: 20px;
 
 	// margin-left: auto;
