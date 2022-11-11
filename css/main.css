@@ -300,7 +300,7 @@ h2.title {
   padding: 40px 17px 20px 0;
 }
 .header.no-transparency {
-  background-color: rgba(25, 28, 38, 0.8);
+  background-color: rgba(17, 19, 25, 0.8);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
 }
@@ -367,35 +367,30 @@ h2.title {
   gap: 24px;
 }
 
-.slider-buttons li {
-  outline: 1px solid red;
-  position: relative;
-}
-
-.slider-buttons li::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background: #fff;
-  margin-bottom: -20px;
-}
-
 .slider-btn {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.3636363636;
+  letter-spacing: 0.1em;
   color: #fff;
   background-color: transparent;
+  width: 60px;
+  padding-bottom: 8px;
   border: none;
+  border-bottom: 1px solid currentColor;
 }
-.slider-btn.inactive {
-  color: rgba(157, 164, 189, 0.6);
+.slider-btn:hover, .slider-btn:focus {
+  color: #fff;
 }
 .slider-btn.prev {
   text-align: left;
 }
 .slider-btn.next {
   text-align: right;
+}
+.slider-btn[disabled] {
+  color: rgba(157, 164, 189, 0.6);
+  cursor: auto;
 }
 
 /* ---------- Sections other than Hero ---------- */

@@ -181,17 +181,14 @@ h2.title {
 	&.no-transparency {
 
 		// background-color: $bg-dark;
-		background-color: rgba(25, 28, 38, 0.8);
+		background-color: rgba(17, 19, 25, 0.8);
 		backdrop-filter: blur(3px);
-
-
 
 		& .icon-logo {
 			fill: $contrast;
 		}
 	}
 }
-
 
 // .header-main {
 // 	padding-left: 100px;
@@ -272,38 +269,24 @@ h2.title {
 	gap: 24px;
 }
 
-.slider-buttons li {
-	outline: 1px solid red;
-	position: relative;
-}
-
-.slider-buttons li::after {
-
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: 0;
-
-	width: 100%;
-	height: 1px;
-	background: $contrast;
-	margin-bottom:
-		-20px;
-}
 
 .slider-btn {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15/11);
+	letter-spacing: 0.1em;
+
 	color: $contrast;
 	background-color: transparent;
+
+	width: 60px;
+	padding-bottom: 8px;
 	border: none;
-	// position: relative;
+	border-bottom: 1px solid currentColor;
 
-	// &:hover,
-	// &:focus {
-	// 	color: $contrast;
-	// }
-
-	&.inactive {
-		color: $light-transp;
+	&:hover,
+	&:focus {
+		color: $contrast;
 	}
 
 	&.prev {
@@ -312,6 +295,12 @@ h2.title {
 
 	&.next {
 		text-align: right;
+	}
+
+	&[disabled] {
+		color: $light-transp;
+		// cursor: not-allowed;
+		cursor: auto;
 	}
 }
 
