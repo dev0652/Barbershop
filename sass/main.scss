@@ -167,21 +167,30 @@ h2.title {
 /* ---------- Header ---------- */
 
 .header {
-	// background-color: $dark;
 	position: fixed;
-	padding-top: 40px;
-	// position: sticky;
 	top: 0;
 	left: 0;
 	z-index: $z-header;
+
 	width: 100%;
-	padding-right: 17px;
+	// padding-right: 17px;
+	// padding-top: 40px;
+	// padding-bottom: 20px;
+	padding: 40px 17px 20px 0;
 
 	&.no-transparency {
-		background-color: #3030309c;
+
+		// background-color: $bg-dark;
+		background-color: rgba(25, 28, 38, 0.8);
+		backdrop-filter: blur(3px);
+
+
+
+		& .icon-logo {
+			fill: $contrast;
+		}
 	}
 }
-
 
 
 // .header-main {

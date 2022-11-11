@@ -293,15 +293,19 @@ h2.title {
 /* ---------- Header ---------- */
 .header {
   position: fixed;
-  padding-top: 40px;
   top: 0;
   left: 0;
   z-index: 1;
   width: 100%;
-  padding-right: 17px;
+  padding: 40px 17px 20px 0;
 }
 .header.no-transparency {
-  background-color: rgba(48, 48, 48, 0.6117647059);
+  background-color: rgba(25, 28, 38, 0.8);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+.header.no-transparency .icon-logo {
+  fill: #fff;
 }
 
 /* ---------- Hero ---------- */
