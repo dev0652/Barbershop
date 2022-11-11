@@ -359,10 +359,13 @@ h2.title {
   gap: 24px;
 }
 
-.slider-button {
+.slider-nav-button {
+  color: rgba(157, 164, 189, 0.6);
   background-color: transparent;
-  color: #fff;
   border: none;
+}
+.slider-nav-button:hover, .slider-nav-button:focus {
+  color: #fff;
 }
 
 /* ---------- Sections other than Hero ---------- */

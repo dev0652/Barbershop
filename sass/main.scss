@@ -229,6 +229,8 @@ h2.title {
 	top: 50%;
 	right: 20px;
 
+	// margin-left: auto;
+
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -255,10 +257,17 @@ h2.title {
 	gap: 24px;
 }
 
-.slider-button {
+.slider-nav-button {
+	color: $light-transp;
 	background-color: transparent;
-	color: $contrast;
 	border: none;
+
+	&::after {}
+
+	&:hover,
+	&:focus {
+		color: $contrast;
+	}
 }
 
 /* ---------- Sections other than Hero ---------- */
