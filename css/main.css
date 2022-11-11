@@ -367,13 +367,35 @@ h2.title {
   gap: 24px;
 }
 
-.slider-nav-button {
-  color: rgba(157, 164, 189, 0.6);
+.slider-buttons li {
+  outline: 1px solid red;
+  position: relative;
+}
+
+.slider-buttons li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  margin-bottom: -20px;
+}
+
+.slider-btn {
+  color: #fff;
   background-color: transparent;
   border: none;
 }
-.slider-nav-button:hover, .slider-nav-button:focus {
-  color: #fff;
+.slider-btn.inactive {
+  color: rgba(157, 164, 189, 0.6);
+}
+.slider-btn.prev {
+  text-align: left;
+}
+.slider-btn.next {
+  text-align: right;
 }
 
 /* ---------- Sections other than Hero ---------- */
