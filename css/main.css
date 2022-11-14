@@ -46,10 +46,6 @@ address {
   font-style: normal;
 }
 
-:focus {
-  outline: none;
-}
-
 /* Color variables */
 /* SVG */
 /* Flex gap values */
