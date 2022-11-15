@@ -155,6 +155,85 @@ address {
   text-transform: lowercase;
 }
 
+/* ---------- Animations ---------- */
+@-webkit-keyframes top-to-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes top-to-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes bottom-to-top {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bottom-to-top {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /* ---------- Common ---------- */
 :root {
   font-family: "Open Sans", sans-serif;
@@ -315,6 +394,18 @@ h2.title {
 .hero {
   height: 680px;
   color: #9DA4BD;
+}
+.hero .sup-heading {
+  -webkit-animation: top-to-bottom 1000ms ease 100ms both;
+          animation: top-to-bottom 1000ms ease 100ms both;
+}
+.hero h1 {
+  -webkit-animation: left-to-right 1000ms ease 1200ms both;
+          animation: left-to-right 1000ms ease 1200ms both;
+}
+.hero .sub-heading {
+  -webkit-animation: bottom-to-top 1000ms ease 2200ms both;
+          animation: bottom-to-top 1000ms ease 2200ms both;
 }
 
 .hero-sidebar {
@@ -552,6 +643,13 @@ h2.title {
 .contacts .icon {
   fill: transparent;
   stroke: currentColor;
+}
+
+.rotatable {
+  transition: transform 200ms ease-in-out 10ms;
+}
+.icon-transformable:hover .rotatable, .icon-transformable:focus .rotatable {
+  transform: rotate(360deg);
 }
 
 /* ---------- Contact us ---------- */

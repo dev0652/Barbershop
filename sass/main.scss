@@ -1,7 +1,7 @@
 @import "../../_sass/normalize";
 @import "variables";
 @import "../../_sass/utilities";
-// @import "icons";
+@import "animations";
 
 /* ---------- Common ---------- */
 
@@ -41,6 +41,7 @@ body {
 }
 
 /* ---------- Links ---------- */
+
 
 .link {
 	font-weight: 600;
@@ -213,6 +214,18 @@ h2.title {
 	height: 680px;
 	// gap: 0;
 	color: $light;
+
+	.sup-heading {
+		animation: top-to-bottom 1000ms ease 100ms both;
+	}
+
+	h1 {
+		animation: left-to-right 1000ms ease 1200ms both;
+	}
+
+	.sub-heading {
+		animation: bottom-to-top 1000ms ease 2200ms both;
+	}
 }
 
 .hero-sidebar {
@@ -510,6 +523,16 @@ h2.title {
 	.contacts & {
 		fill: transparent;
 		stroke: currentColor;
+	}
+}
+
+.rotatable {
+	transition: transform 200ms ease-in-out 10ms;
+
+	.icon-transformable:hover &,
+	.icon-transformable:focus & {
+		transform: rotate(360deg);
+		// animation: iconScroll 2500ms;
 	}
 }
 
