@@ -47,6 +47,8 @@ body {
 	font-size: 16px;
 	color: $darker;
 
+	transition: color $transition-duration $transition-timing-function;
+
 	.header & {
 		color: $contrast;
 	}
@@ -79,17 +81,24 @@ body {
 .button {
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
-	background-color: transparent;
+
 	border: 1px solid $accent;
 	border-radius: 25px;
-	padding: 12px 20px;
+
 	min-width: 160px;
+	padding: 12px 20px;
+
 	color: $darker;
+	background-color: transparent;
+
+	transition:
+		color $transition-duration $transition-timing-function,
+		background-color $transition-duration $transition-timing-function;
 
 	&:hover,
 	&:focus {
 		color: $contrast;
-		background: $accent;
+		background-color: $accent;
 	}
 
 	.dark & {
@@ -284,10 +293,13 @@ h2.title {
 	border: none;
 	border-bottom: 1px solid currentColor;
 
-	&:hover,
-	&:focus {
-		color: $contrast;
-	}
+	// transition:
+	// 	color $transition-duration $transition-timing-function;
+
+	// &:hover,
+	// &:focus {
+	// 	color: $contrast;
+	// }
 
 	&.prev {
 		text-align: left;
@@ -489,6 +501,7 @@ h2.title {
 .icon {
 	// display: block;
 	fill: currentColor;
+	// transition: fill $transition-duration $transition-timing-function;
 
 	&.icon-logo {
 		fill: $darker;
@@ -530,6 +543,10 @@ h2.title {
 
 	border: none;
 	border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+	transition:
+		color $transition-duration $transition-timing-function,
+		border-color $transition-duration $transition-timing-function;
 
 	&::placeholder {
 		color: inherit;
