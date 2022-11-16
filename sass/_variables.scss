@@ -27,7 +27,8 @@ $number-of-gaps: $items-per-row - 1;
 
 /* Positioning */
 $z-header: 1;
-// $z-modal:
+$z-backdrop: 10;
+$z-modal: 100;
 
 /* SVG */
 $icon-inactive: #000;
