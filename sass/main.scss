@@ -149,17 +149,23 @@ h2.title {
 
 .prefix {
 	display: flex;
+	// outline: auto;
 
 	&::before {
 		content: '';
 		width: 60px;
+		height: 1px;
+
+		align-self: center;
+
 		margin-right: $regular-spacing;
 
-		background: linear-gradient(to right, currentColor, currentColor);
+		// background: linear-gradient(to right, currentColor, currentColor);
 
-		background-size: 100% 1px;
-		background-position: 0% 51%;
-		background-repeat: repeat-x;
+		background-color: currentColor;
+		// background-size: 100% 1px;
+		// background-position: 0% 51%;
+		// background-repeat: repeat-x;
 	}
 }
 
@@ -229,6 +235,7 @@ h2.title {
 
 .hero-sidebar {
 	padding: 32px 31px 40px 0;
+	background-color: beige;
 }
 
 .sidebar-content {
@@ -575,7 +582,7 @@ h2.title {
 }
 
 .narrow {
-	height: 30px;
+	height: 24px;
 	flex-grow: 1;
 }
 
@@ -584,8 +591,10 @@ h2.title {
 	height: 100%;
 
 	font-size: inherit;
+	font-family: "Open Sans";
+
 	background-color: inherit;
-	color: currentColor;
+	color: $light;
 
 	border: none;
 	border-bottom: 1px solid currentColor;
@@ -611,19 +620,19 @@ h2.title {
 	top: 0;
 	left: 0;
 
-	transition:
-		color $transition-duration $transition-timing-function,
+	transition: color $transition-duration $transition-timing-function,
 		transform $transition-duration $transition-timing-function;
 
 	.text-field:focus+&,
 	.text-field:not(:placeholder-shown)+& {
-		transform: translateY(-20px);
+		// transform: translateY(-20px);
+		transform: translateY(-1.4em);
 		color: $contrast;
 	}
-}
 
-.starred::after {
-	content: '*';
+	.text-field:required+&::after {
+		content: '*';
+	}
 }
 
 .message-field {

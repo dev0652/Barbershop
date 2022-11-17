@@ -358,11 +358,10 @@ h2.title {
 .prefix::before {
   content: "";
   width: 60px;
+  height: 1px;
+  align-self: center;
   margin-right: 20px;
-  background: linear-gradient(to right, currentColor, currentColor);
-  background-size: 100% 1px;
-  background-position: 0% 51%;
-  background-repeat: repeat-x;
+  background-color: currentColor;
 }
 
 /* White "sidebar" in header and hero */
@@ -410,6 +409,7 @@ h2.title {
 
 .hero-sidebar {
   padding: 32px 31px 40px 0;
+  background-color: beige;
 }
 
 .sidebar-content {
@@ -685,7 +685,7 @@ h2.title {
 }
 
 .narrow {
-  height: 30px;
+  height: 24px;
   flex-grow: 1;
 }
 
@@ -693,8 +693,9 @@ h2.title {
   width: 100%;
   height: 100%;
   font-size: inherit;
+  font-family: "Open Sans";
   background-color: inherit;
-  color: currentColor;
+  color: #9DA4BD;
   border: none;
   border-bottom: 1px solid currentColor;
   transition: border-color 300ms ease-in-out;
@@ -716,19 +717,18 @@ h2.title {
   transition: color 300ms ease-in-out, transform 300ms ease-in-out;
 }
 .text-field:not(:-moz-placeholder-shown) + .hovering-label {
-  transform: translateY(-20px);
+  transform: translateY(-1.4em);
   color: #fff;
 }
 .text-field:not(:-ms-input-placeholder) + .hovering-label {
-  transform: translateY(-20px);
+  transform: translateY(-1.4em);
   color: #fff;
 }
 .text-field:focus + .hovering-label, .text-field:not(:placeholder-shown) + .hovering-label {
-  transform: translateY(-20px);
+  transform: translateY(-1.4em);
   color: #fff;
 }
-
-.starred::after {
+.text-field:required + .hovering-label::after {
   content: "*";
 }
 
