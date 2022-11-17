@@ -597,11 +597,6 @@ h2.title {
 	&:focus {
 		border-color: $contrast;
 	}
-
-	// &:focus+.hovering-label {
-	// 	transform: translateY(-20px);
-	// 	color: $contrast;
-	// }
 }
 
 .hovering-label {
@@ -620,7 +615,8 @@ h2.title {
 		color $transition-duration $transition-timing-function,
 		transform $transition-duration $transition-timing-function;
 
-	.text-field:focus+& {
+	.text-field:focus+&,
+	.text-field:not(:placeholder-shown)+& {
 		transform: translateY(-20px);
 		color: $contrast;
 	}
