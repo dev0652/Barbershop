@@ -487,18 +487,31 @@
 						</h2>
 
 						<form class="booking-form flex column large-spacing" name="booking_form" autocomplete="off">
-							<div class="flex">
-								<input type="text" class="field narrow" name="name" placeholder="Name*" required>
 
-								<input type="tel" class="field narrow" name="phone" placeholder="Phone*" required>
+							<div class="text-fields" role="group">
+
+								<div class="flex">
+
+									<div class="text-field-wrapper narrow">
+										<label for="name" class="hovering-label starred">Name</label>
+										<input type="text" class="text-field" name="name" id="name" required>
+									</div>
+
+									<div class="text-field-wrapper narrow">
+										<label for="phone" class="hovering-label starred">Phone</label>
+										<input type="tel" class="text-field" name="phone" id="phone" required>
+									</div>
+								</div>
+
+								<div class="text-field-wrapper wide">
+									<label for="message" class="hovering-label">Message</label>
+									<textarea class="text-field message-field" name="message" rows="4" id="message"></textarea>
+								</div>
+
+								<div>
+									<button type="submit" class="button">Send</button>
+								</div>
 							</div>
-
-							<textarea class="field wide" name="message" rows="4" placeholder="Message"></textarea>
-
-							<div>
-								<button type="submit" class="button">Send</button>
-							</div>
-
 						</form>
 
 					</div>
