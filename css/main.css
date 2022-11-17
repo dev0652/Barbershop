@@ -683,20 +683,10 @@ h2.title {
 .text-field-wrapper:hover, .text-field-wrapper:focus {
   color: #fff;
 }
-.text-field-wrapper .hovering-label {
-  font-family: "Open Sans";
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.3636363636;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: color 300ms ease-out;
-}
-.text-field-wrapper .starred::after {
-  content: "*";
+
+.narrow {
+  height: 30px;
+  flex-grow: 1;
 }
 
 .text-field {
@@ -713,9 +703,25 @@ h2.title {
   border-color: #fff;
 }
 
-.narrow {
-  height: 30px;
-  flex-grow: 1;
+.hovering-label {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.3636363636;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: color 300ms ease-out, transform 300ms ease-out;
+}
+.text-field:focus + .hovering-label {
+  transform: translateY(-20px);
+  color: #fff;
+}
+
+.starred::after {
+  content: "*";
 }
 
 .message-field {

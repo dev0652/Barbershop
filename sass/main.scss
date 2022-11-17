@@ -572,26 +572,11 @@ h2.title {
 	&:focus {
 		color: $contrast;
 	}
+}
 
-	.hovering-label {
-		font-family: "Open Sans";
-		font-weight: 600;
-		font-size: 11px;
-		line-height: calc(15/11);
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-
-		transition:
-			color $transition-duration $transition-timing-function;
-	}
-
-	.starred::after {
-		content: '*';
-	}
+.narrow {
+	height: 30px;
+	flex-grow: 1;
 }
 
 .text-field {
@@ -612,11 +597,37 @@ h2.title {
 	&:focus {
 		border-color: $contrast;
 	}
+
+	// &:focus+.hovering-label {
+	// 	transform: translateY(-20px);
+	// 	color: $contrast;
+	// }
 }
 
-.narrow {
-	height: 30px;
-	flex-grow: 1;
+.hovering-label {
+	font-family: "Open Sans";
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15/11);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	transition:
+		color $transition-duration $transition-timing-function,
+		transform $transition-duration $transition-timing-function;
+
+	.text-field:focus+& {
+		transform: translateY(-20px);
+		color: $contrast;
+	}
+}
+
+.starred::after {
+	content: '*';
 }
 
 .message-field {
