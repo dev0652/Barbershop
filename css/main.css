@@ -33,12 +33,10 @@ html {
 /* SVG */
 /* Transitions */
 /* Utility classes */
-/* Remove markers in semantic ul's and ol's */
 .markup-list {
   list-style: none;
 }
 
-/* Flex-boxes */
 .flex {
   display: flex;
 }
@@ -79,7 +77,12 @@ html {
   gap: 44px;
 }
 
-/* Other */
+.flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .relative {
   position: relative;
 }
@@ -103,12 +106,6 @@ html {
   text-decoration: underline;
 }
 
-/* Get rid of user-agent-defined spacing after list items and images by changing their display to "block" */
-.no-end-spacing {
-  display: block;
-}
-
-/* For testing */
 .outline {
   outline: auto;
 }
@@ -117,7 +114,6 @@ html {
   outline: 1px solid steelblue;
 }
 
-/* Colors */
 .black {
   color: black;
 }
@@ -126,7 +122,6 @@ html {
   color: white;
 }
 
-/* Letter case */
 .uppercase {
   text-transform: uppercase;
 }
