@@ -26,30 +26,6 @@ html {
   padding: 0;
 }
 
-/* My rules */
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  background-color: transparent;
-  text-decoration: none;
-  color: inherit;
-}
-
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  cursor: pointer;
-  font-family: inherit;
-  text-align: center;
-}
-
-address {
-  font-style: normal;
-}
-
 /* Colors */
 /* Flex gap values */
 /* Variables for flex-basis calculation */
@@ -121,6 +97,10 @@ address {
   margin: 0;
   border: none;
   overflow: hidden;
+}
+
+.underlined {
+  text-decoration: underline;
 }
 
 /* Get rid of user-agent-defined spacing after list items and images by changing their display to "block" */
@@ -277,7 +257,7 @@ body {
 .header .link {
   color: #fff;
 }
-.contacts-list .link {
+.link.contacts-link {
   color: #9DA4BD;
 }
 .link:hover, .link:focus {
@@ -408,18 +388,21 @@ h2.title {
 }
 
 .hero-sidebar {
-  padding: 32px 31px 40px 0;
   background-color: beige;
 }
 
 .sidebar-content {
-  width: 69px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
   height: 100%;
-  padding-bottom: 120px;
+  background-color: steelblue;
 }
 
 .vertical {
   transform: rotate(-90deg);
+  transform-origin: bottom left;
+  align-items: center;
 }
 
 .hero-main {
@@ -637,10 +620,12 @@ h2.title {
 .icon {
   fill: currentColor;
 }
-.icon.icon-logo {
+
+.icon-logo {
   fill: #303030;
 }
-.contacts .icon {
+
+.contacts-icon {
   fill: transparent;
   stroke: currentColor;
 }
@@ -703,6 +688,9 @@ h2.title {
 .text-field:hover, .text-field:focus {
   border-color: #fff;
 }
+.text-field:focus {
+  outline: none;
+}
 
 .hovering-label {
   font-family: "Open Sans";
@@ -745,13 +733,12 @@ h2.title {
 .contacts-list {
   margin-top: 40px;
   margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.contacts-list li {
+.contacts-list .contacts-list-item {
   line-height: 1.6666666667;
-}
-
-.contacts-list li::marker {
-  background-image: url("../img/icons/symbol-defs.svg#icon-map-pin");
 }
 
 .contacts-link {
@@ -761,14 +748,16 @@ h2.title {
   align-items: center;
   gap: 16px;
 }
-
-.address-link {
+.contacts-link.address-link {
   font-weight: 700;
 }
-
-.email-link {
+.contacts-link.email-link {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.contacts-list-item:first-child .contacts-icon {
+  transform: translateY(-13px);
 }
 
 /* ---------- Footer ---------- */
