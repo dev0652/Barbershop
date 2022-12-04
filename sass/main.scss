@@ -11,7 +11,7 @@
 
 body {
 	font-size: 18px;
-	line-height: calc(30/18);
+	line-height: calc(30 / 18);
 	letter-spacing: 0.02em;
 	background-color: $bg-default;
 }
@@ -19,7 +19,7 @@ body {
 .container {
 	$padding: 15px;
 
-	width: calc(1170px + $padding*2);
+	width: calc(1170px + $padding * 2);
 	padding-left: $padding;
 	padding-right: $padding;
 	margin-left: auto;
@@ -41,7 +41,6 @@ body {
 }
 
 /* ---------- Links ---------- */
-
 
 .link {
 	font-weight: 600;
@@ -72,7 +71,7 @@ body {
 .copyright {
 	font-weight: 600;
 	font-size: 11px;
-	line-height: calc(15/11);
+	line-height: calc(15 / 11);
 	letter-spacing: 0.2em;
 }
 
@@ -91,8 +90,7 @@ body {
 	color: $darker;
 	background-color: transparent;
 
-	transition:
-		color $transition-duration $transition-timing-function,
+	transition: color $transition-duration $transition-timing-function,
 		background-color $transition-duration $transition-timing-function;
 
 	&:hover,
@@ -109,7 +107,7 @@ body {
 /* ---------- Headings ---------- */
 
 .title {
-	font-family: 'Raleway';
+	font-family: "Raleway";
 	font-weight: 700;
 	letter-spacing: 0.05em;
 	color: $darker;
@@ -121,18 +119,18 @@ body {
 
 h1.title {
 	font-size: 72px;
-	line-height: calc(85/72);
+	line-height: calc(85 / 72);
 }
 
 h2.title {
 	font-size: 42px;
-	line-height: calc(49/42);
+	line-height: calc(49 / 42);
 }
 
 .sup-heading {
 	font-weight: 600;
 	font-size: 11px;
-	line-height: calc(15/11);
+	line-height: calc(15 / 11);
 	text-transform: uppercase;
 	color: $darker;
 
@@ -151,20 +149,13 @@ h2.title {
 	display: flex;
 
 	&::before {
-		content: '';
+		content: "";
 		width: 60px;
 		height: 1px;
 
 		align-self: center;
-
 		margin-right: $regular-spacing;
-
-		// background: linear-gradient(to right, currentColor, currentColor);
-
 		background-color: currentColor;
-		// background-size: 100% 1px;
-		// background-position: 0% 51%;
-		// background-repeat: repeat-x;
 	}
 }
 
@@ -192,7 +183,6 @@ h2.title {
 	padding: 40px 17px 20px 0;
 
 	&.no-transparency {
-
 		// background-color: $bg-dark;
 		background-color: rgba(17, 19, 25, 0.8);
 		backdrop-filter: blur(3px);
@@ -253,8 +243,6 @@ h2.title {
 	// margin-bottom: 40px;
 }
 
-
-
 .hero-main {
 	// width: 1070px;
 	flex-grow: 1;
@@ -264,7 +252,12 @@ h2.title {
 	padding: 0 20px 40px 100px;
 
 	background-color: $dark;
-	background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url('../img/slider/slider-img3.jpg');
+	background-image: linear-gradient(
+			to right,
+			rgba(25, 28, 38, 0.2),
+			rgba(25, 28, 38, 0.2)
+		),
+		url("../img/slider/slider-img3.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -304,11 +297,10 @@ h2.title {
 	gap: 24px;
 }
 
-
 .slider-btn {
 	font-weight: 600;
 	font-size: 11px;
-	line-height: calc(15/11);
+	line-height: calc(15 / 11);
 	letter-spacing: 0.1em;
 
 	color: $contrast;
@@ -342,7 +334,6 @@ h2.title {
 	}
 }
 
-
 /* ---------- Sections other than Hero ---------- */
 
 .section {
@@ -374,7 +365,7 @@ h2.title {
 
 .description {
 	font-size: 14px;
-	line-height: calc(26/14);
+	line-height: calc(26 / 14);
 
 	/* Additional margin */
 	margin-bottom: calc(42px - 20px);
@@ -390,7 +381,11 @@ h2.title {
 	margin: 0 auto;
 
 	background-color: $bg-dark;
-	background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)), url('../img/services-and-prices.jpg');
+	background-image: linear-gradient(
+			rgba(17, 19, 25, 0.8),
+			rgba(17, 19, 25, 0.8)
+		),
+		url("../img/services-and-prices.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -406,7 +401,12 @@ h2.title {
 	columns: 2;
 	column-gap: 30px;
 
-	background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%), linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+	background-image: linear-gradient(
+			180deg,
+			#171a24 0%,
+			rgba(23, 26, 36, 0.2) 100%
+		),
+		linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 	background-repeat: no-repeat;
 	background-position: left, right;
 	background-size: 570px 100%, 570px 100%;
@@ -455,7 +455,7 @@ h2.title {
 .stat-number {
 	font-weight: 700;
 	font-size: 42px;
-	line-height: calc(57/42);
+	line-height: calc(57 / 42);
 	letter-spacing: 0.05em;
 	margin-bottom: 6px;
 
@@ -470,7 +470,7 @@ h2.title {
 .stat-name {
 	font-weight: 600;
 	font-size: 11px;
-	line-height: calc(15/11);
+	line-height: calc(15 / 11);
 }
 
 /* ---------- Our barbers ---------- */
@@ -484,14 +484,14 @@ h2.title {
 }
 
 .name {
-	line-height: calc(25/18);
+	line-height: calc(25 / 18);
 	margin-bottom: 8px;
 	color: $darker;
 }
 
 .position {
 	font-size: 14px;
-	line-height: calc(19/14);
+	line-height: calc(19 / 14);
 	color: $accent;
 }
 
@@ -551,7 +551,11 @@ h2.title {
 
 .overlay-contacts {
 	background-color: $bg-dark;
-	background-image: linear-gradient(rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../img/contacts/bg.jpg");
+	background-image: linear-gradient(
+			rgba(25, 28, 38, 0.9),
+			rgba(25, 28, 38, 0.9)
+		),
+		url("../img/contacts/bg.jpg");
 	background-position: right;
 	background-repeat: no-repeat;
 	// background-size: contain;
@@ -604,8 +608,7 @@ h2.title {
 	border: none;
 	border-bottom: 1px solid currentColor;
 
-	transition:
-		border-color $transition-duration $transition-timing-function;
+	transition: border-color $transition-duration $transition-timing-function;
 
 	&:hover,
 	&:focus {
@@ -621,7 +624,7 @@ h2.title {
 	font-family: "Open Sans";
 	font-weight: 600;
 	font-size: 11px;
-	line-height: calc(15/11);
+	line-height: calc(15 / 11);
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 
@@ -632,15 +635,15 @@ h2.title {
 	transition: color $transition-duration $transition-timing-function,
 		transform $transition-duration $transition-timing-function;
 
-	.text-field:focus+&,
-	.text-field:not(:placeholder-shown)+& {
+	.text-field:focus + &,
+	.text-field:not(:placeholder-shown) + & {
 		// transform: translateY(-20px);
 		transform: translateY(-1.4em);
 		color: $contrast;
 	}
 
-	.text-field:required+&::after {
-		content: '*';
+	.text-field:required + &::after {
+		content: "*";
 	}
 }
 
@@ -664,7 +667,7 @@ h2.title {
 	gap: $regular-spacing;
 
 	.contacts-list-item {
-		line-height: calc(30/18);
+		line-height: calc(30 / 18);
 	}
 }
 
@@ -696,7 +699,7 @@ h2.title {
 	color: $light;
 	font-weight: 600;
 	font-size: 11px;
-	line-height: calc(15/11);
+	line-height: calc(15 / 11);
 }
 
 /* ---------- Modal window ---------- */
@@ -713,8 +716,7 @@ h2.title {
 	background-color: rgba(17, 19, 25, 0.4);
 	backdrop-filter: blur(2px);
 
-	transition:
-		opacity $transition-duration $transition-timing-function,
+	transition: opacity $transition-duration $transition-timing-function,
 		visibility $transition-duration $transition-timing-function;
 
 	&.is-hidden {
@@ -737,7 +739,6 @@ h2.title {
 	box-shadow: 2px 2px 2px darkgray;
 
 	background-color: $bg-default;
-
 }
 
 .modal-close-button {

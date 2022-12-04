@@ -577,8 +577,8 @@ h2.title {
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#171A24), to(rgba(23, 26, 36, 0.2))), -webkit-gradient(linear, left top, left bottom, from(#090B13), to(rgba(9, 11, 19, 0.2)));
-  background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%), linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2))), -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%), linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
   background-repeat: no-repeat;
   background-position: left, right;
   background-size: 570px 100%, 570px 100%;
