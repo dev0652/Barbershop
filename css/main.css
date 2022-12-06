@@ -28,12 +28,37 @@ html {
   padding: 0;
 }
 
-/* Colors */
+/* My defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+
 /* Flex gap values */
-/* Variables for flex-basis calculation */
-/* Positioning */
-/* SVG */
-/* Transitions */
 /* Utility classes */
 .markup-list {
   list-style: none;
@@ -157,97 +182,6 @@ html {
   text-transform: lowercase;
 }
 
-/* ---------- Animations ---------- */
-@-webkit-keyframes top-to-bottom {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
-  }
-  50% {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-@keyframes top-to-bottom {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
-  }
-  50% {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-@-webkit-keyframes bottom-to-top {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(150px);
-            transform: translateY(150px);
-  }
-  50% {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-@keyframes bottom-to-top {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(150px);
-            transform: translateY(150px);
-  }
-  50% {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-@-webkit-keyframes left-to-right {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(-250px);
-            transform: translateX(-250px);
-  }
-  50% {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-@keyframes left-to-right {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(-250px);
-            transform: translateX(-250px);
-  }
-  50% {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
 /* ---------- Common ---------- */
 :root {
   font-family: "Open Sans", sans-serif;
@@ -269,7 +203,7 @@ body {
 }
 
 .bg-dark {
-  background-color: #191C26;
+  background-color: #191c26;
 }
 
 /* Flex gap values */
@@ -293,10 +227,10 @@ body {
   color: #fff;
 }
 .link.contacts-link {
-  color: #9DA4BD;
+  color: #9da4bd;
 }
 .link:hover, .link:focus {
-  color: #FF6C00;
+  color: #ff6c00;
 }
 
 .follow-us {
@@ -315,7 +249,7 @@ body {
 .button {
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  border: 1px solid #FF6C00;
+  border: 1px solid #ff6c00;
   border-radius: 25px;
   min-width: 160px;
   padding: 12px 20px;
@@ -326,7 +260,7 @@ body {
 }
 .button:hover, .button:focus {
   color: #fff;
-  background-color: #FF6C00;
+  background-color: #ff6c00;
 }
 .dark .button {
   color: #fff;
@@ -411,7 +345,7 @@ h2.title {
 /* ---------- Hero ---------- */
 .hero {
   height: 680px;
-  color: #9DA4BD;
+  color: #9da4bd;
 }
 .hero .sup-heading {
   -webkit-animation: top-to-bottom 1000ms ease 100ms both;
@@ -535,7 +469,7 @@ h2.title {
   color: #555555;
 }
 .section.light {
-  color: #9DA4BD;
+  color: #9da4bd;
 }
 .section.with-overlay {
   padding: 0px;
@@ -560,7 +494,7 @@ h2.title {
   padding-top: 120px;
   padding-bottom: 120px;
   margin: 0 auto;
-  background-color: #191C26;
+  background-color: #191c26;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 19, 25, 0.8)), to(rgba(17, 19, 25, 0.8))), url("../img/services-and-prices.jpg");
   background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)), url("../img/services-and-prices.jpg");
   background-repeat: no-repeat;
@@ -587,7 +521,7 @@ h2.title {
 }
 
 .price-list {
-  color: #9DA4BD;
+  color: #9da4bd;
 }
 .price-list li {
   margin: 0 20px;
@@ -618,7 +552,7 @@ h2.title {
   text-align: center;
   padding: 20px 24px;
   color: #303030;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 .stat:nth-child(odd) {
   margin-top: -30px;
@@ -634,7 +568,7 @@ h2.title {
 .stat-number:after {
   content: "+";
   font-size: 16px;
-  color: #FF6C00;
+  color: #ff6c00;
   vertical-align: top;
 }
 
@@ -646,7 +580,7 @@ h2.title {
 
 /* ---------- Our barbers ---------- */
 .barbers {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 .team-card {
@@ -662,7 +596,7 @@ h2.title {
 .position {
   font-size: 14px;
   line-height: 1.3571428571;
-  color: #FF6C00;
+  color: #ff6c00;
 }
 
 .social-links {
@@ -688,7 +622,7 @@ h2.title {
           align-items: center;
 }
 .social-link:hover, .social-link:focus {
-  color: #FF6C00;
+  color: #ff6c00;
 }
 
 /* SVG icons */
@@ -718,7 +652,7 @@ h2.title {
 
 /* ---------- Contact us ---------- */
 .overlay-contacts {
-  background-color: #191C26;
+  background-color: #191c26;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../img/contacts/bg.jpg");
   background-image: linear-gradient(rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../img/contacts/bg.jpg");
   background-position: right;
@@ -767,7 +701,7 @@ h2.title {
   font-size: inherit;
   font-family: "Open Sans";
   background-color: inherit;
-  color: #9DA4BD;
+  color: #9da4bd;
   border: none;
   border-bottom: 1px solid currentColor;
   -webkit-transition: border-color 300ms ease-in-out;
@@ -819,7 +753,7 @@ h2.title {
 /* Right block - Contacts */
 .contacts {
   padding-left: 100px;
-  color: #9DA4BD;
+  color: #9da4bd;
 }
 
 .contacts-list {
@@ -865,7 +799,7 @@ h2.title {
 /* ---------- Footer ---------- */
 .footer {
   padding: 56px 215px;
-  color: #9DA4BD;
+  color: #9da4bd;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.3636363636;

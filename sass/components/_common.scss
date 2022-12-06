@@ -1,0 +1,155 @@
+/* ---------- Common ---------- */
+
+:root {
+	font-family: "Open Sans", sans-serif;
+}
+
+body {
+	font-size: 18px;
+	line-height: calc(30 / 18);
+	letter-spacing: 0.02em;
+	background-color: $bg-default;
+}
+
+.container {
+	$padding: 15px;
+
+	width: calc(1170px + $padding * 2);
+	padding-left: $padding;
+	padding-right: $padding;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bg-dark {
+	background-color: $bg-dark;
+}
+
+/* Flex gap values */
+
+.flex {
+	gap: $regular-gap;
+}
+
+.zero-gap {
+	gap: 0;
+}
+
+/* ---------- Links ---------- */
+
+.link {
+	font-weight: 600;
+	font-size: 16px;
+	color: $darker;
+
+	transition: color $transition-duration $transition-timing-function;
+
+	.header & {
+		color: $contrast;
+	}
+
+	&.contacts-link {
+		color: $light;
+	}
+
+	&:hover,
+	&:focus {
+		color: $accent;
+	}
+}
+
+.follow-us {
+	color: $darker;
+}
+
+.follow-us .link,
+.copyright {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15 / 11);
+	letter-spacing: 0.2em;
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+
+	border: 1px solid $accent;
+	border-radius: 25px;
+
+	min-width: 160px;
+	padding: 12px 20px;
+
+	color: $darker;
+	background-color: transparent;
+
+	transition: color $transition-duration $transition-timing-function,
+		background-color $transition-duration $transition-timing-function;
+
+	&:hover,
+	&:focus {
+		color: $contrast;
+		background-color: $accent;
+	}
+
+	.dark & {
+		color: $contrast;
+	}
+}
+
+/* ---------- Headings ---------- */
+
+.title {
+	font-family: "Raleway";
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	color: $darker;
+
+	.dark & {
+		color: $contrast;
+	}
+}
+
+h1.title {
+	font-size: 72px;
+	line-height: calc(85 / 72);
+}
+
+h2.title {
+	font-size: 42px;
+	line-height: calc(49 / 42);
+}
+
+.sup-heading {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15 / 11);
+	text-transform: uppercase;
+	color: $darker;
+
+	.dark & {
+		color: $light-transp;
+	}
+
+	.contacts & {
+		color: $contrast;
+	}
+}
+
+/* Thin line before sup-headings and follow-us links in hero sidebar) */
+
+.prefix {
+	display: flex;
+
+	&::before {
+		content: "";
+		width: 60px;
+		height: 1px;
+
+		align-self: center;
+		margin-right: $regular-spacing;
+		background-color: currentColor;
+	}
+}
