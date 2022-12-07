@@ -8,7 +8,7 @@
 	left: 0;
 	z-index: $z-header;
 
-	width: 100%;
+	width: 100vw;
 	padding: 40px 17px 20px 0;
 
 	&.no-transparency {
@@ -113,32 +113,22 @@
 	width: 100px;
 	color: $dark;
 	// padding: 32px 31px 40px 0;
-	background-color: beige;
+	padding-bottom: 40px;
+	padding-left: 27px;
+	display: flex;
 
 	@media screen and (max-width: ($tablet - 1px)) {
 		display: none;
 	}
 }
 
-.sidebar-content {
-	display: flex;
-	align-items: flex-end;
-	outline: auto;
-
-	width: 100%;
-	height: 100%;
-	padding-bottom: 40px;
-
-	background-color: steelblue;
-}
-
 .follow-us {
-	@extend .flex, .markup-list;
+	@extend .flex, .markup-list, .prefix;
 
+	gap: $double-spacing;
 	color: $darker;
 
-	.link,
-	.copyright {
+	&-link {
 		font-weight: 600;
 		// font-size: 11px;
 		// line-height: calc(15 / 11);
@@ -147,12 +137,16 @@
 	}
 
 	&.vertical {
-		// transform: rotate(-90deg);
-		// transform-origin: bottom left;
-
+		transform: rotate(270deg);
+		transform-origin: top left;
 		align-items: center;
+		margin-top: auto;
+	}
 
-		writing-mode: vertical-lr;
+	&.prefix {
+		::before {
+			margin-right: 0;
+		}
 	}
 }
 
@@ -189,7 +183,7 @@
 .hero-text-block {
 	display: flex;
 	flex-direction: column;
-	gap: $regular-spacing;
+	gap: $single-spacing;
 }
 
 // Slider
@@ -275,18 +269,22 @@
 
 /* ---------- Services and prices ---------- */
 
-.overlay-services {
-	// padding: 120px 215px;
-	padding-top: 120px;
-	padding-bottom: 120px;
-	margin: 0 auto;
+section.services {
+	@extend .with-overlay, .dark;
 
-	background-color: $bg-dark;
-	background-image: linear-gradient(rgba(#111319, 0.8), rgba(#111319, 0.8)),
-		url("../images/jpeg/services-and-prices.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	.overlay-services {
+		// padding: 120px 215px;
+		padding-top: 120px;
+		padding-bottom: 120px;
+		margin: 0 auto;
+
+		background-color: $bg-dark;
+		background-image: linear-gradient(rgba(#111319, 0.8), rgba(#111319, 0.8)),
+			url("../images/jpeg/services-and-prices.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
 }
 
 /* ---------- Price-list ---------- */
@@ -454,13 +452,17 @@
 
 /* ---------- Contact us ---------- */
 
-.overlay-contacts {
-	background-color: $bg-dark;
-	background-image: linear-gradient(rgba(#191c26, 0.9), rgba(#191c26, 0.9)),
-		url("../images/jpeg/contacts/bg.jpg");
-	background-position: right;
-	background-repeat: no-repeat;
-	// background-size: contain;
+section.contact-us {
+	@extend .with-overlay, .bg-dark;
+
+	.overlay {
+		background-color: $bg-dark;
+		background-image: linear-gradient(rgba(#191c26, 0.9), rgba(#191c26, 0.9)),
+			url("../images/jpeg/contacts/bg.jpg");
+		background-position: right;
+		background-repeat: no-repeat;
+		// background-size: contain;
+	}
 }
 
 .contacts-container {
@@ -567,7 +569,7 @@
 
 	display: flex;
 	flex-direction: column;
-	gap: $regular-spacing;
+	gap: $single-spacing;
 
 	.contacts-list-item {
 		line-height: calc(30 / 18);

@@ -29,9 +29,13 @@ $standard-radius: 4px;
 
 // Spacings
 $regular-gap: 30px;
-$regular-spacing: 20px;
+
+$single-spacing: 20px;
+$double-spacing: $single-spacing * 2;
+
 $large-spacing: 44px;
 $list-spacing: 10px;
+$list-icon-spacing: 16px;
 
 $header-items-spacing: 50px;
 $header-items-spacing-mobile: 32px;
@@ -42,15 +46,8 @@ $container-padding: 15px;
 $desktop-version-margin: 215px;
 
 $section-padding-mobile: 84px;
-$section-padding-tablet: $regular-spacing * 5;
-$section-padding-desktop: $regular-spacing * 6;
-
-// Flex gap values
-$regular-gap: 30px;
-$regular-spacing: 20px;
-$large-spacing: 44px;
-$list-spacing: 10px;
-$list-icon-spacing: 16px;
+$section-padding-tablet: $single-spacing * 5;
+$section-padding-desktop: $single-spacing * 6;
 
 // Positioning
 $z-header: 1;
