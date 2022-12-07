@@ -5,19 +5,22 @@
 }
 
 body {
-	font-size: 18px;
-	line-height: calc(30 / 18);
+	// font-size: 18px;
+	// line-height: calc(30 / 18);
+	@include fz-lh-rem(18, 30);
 	letter-spacing: 0.02em;
 	background-color: $bg-default;
 }
 
 .container {
+	// outline: auto;
+
 	padding-left: $container-padding;
 	padding-right: $container-padding;
 	margin-left: auto;
 	margin-right: auto;
 
-	@media screen and (max-width: ($tablet - 1px)) {
+	@media screen and (min-width: $mobile) {
 		width: $mobile;
 	}
 
@@ -131,14 +134,16 @@ body {
 .section-heading {
 	@extend %heading;
 
-	font-size: 42px;
-	line-height: calc(49 / 42);
+	// font-size: 42px;
+	// line-height: calc(49 / 42);
+	@include fz-lh-rem(42, 29);
 }
 
 .sup-heading {
 	font-weight: 600;
-	font-size: 11px;
-	line-height: calc(15 / 11);
+	// font-size: 11px;
+	// line-height: calc(15 / 11);
+	@include fz-lh-rem(11, 15);
 	text-transform: uppercase;
 	color: $darker;
 
@@ -146,10 +151,10 @@ body {
 		color: rgba($light, 0.6);
 	}
 
-	@extend .prefix;
+	@extend %prefix;
 }
 
-.prefix {
+%prefix {
 	// Thin line before sup-headings and follow-us links in hero sidebar)
 	display: flex;
 	align-items: center;
@@ -160,7 +165,7 @@ body {
 		height: 1px;
 
 		// align-self: center;
-		margin-right: $regular-spacing;
+		margin-right: $single-spacing;
 		background-color: currentColor;
 	}
 }
