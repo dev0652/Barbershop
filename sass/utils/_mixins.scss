@@ -56,6 +56,7 @@
 	$items-per-row-tablet,
 	$items-per-row-desktop
 ) {
+	//
 	@media screen and (max-width: ($tablet - 1px)) {
 		// flex-basis: 450px;
 		@include flex-basis($items-per-row-mobile);
@@ -72,18 +73,21 @@
 	}
 }
 
-// ...
+// Background image retinization
 
-// 	@media (min-device-pixel-ratio: 2),
-// (min-resolution: 192dpi),
-// (min-resolution: 2dppx) {
-// .box {
-//   background-image: url('photo@2x.png');
-// }
+@mixin image-retinization($path, $filename-2x, $filename-3x) {
+	//
+	@media (min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		//
+		background-image: url("#{$path}/#{$filename-2x}");
+	}
 
-// @media (min-device-pixel-ratio: 3),
-// (min-resolution: 288dpi),
-// (min-resolution: 3dppx) {
-// .box {
-//   background-image: url('photo@3x.png');
-// }
+	@media (min-device-pixel-ratio: 3),
+		(min-resolution: 288dpi),
+		(min-resolution: 3dppx) {
+		//
+		background-image: url("#{$path}/#{$filename-3x}");
+	}
+}

@@ -1,0 +1,161 @@
+/* ---------- Common ---------- */
+
+:root {
+	font-family: $primary-font;
+}
+
+body {
+	font-size: 18px;
+	line-height: calc(30 / 18);
+	letter-spacing: 0.02em;
+	background-color: $bg-default;
+}
+
+.container {
+	padding-left: $container-padding;
+	padding-right: $container-padding;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media screen and (max-width: ($tablet - 1px)) {
+		width: $mobile;
+	}
+
+	@media screen and (min-width: $tablet) {
+		width: $tablet;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: $desktop;
+	}
+}
+
+.section {
+	@media screen and (max-width: ($tablet - 1px)) {
+		padding-top: $section-padding-mobile 0;
+	}
+	@media screen and (min-width: $tablet) {
+		padding: $section-padding-tablet 0;
+	}
+	@media screen and (min-width: $desktop) {
+		padding: $section-padding-desktop 0;
+	}
+
+	&.dark {
+		color: $dark;
+	}
+
+	&.light {
+		color: $light;
+	}
+
+	&.with-overlay {
+		padding: 0px;
+	}
+}
+
+.bg-dark {
+	background-color: $bg-dark;
+}
+
+/* Links */
+
+.link {
+	font-weight: 600;
+	font-size: 16px;
+	color: $darker;
+
+	@include transition(color);
+
+	&:hover,
+	&:focus {
+		color: $accent;
+	}
+}
+
+/* SVG icons */
+
+.icon {
+	display: block;
+	fill: currentColor;
+
+	@include transition(fill);
+}
+
+/* Buttons */
+
+.button {
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+
+	border: 1px solid $accent;
+	border-radius: 25px;
+
+	min-width: 160px;
+	padding: 12px 20px;
+
+	color: $darker;
+	background-color: transparent;
+
+	@include transition-multiple(color, background-color);
+
+	&:hover,
+	&:focus {
+		color: $contrast;
+		background-color: $accent;
+	}
+
+	.dark & {
+		color: $contrast;
+	}
+}
+
+/* Headings */
+
+%heading {
+	font-family: $secondary-font;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	color: $darker;
+
+	.dark & {
+		color: $contrast;
+	}
+}
+
+.section-heading {
+	@extend %heading;
+
+	font-size: 42px;
+	line-height: calc(49 / 42);
+}
+
+.sup-heading {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: calc(15 / 11);
+	text-transform: uppercase;
+	color: $darker;
+
+	.dark & {
+		color: $light-transp;
+	}
+
+	@extend .prefix;
+}
+
+.prefix {
+	// Thin line before sup-headings and follow-us links in hero sidebar)
+	display: flex;
+	align-items: center;
+
+	&::before {
+		content: "";
+		width: 60px;
+		height: 1px;
+
+		// align-self: center;
+		margin-right: $regular-spacing;
+		background-color: currentColor;
+	}
+}
