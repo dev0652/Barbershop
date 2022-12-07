@@ -30,6 +30,11 @@ body {
 	}
 }
 
+.overlay {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
 .section {
 	@media screen and (max-width: ($tablet - 1px)) {
 		padding-top: $section-padding-mobile 0;
