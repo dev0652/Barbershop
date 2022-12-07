@@ -176,8 +176,12 @@
 	// 	),
 	// 	url("../images/jpeg/slider/slider-img.jpg");
 
-	// $path, $filename, $extension
-	@include bg-img-retina-2x-3x-w-gradient(images/jpeg/slider, slider-img, jpg);
+	// $gradient-color, $path (only additional folders), $filename (without ext), $extension (default: jpg)
+	@include bg-img-retina-2x-3x-w-gradient(
+		rgba(25, 28, 38, 0.2),
+		images/jpeg/slider,
+		slider-img
+	);
 }
 
 .hero-text-block {
