@@ -59,66 +59,66 @@ img {
 }
 
 /* Utility classes */
-.markup-list, .follow-us {
+.markup-list, .stats, .about-image-list, .follow-us {
   list-style: none;
 }
 
-.flex, .header-nav-list, .follow-us {
+.flex, .about-content, .about-image-list, section.about .container, section.about .header-container, section.about .hero, .header-nav-list, .follow-us {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.flex.column, .column.header-nav-list, .column.follow-us {
+.flex.column, .column.about-content, .column.about-image-list, section.about .column.container, section.about .column.header-container, section.about .column.hero, .column.header-nav-list, .column.follow-us {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.flex.space-between, .space-between.header-nav-list, .space-between.follow-us {
+.flex.space-between, .space-between.about-content, .space-between.about-image-list, section.about .space-between.container, section.about .space-between.header-container, section.about .space-between.hero, .space-between.header-nav-list, .space-between.follow-us {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.flex.space-around, .space-around.header-nav-list, .space-around.follow-us {
+.flex.space-around, .space-around.about-content, .space-around.about-image-list, section.about .space-around.container, section.about .space-around.header-container, section.about .space-around.hero, .space-around.header-nav-list, .space-around.follow-us {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.flex.justify-center, .justify-center.header-nav-list, .justify-center.follow-us {
+.flex.justify-center, .justify-center.about-content, .justify-center.about-image-list, section.about .justify-center.container, section.about .justify-center.header-container, section.about .justify-center.hero, .justify-center.header-nav-list, .justify-center.follow-us {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-.flex.justify-end, .justify-end.header-nav-list, .justify-end.follow-us {
+.flex.justify-end, .justify-end.about-content, .justify-end.about-image-list, section.about .justify-end.container, section.about .justify-end.header-container, section.about .justify-end.hero, .justify-end.header-nav-list, .justify-end.follow-us {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
 }
-.flex.align-center, .align-center.header-nav-list, .align-center.follow-us {
+.flex.align-center, .align-center.about-content, .align-center.about-image-list, section.about .align-center.container, section.about .align-center.header-container, section.about .align-center.hero, .align-center.header-nav-list, .align-center.follow-us {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.flex.align-end, .align-end.header-nav-list, .align-end.follow-us {
+.flex.align-end, .align-end.about-content, .align-end.about-image-list, section.about .align-end.container, section.about .align-end.header-container, section.about .align-end.hero, .align-end.header-nav-list, .align-end.follow-us {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
 }
-.flex.align-baseline, .align-baseline.header-nav-list, .align-baseline.follow-us {
+.flex.align-baseline, .align-baseline.about-content, .align-baseline.about-image-list, section.about .align-baseline.container, section.about .align-baseline.header-container, section.about .align-baseline.hero, .align-baseline.header-nav-list, .align-baseline.follow-us {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
 }
-.flex.wrap, .wrap.header-nav-list, .wrap.follow-us {
+.flex.wrap, .wrap.about-content, .wrap.about-image-list, section.about .wrap.container, section.about .wrap.header-container, section.about .wrap.hero, .wrap.header-nav-list, .wrap.follow-us {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.flex.regular-gap, .regular-gap.header-nav-list, .regular-gap.follow-us {
+.flex.regular-gap, .regular-gap.about-content, .regular-gap.about-image-list, section.about .regular-gap.container, section.about .regular-gap.header-container, section.about .regular-gap.hero, .regular-gap.header-nav-list, .regular-gap.follow-us {
   gap: 30px;
 }
-.flex.regular-spacing, .regular-spacing.header-nav-list, .regular-spacing.follow-us {
+.flex.regular-spacing, .regular-spacing.about-content, .regular-spacing.about-image-list, section.about .regular-spacing.container, section.about .regular-spacing.header-container, section.about .regular-spacing.hero, .regular-spacing.header-nav-list, .regular-spacing.follow-us {
   gap: 20px;
 }
-.flex.large-spacing, .large-spacing.header-nav-list, .large-spacing.follow-us {
+.flex.large-spacing, .large-spacing.about-content, .large-spacing.about-image-list, section.about .large-spacing.container, section.about .large-spacing.header-container, section.about .large-spacing.hero, .large-spacing.header-nav-list, .large-spacing.follow-us {
   gap: 44px;
 }
 
@@ -323,7 +323,7 @@ body {
 
 .section-heading {
   font-size: 2.625rem;
-  line-height: 0.6904761905;
+  line-height: 1.1666666667;
 }
 
 .sup-heading, .hero-sup-heading {
@@ -413,6 +413,8 @@ body {
 }
 
 .header-menu-wrapper {
+  width: 100%;
+  margin-right: 17px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,7 +432,7 @@ body {
 }
 
 .header-nav-list {
-  gap: 50px;
+  gap: 30px;
 }
 
 .header-right {
@@ -440,7 +442,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 50px;
+  gap: 44px;
+  margin-left: auto;
 }
 
 /* ---------- Hero ---------- */
@@ -598,16 +601,32 @@ body {
 }
 
 /* ---------- About ---------- */
+section.about .container, section.about .header-container, section.about .hero {
+  gap: 30px;
+}
+
+.about-image-list {
+  gap: 30px;
+}
+
+.about-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  max-width: 470px;
+}
+
 .description {
   font-size: 0.875rem;
   line-height: 1.8571428571;
-  /* Additional margin */
-  margin-bottom: 22px;
   color: #555555;
+  margin-bottom: auto;
 }
 
 /* ---------- Services and prices ---------- */
-section.services .overlay-services {
+section.services .overlay {
   padding-top: 120px;
   padding-bottom: 120px;
   margin: 0 auto;
@@ -663,6 +682,27 @@ section.services .overlay-services {
 }
 
 /* ---------- Why us ---------- */
+section.why-us .container, section.why-us .header-container, section.why-us .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.stats {
+  padding: 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 30px;
+}
+
 .stat {
   width: 170px;
   height: 133px;

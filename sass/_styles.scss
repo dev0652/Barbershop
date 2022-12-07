@@ -30,6 +30,7 @@
 
 	display: flex;
 	align-items: center;
+	// outline: auto;
 }
 
 .header-logo {
@@ -38,6 +39,10 @@
 }
 
 .header-menu-wrapper {
+	// outline: auto;
+	width: 100%;
+	margin-right: 17px;
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -49,7 +54,7 @@
 
 .header-nav-list {
 	@extend %markup-list, .flex;
-	gap: $header-items-spacing;
+	gap: $regular-gap;
 }
 
 // .header-nav-item {
@@ -62,12 +67,9 @@
 .header-right {
 	display: flex;
 	align-items: center;
-	gap: $header-items-spacing;
+	gap: $large-spacing;
+	margin-left: auto;
 }
-
-// .header-telephone {
-// 	margin-left: auto;
-// }
 
 .header-button {
 	@extend .button;
@@ -231,14 +233,34 @@
 
 /* ---------- About ---------- */
 
+section.about {
+	//
+	.container {
+		@extend .flex;
+		gap: $regular-gap;
+	}
+}
+
+.about-image-list {
+	@extend .markup-list, .flex;
+	gap: $regular-gap;
+}
+
+.about-content {
+	@extend .flex;
+	flex-direction: column;
+	gap: $single-spacing;
+
+	max-width: 470px;
+}
+
 .description {
 	// font-size: 14px;
 	// line-height: calc(26 / 14);
 	@include fz-lh-rem(14, 26);
 
-	/* Additional margin */
-	margin-bottom: calc(42px - 20px);
 	color: $dark;
+	margin-bottom: auto;
 }
 
 /* ---------- Services and prices ---------- */
@@ -246,7 +268,7 @@
 section.services {
 	@extend .with-overlay, .dark;
 
-	.overlay-services {
+	.overlay {
 		// padding: 120px 215px;
 		padding-top: 120px;
 		padding-bottom: 120px;
@@ -304,6 +326,26 @@ section.services {
 }
 
 /* ---------- Why us ---------- */
+
+section.why-us {
+	//
+	.container {
+		display: flex;
+		gap: $regular-gap;
+	}
+}
+
+.stats {
+	@extend .markup-list;
+	padding: 0 100px;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: $regular-gap;
+
+	padding-top: 30px;
+}
 
 .stat {
 	width: 170px;
