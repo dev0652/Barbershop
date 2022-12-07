@@ -94,8 +94,9 @@
 .hero-title {
 	@extend %heading;
 
-	font-size: 72px;
-	line-height: calc(85 / 72);
+	// font-size: 72px;
+	// line-height: calc(85 / 72);
+	@include fz-lh-rem(72, 85);
 
 	animation: left-to-right 1000ms ease 1200ms both;
 }
@@ -139,8 +140,9 @@
 	.link,
 	.copyright {
 		font-weight: 600;
-		font-size: 11px;
-		line-height: calc(15 / 11);
+		// font-size: 11px;
+		// line-height: calc(15 / 11);
+		@include fz-lh-rem(11, 15);
 		letter-spacing: 0.2em;
 	}
 
@@ -231,8 +233,9 @@
 
 .slider-btn {
 	font-weight: 600;
-	font-size: 11px;
-	line-height: calc(15 / 11);
+	// font-size: 11px;
+	// line-height: calc(15 / 11);
+	@include fz-lh-rem(11, 15);
 	letter-spacing: 0.1em;
 
 	color: $contrast;
@@ -261,8 +264,9 @@
 /* ---------- About ---------- */
 
 .description {
-	font-size: 14px;
-	line-height: calc(26 / 14);
+	// font-size: 14px;
+	// line-height: calc(26 / 14);
+	@include fz-lh-rem(14, 26);
 
 	/* Additional margin */
 	margin-bottom: calc(42px - 20px);
@@ -344,8 +348,9 @@
 
 .stat-number {
 	font-weight: 700;
-	font-size: 42px;
-	line-height: calc(57 / 42);
+	// font-size: 42px;
+	// line-height: calc(57 / 42);
+	@include fz-lh-rem(42, 57);
 	letter-spacing: 0.05em;
 	margin-bottom: 6px;
 
@@ -359,8 +364,9 @@
 
 .stat-name {
 	font-weight: 600;
-	font-size: 11px;
-	line-height: calc(15 / 11);
+	// font-size: 11px;
+	// line-height: calc(15 / 11);
+	@include fz-lh-rem(11, 15);
 }
 
 /* ---------- Our barbers ---------- */
@@ -380,8 +386,9 @@
 }
 
 .position {
-	font-size: 14px;
-	line-height: calc(19 / 14);
+	// font-size: 14px;
+	// line-height: calc(19 / 14);
+	@include fz-lh-rem(14, 19);
 	color: $accent;
 }
 
@@ -514,8 +521,9 @@
 .hovering-label {
 	font-family: "Open Sans";
 	font-weight: 600;
-	font-size: 11px;
-	line-height: calc(15 / 11);
+	// font-size: 11px;
+	// line-height: calc(15 / 11);
+	@include fz-lh-rem(11, 15);
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 
@@ -595,8 +603,9 @@
 	padding: 56px 215px;
 	color: $light;
 	font-weight: 600;
-	font-size: 11px;
-	line-height: calc(15 / 11);
+	// font-size: 11px;
+	// line-height: calc(15 / 11);
+	@include fz-lh-rem(11, 15);
 }
 
 /* ---------- Modal window ---------- */

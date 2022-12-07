@@ -434,7 +434,7 @@ body {
 }
 
 .hero-title {
-  font-size: 72px;
+  font-size: 4.5rem;
   line-height: 1.1805555556;
   -webkit-animation: left-to-right 1000ms ease 1200ms both;
           animation: left-to-right 1000ms ease 1200ms both;
@@ -481,7 +481,7 @@ body {
 .follow-us .link, .follow-us .header-logo, .follow-us .header-nav-link,
 .follow-us .copyright {
   font-weight: 600;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.3636363636;
   letter-spacing: 0.2em;
 }
@@ -580,7 +580,7 @@ body {
 
 .slider-btn {
   font-weight: 600;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.3636363636;
   letter-spacing: 0.1em;
   color: #fff;
@@ -603,7 +603,7 @@ body {
 
 /* ---------- About ---------- */
 .description {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.8571428571;
   /* Additional margin */
   margin-bottom: 22px;
@@ -681,7 +681,7 @@ body {
 
 .stat-number {
   font-weight: 700;
-  font-size: 42px;
+  font-size: 2.625rem;
   line-height: 1.3571428571;
   letter-spacing: 0.05em;
   margin-bottom: 6px;
@@ -695,7 +695,7 @@ body {
 
 .stat-name {
   font-weight: 600;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.3636363636;
 }
 
@@ -715,7 +715,7 @@ body {
 }
 
 .position {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.3571428571;
   color: #ff6c00;
 }
@@ -843,7 +843,7 @@ body {
 .hovering-label {
   font-family: "Open Sans";
   font-weight: 600;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.3636363636;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -931,7 +931,7 @@ body {
   padding: 56px 215px;
   color: #9da4bd;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.3636363636;
 }
 

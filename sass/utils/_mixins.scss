@@ -113,3 +113,21 @@
 			url("../#{$path}/#{$filename}@3x.#{$extension}");
 	}
 }
+
+// Font-size in rem + line height
+
+@mixin fz-lh($fz, $lh: false) {
+	font-size: $fz + px;
+
+	@if ($lh) {
+		line-height: calc($lh / $fz);
+	}
+}
+
+@mixin fz-lh-rem($fz, $lh: false) {
+	font-size: rem-calc($fz);
+
+	@if ($lh) {
+		line-height: calc($lh / $fz);
+	}
+}
