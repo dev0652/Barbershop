@@ -143,7 +143,7 @@ body {
 	color: $darker;
 
 	.dark & {
-		color: $light-transp;
+		color: rgba($light, 0.6);
 	}
 
 	@extend .prefix;
