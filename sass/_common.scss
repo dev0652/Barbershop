@@ -69,11 +69,6 @@ body {
 	width: 100%;
 }
 
-.section-button {
-	@extend .button;
-	margin-top: auto;
-}
-
 .bg-dark {
 	background-color: $bg-dark;
 }
@@ -108,16 +103,20 @@ body {
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
 
-	border: 1px solid $accent;
+	border: 1px solid;
 	border-radius: 25px;
 
 	min-width: 160px;
 	padding: 12px 20px;
 
-	color: $darker;
 	background-color: transparent;
 
 	@include transition-multiple(color, background-color);
+}
+
+.button--accented {
+	border-color: $accent;
+	color: $darker;
 
 	&:hover,
 	&:focus {

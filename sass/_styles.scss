@@ -247,8 +247,9 @@ section.about {
 		padding-right: 100px;
 	}
 
-	.section-button {
+	.button {
 		align-self: flex-start;
+		margin-top: auto;
 	}
 }
 
@@ -292,6 +293,16 @@ section.services {
 			webp
 		);
 	}
+
+	.container {
+		@extend .flex;
+		flex-direction: column;
+		gap: $regular-gap;
+	}
+
+	.button {
+		align-self: center;
+	}
 }
 
 /* ---------- Price-list ---------- */
@@ -315,17 +326,18 @@ section.services {
 }
 
 .price-list {
+	@extend .markup-list;
 	color: $light;
+}
 
-	& li {
-		margin: 0 20px;
-		display: flex;
-		gap: $list-spacing;
-		align-items: baseline;
+.price-list-item {
+	margin: 0 20px;
+	display: flex;
+	gap: $list-spacing;
+	align-items: baseline;
 
-		&:not(:last-child) {
-			margin-bottom: 20px;
-		}
+	&:not(:last-child) {
+		margin-bottom: 20px;
 	}
 }
 
