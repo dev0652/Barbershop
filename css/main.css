@@ -198,7 +198,6 @@ body {
 }
 
 .container, .hero, .header-container {
-  outline: auto;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -246,7 +245,7 @@ body {
 .section.light {
   color: #9da4bd;
 }
-.section.with-overlay, section.section.contact-us, section.section.services {
+.section.overlay-paddings, section.section.contact-us, section.section.services {
   padding: 0px;
 }
 
@@ -399,7 +398,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
-  width: calc(100vw - 15px);
+  width: 100vw;
   padding: 40px 17px 20px 0;
 }
 .header.no-transparency {
@@ -854,8 +853,9 @@ section.why-us .container, section.why-us .header-container, section.why-us .her
 /* ---------- Contact us ---------- */
 section.contact-us .overlay {
   background-color: #191c26;
-  background-position: right;
+  background-position: calc(100% + 30px) 0%;
   background-repeat: no-repeat;
+  background-size: 50% 100%;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/contacts/bg.webp");
   background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/contacts/bg.webp");
 }
@@ -871,8 +871,7 @@ section.contact-us .overlay {
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/contacts/bg@3x.webp");
   }
 }
-
-.contacts-container {
+section.contact-us .container, section.contact-us .header-container, section.contact-us .hero {
   padding-top: 130px;
   padding-bottom: 120px;
 }

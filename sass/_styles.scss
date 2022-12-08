@@ -9,7 +9,8 @@
 	left: 0;
 	z-index: $z-header;
 
-	width: calc(100vw - 15px); //to adjust for vertical scroll on Windows machines
+	width: 100vw;
+	// width: calc(100vw - 15px); //to adjust for vertical scroll on Windows 10
 	padding: 40px 17px 20px 0;
 
 	&.no-transparency {
@@ -269,7 +270,7 @@ section.about {
 /* ---------- Services and prices ---------- */
 
 section.services {
-	@extend .with-overlay, .dark;
+	@extend .overlay-paddings, .dark;
 
 	.overlay {
 		// padding: 120px 215px;
@@ -498,13 +499,14 @@ section.why-us {
 /* ---------- Contact us ---------- */
 
 section.contact-us {
-	@extend .with-overlay, .bg-dark;
+	@extend .overlay-paddings, .bg-dark;
 
 	.overlay {
 		background-color: $bg-dark;
-		background-position: right;
+		background-position: calc(100% + 30px) 0%;
+		// background-position: 100% top;
 		background-repeat: no-repeat;
-		// background-size: contain;
+		background-size: 50% 100%;
 
 		// background-image: linear-gradient(rgba(#191c26, 0.9), rgba(#191c26, 0.9)),
 		// 	url("../images/jpeg/contacts/bg.jpg");
@@ -517,13 +519,11 @@ section.contact-us {
 			webp
 		);
 	}
-}
 
-.contacts-container {
-	padding-top: 130px;
-	padding-bottom: 120px;
-	// margin-top: 130px;
-	// 	margin-bottom: 120px;
+	.container {
+		padding-top: 130px;
+		padding-bottom: 120px;
+	}
 }
 
 .half-sized {
