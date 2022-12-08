@@ -394,11 +394,12 @@ body {
 
 /* ---------- Header ---------- */
 .header {
+  outline: auto;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  width: 100vw;
+  width: calc(100vw - 15px);
   padding: 40px 17px 20px 0;
 }
 .header.no-transparency {
@@ -420,6 +421,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  outline: auto;
 }
 
 .header-logo {
@@ -427,11 +429,13 @@ body {
 }
 
 .header-menu-wrapper {
-  width: 100%;
   margin-right: 17px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

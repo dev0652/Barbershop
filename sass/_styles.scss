@@ -2,13 +2,14 @@
 
 .header {
 	@extend .dark;
+	outline: auto;
 
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: $z-header;
 
-	width: 100vw;
+	width: calc(100vw - 15px); //to adjust for vertical scroll on Windows machines
 	padding: 40px 17px 20px 0;
 
 	&.no-transparency {
@@ -30,7 +31,7 @@
 
 	display: flex;
 	align-items: center;
-	// outline: auto;
+	outline: auto;
 }
 
 .header-logo {
@@ -40,10 +41,11 @@
 
 .header-menu-wrapper {
 	// outline: auto;
-	width: 100%;
+	// width: 100%;
 	margin-right: 17px;
 
 	display: flex;
+	flex-grow: 1;
 	align-items: center;
 	justify-content: space-between;
 
