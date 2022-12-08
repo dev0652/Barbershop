@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-	// outline: auto;
+	outline: auto;
 
 	padding-left: $container-padding;
 	padding-right: $container-padding;
@@ -29,7 +29,7 @@ body {
 	}
 
 	@media screen and (min-width: $desktop) {
-		width: $desktop;
+		width: $desktop + ($container-padding * 2);
 	}
 }
 
@@ -60,6 +60,18 @@ body {
 	&.with-overlay {
 		padding: 0px;
 	}
+}
+
+.section-content {
+	@extend .flex;
+	flex-direction: column;
+	gap: $single-spacing;
+	width: 100%;
+}
+
+.section-button {
+	@extend .button;
+	margin-top: auto;
 }
 
 .bg-dark {

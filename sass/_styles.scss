@@ -239,19 +239,19 @@ section.about {
 		@extend .flex;
 		gap: $regular-gap;
 	}
+
+	.section-content {
+		padding-right: 100px;
+	}
+
+	.section-button {
+		align-self: flex-start;
+	}
 }
 
 .about-image-list {
 	@extend .markup-list, .flex;
 	gap: $regular-gap;
-}
-
-.about-content {
-	@extend .flex;
-	flex-direction: column;
-	gap: $single-spacing;
-
-	max-width: 470px;
 }
 
 .description {
@@ -260,7 +260,6 @@ section.about {
 	@include fz-lh-rem(14, 26);
 
 	color: $dark;
-	margin-bottom: auto;
 }
 
 /* ---------- Services and prices ---------- */
@@ -330,8 +329,12 @@ section.services {
 section.why-us {
 	//
 	.container {
-		display: flex;
+		@extend .flex;
 		gap: $regular-gap;
+	}
+
+	.section-content {
+		// padding-right: 70px;
 	}
 }
 
@@ -350,10 +353,12 @@ section.why-us {
 .stat {
 	width: 170px;
 	height: 133px;
-	text-align: center;
 	padding: 20px 24px;
+
 	color: $darker;
 	background-color: $bg-light;
+
+	text-align: center;
 
 	&:nth-child(odd) {
 		margin-top: -30px;
