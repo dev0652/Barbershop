@@ -151,8 +151,9 @@
 	// $gradient-color, $path (only additional folders), $filename (without ext), $extension (default: jpg)
 	@include bg-img-retina-2x-3x-w-gradient(
 		rgba($bg-dark, 0.2),
-		images/jpeg/slider,
-		slider-img
+		images/webp/slider,
+		slider-img3,
+		webp
 	);
 }
 
@@ -249,7 +250,7 @@ section.about {
 	}
 }
 
-.about-image-list {
+.about-images-list {
 	@extend .markup-list, .flex;
 	gap: $regular-gap;
 }
