@@ -10,6 +10,12 @@ body {
 	@include fz-lh-rem(18, 30);
 	letter-spacing: 0.02em;
 	background-color: $bg-default;
+
+	min-width: 280px;
+
+	&.scroll-locked {
+		overflow: hidden;
+	}
 }
 
 .container {
@@ -29,7 +35,8 @@ body {
 	}
 
 	@media screen and (min-width: $desktop) {
-		width: $desktop + ($container-padding * 2);
+		// width: $desktop + ($container-padding * 2);
+		width: $desktop;
 	}
 }
 
@@ -39,15 +46,17 @@ body {
 }
 
 .section {
-	@media screen and (max-width: ($tablet - 1px)) {
-		padding-top: $section-padding-mobile 0;
-	}
-	@media screen and (min-width: $tablet) {
-		padding: $section-padding-tablet 0;
-	}
-	@media screen and (min-width: $desktop) {
-		padding: $section-padding-desktop 0;
-	}
+	padding: $section-padding 0;
+
+	// @media screen and (max-width: ($tablet - 1px)) {
+	// 	padding: $section-padding-mobile 0;
+	// }
+	// @media screen and (min-width: $tablet) {
+	// 	padding: $section-padding-tablet 0;
+	// }
+	// @media screen and (min-width: $desktop) {
+	// 	padding: $section-padding-desktop 0;
+	// }
 
 	&.dark {
 		color: $dark;

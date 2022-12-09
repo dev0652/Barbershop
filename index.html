@@ -148,20 +148,32 @@
 					<!-- Image 1 -->
 					<li class="about-images-item">
 
-						<!-- <picture>
-							<source srcset="https://picsum.photos/id/237/400/600 400w, https://picsum.photos/id/237/800/1200 800w"
-								media="(max-width: 600px)" sizes="(min-width: 480px) 480px, 100vw">
-							<source srcset="https://picsum.photos/id/237/800/400 800w, https://picsum.photos/id/237/1600/800 1600w"
-								media="(min-width: 601px)" sizes="(min-width: 800px) 800px, 100vw">
-							<img src="https://picsum.photos/id/237/300/200" alt="Cute puppy">
-						</picture> -->
+						<picture class="about-image">
 
-						<img class="about-image" srcset="
+							<!-- Desktop -->
+							<!-- <source media="(min-width: 1200px)" srcset="
+										./images/webp/about/img1-large.webp 1x,
+										./images/webp/about/img1@2x.webp 2x,
+										./images/webp/about/img1@3x.webp 3x"> -->
+
+							<!-- Tablet -->
+							<source media="(min-width: 768px)" srcset="
+										./images/webp/about/img1.webp 1x,
+										./images/webp/about/img1@2x.webp 2x,
+										./images/webp/about/img1@3x.webp 3x">
+
+							<!-- Default -->
+							<img src="./images/jpeg/about/img1.jpg" width="270" height="445"
+								alt="Black-and-white close-up of shaving cream being applied on a man's neck with a brush."
+								loading="lazy">
+						</picture>
+
+						<!-- <img class="about-image" srcset="
 						./images/webp/about/img1.webp 1x,
 						./images/webp/about/img1@2x.webp 2x,
 						./images/webp/about/img1@3x.webp 3x" src="./images/jpeg/about/img1.jpg" width="270" height="445"
 							alt="Black-and-white close-up of shaving cream being applied on a man's neck with a brush."
-							loading="lazy">
+							loading="lazy"> -->
 
 					</li>
 

@@ -2,7 +2,7 @@
 
 .header {
 	@extend .dark;
-	outline: auto;
+	// outline: auto;
 
 	position: fixed;
 	top: 0;
@@ -10,15 +10,19 @@
 	z-index: $z-header;
 
 	width: 100vw;
-	// width: calc(100vw - 15px); //to adjust for vertical scroll on Windows 10
+	// width: calc(100vw - 15px); //to adjust for  scrollbar width on Windows 10
 	padding: 40px 17px 20px 0;
-
-	.icon-logo {
-		fill: $darker;
-	}
 
 	.link {
 		color: $contrast;
+	}
+
+	.icon-logo {
+		fill: $darker;
+
+		@media screen and (max-width: ($tablet - 1px)) {
+			fill: $contrast;
+		}
 	}
 
 	&.no-transparency {
@@ -36,26 +40,64 @@
 
 	display: flex;
 	align-items: center;
-	outline: auto;
+	// outline: auto;
 }
 
 .header-logo {
 	@extend .link;
-	margin-right: 70px;
+
+	@media screen and (min-width: $tablet) {
+		margin-right: 70px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-right: 70px;
+	}
 }
 
+// Header menu wrapper
+
 .header-menu-wrapper {
-	// outline: auto;
-	// width: 100%;
-	margin-right: 17px;
-
-	display: flex;
-	flex-grow: 1;
-	align-items: center;
-	justify-content: space-between;
-
+	//
 	@media screen and (max-width: ($tablet - 1px)) {
-		display: none;
+		//
+		position: fixed;
+		top: 100%; // якщо буде виводитись під футером
+		top: 0; // якщо буде виводитись поверх футера
+		left: 20vw;
+		width: 100%;
+		z-index: 2;
+
+		width: 80vw;
+		height: 100vh;
+		padding: 48px 40px;
+
+		@media screen and (max-width: ($mobile - 1px)) {
+			padding: 48px 20px;
+		}
+
+		display: flex;
+		flex-direction: column;
+
+		background-color: #fff;
+
+		transform: translateX(100%);
+		@include transition(transform);
+
+		&.is-open {
+			// display: block;
+			transform: translateX(0);
+			transition-delay: 100ms;
+		}
+	}
+
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-grow: 1;
+
+		margin-right: 17px;
 	}
 }
 
@@ -175,16 +217,20 @@
 .slider-pagination {
 	@extend %markup-list;
 
-	position: absolute;
-	top: calc(50% - 15px);
-	right: 20px;
+	@media screen and (max-width: ($tablet - 1px)) {
+		display: none;
+	}
 
-	// margin-left: auto;
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 12px;
 
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	gap: 12px;
+		position: absolute;
+		top: calc(50% - 15px);
+		right: 20px;
+	}
 }
 
 .slider-pagination-item {
@@ -201,12 +247,18 @@
 .slider-buttons {
 	@extend %markup-list;
 
-	position: absolute;
-	bottom: 40px;
-	right: 20px;
+	@media screen and (max-width: ($tablet - 1px)) {
+		display: none;
+	}
 
-	display: flex;
-	gap: 24px;
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		gap: 24px;
+
+		position: absolute;
+		bottom: 40px;
+		right: 20px;
+	}
 }
 
 .slider-btn {
@@ -259,8 +311,16 @@ section.about {
 }
 
 .about-images-list {
-	@extend .markup-list, .flex;
-	gap: $regular-gap;
+	@extend .markup-list;
+
+	@media screen and (max-width: ($tablet - 1px)) {
+		display: none;
+	}
+
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		gap: $regular-gap;
+	}
 }
 
 .description {
@@ -278,8 +338,7 @@ section.services {
 	padding: 0px;
 
 	.overlay {
-		padding-top: 120px;
-		padding-bottom: 120px;
+		padding: $section-padding 0;
 		margin: 0 auto;
 
 		background-color: $bg-dark;
@@ -319,16 +378,24 @@ section.services {
 /* ---------- Price-list ---------- */
 
 .price-list-wrapper {
-	/* https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css */
+	// https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css
 
-	columns: 2;
-	column-gap: 30px;
+	columns: 1;
 
-	background-image: linear-gradient(180deg, #171a24 0%, rgba(#171a24, 0.2) 100%),
-		linear-gradient(180deg, #090b13 0%, rgba(#090b13, 0.2) 100%);
-	background-repeat: no-repeat;
-	background-position: left, right;
-	background-size: 585px 100%, 585px 100%;
+	@media screen and (min-width: ($tablet + 100px)) {
+		columns: 2;
+		column-gap: 30px;
+
+		background-image: linear-gradient(
+				180deg,
+				#171a24 0%,
+				rgba(#171a24, 0.2) 100%
+			),
+			linear-gradient(180deg, #090b13 0%, rgba(#090b13, 0.2) 100%);
+		background-repeat: no-repeat;
+		background-position: left, right;
+		background-size: 585px 100%, 585px 100%;
+	}
 
 	padding-top: 30px;
 	padding-bottom: 30px;
