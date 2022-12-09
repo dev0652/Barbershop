@@ -59,7 +59,7 @@ img {
 }
 
 /* Utility classes */
-.markup-list, .stats, .price-list, .about-images-list, .follow-us {
+.markup-list, .contacts-list, .gallery-list, .social-links, .team-cards, .stats, .price-list, .about-images-list, .follow-us {
   list-style: none;
 }
 
@@ -239,14 +239,11 @@ body {
     padding: 120px 0;
   }
 }
-.section.dark, section.section.services, .section.hero, .section.header {
+.section.dark, section.section.contacts, section.section.online-booking, section.section.services, .section.hero, .section.header {
   color: #555555;
 }
 .section.light {
   color: #9da4bd;
-}
-.section.overlay-paddings, section.section.contact-us, section.section.services {
-  padding: 0px;
 }
 
 .section-content {
@@ -258,12 +255,8 @@ body {
   width: 100%;
 }
 
-.bg-dark, section.contact-us {
-  background-color: #191c26;
-}
-
 /* Links */
-.link, .header-nav-link, .header-logo, .follow-us-link {
+.link, .contacts-link, .social-link, .header-nav-link, .header-logo, .follow-us-link {
   font-weight: 600;
   font-size: 16px;
   color: #303030;
@@ -276,12 +269,12 @@ body {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
-.link:hover, .header-nav-link:hover, .header-logo:hover, .follow-us-link:hover, .link:focus, .header-nav-link:focus, .header-logo:focus, .follow-us-link:focus {
+.link:hover, .contacts-link:hover, .social-link:hover, .header-nav-link:hover, .header-logo:hover, .follow-us-link:hover, .link:focus, .contacts-link:focus, .social-link:focus, .header-nav-link:focus, .header-logo:focus, .follow-us-link:focus {
   color: #ff6c00;
 }
 
 /* SVG icons */
-.icon {
+.icon, .contacts-icon, .social-link-icon {
   display: block;
   fill: currentColor;
   -webkit-transition-property: fill;
@@ -319,7 +312,7 @@ body {
   color: #fff;
   background-color: #ff6c00;
 }
-.dark .button--accented, section.services .button--accented, .hero .button--accented, .header .button--accented {
+.dark .button--accented, section.contacts .button--accented, section.online-booking .button--accented, section.services .button--accented, .hero .button--accented, .header .button--accented {
   color: #fff;
 }
 
@@ -330,7 +323,7 @@ body {
   letter-spacing: 0.05em;
   color: #303030;
 }
-.dark .hero-title, section.services .hero-title, .hero .hero-title, .header .hero-title, .dark .section-heading, section.services .section-heading, .hero .section-heading, .header .section-heading {
+.dark .hero-title, section.contacts .hero-title, section.online-booking .hero-title, section.services .hero-title, .hero .hero-title, .header .hero-title, .dark .section-heading, section.contacts .section-heading, section.online-booking .section-heading, section.services .section-heading, .hero .section-heading, .header .section-heading {
   color: #fff;
 }
 
@@ -346,7 +339,7 @@ body {
   text-transform: uppercase;
   color: #303030;
 }
-.dark .sup-heading, section.services .sup-heading, .dark .hero-sup-heading, section.services .hero-sup-heading, .hero .sup-heading, .hero .hero-sup-heading, .header .sup-heading, .header .hero-sup-heading {
+.dark .sup-heading, section.contacts .sup-heading, section.online-booking .sup-heading, section.services .sup-heading, .dark .hero-sup-heading, section.contacts .hero-sup-heading, section.online-booking .hero-sup-heading, section.services .hero-sup-heading, .hero .sup-heading, .hero .hero-sup-heading, .header .sup-heading, .header .hero-sup-heading {
   color: rgba(157, 164, 189, 0.6);
 }
 
@@ -401,6 +394,12 @@ body {
   width: 100vw;
   padding: 40px 17px 20px 0;
 }
+.header .icon-logo {
+  fill: #303030;
+}
+.header .link, .header .contacts-link, .header .social-link, .header .header-nav-link, .header .header-logo, .header .follow-us-link {
+  color: #fff;
+}
 .header.no-transparency {
   background-color: rgba(17, 19, 25, 0.8);
   -webkit-backdrop-filter: blur(3px);
@@ -408,9 +407,6 @@ body {
 }
 .header.no-transparency .icon-logo {
   fill: #fff;
-}
-.header .link, .header .header-nav-link, .header .header-logo, .header .follow-us-link {
-  color: #fff;
 }
 
 .header-container {
@@ -641,6 +637,9 @@ section.about .button, section.about .header-button {
 }
 
 /* ---------- Services and prices ---------- */
+section.services {
+  padding: 0px;
+}
 section.services .overlay {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -676,12 +675,23 @@ section.services .button, section.services .header-button {
       align-self: center;
 }
 
+.services-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 44px;
+}
+
 /* ---------- Price-list ---------- */
 .price-list-wrapper {
   /* https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css */
   -webkit-columns: 2;
-  -moz-columns: 2;
-  columns: 2;
+     -moz-columns: 2;
+          columns: 2;
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
@@ -689,7 +699,7 @@ section.services .button, section.services .header-button {
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%), linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
   background-repeat: no-repeat;
   background-position: left, right;
-  background-size: 570px 100%, 570px 100%;
+  background-size: 585px 100%, 585px 100%;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -771,32 +781,78 @@ section.why-us .container, section.why-us .header-container, section.why-us .her
 }
 
 /* ---------- Our barbers ---------- */
-.barbers {
+section.barbers {
   background-color: #f7f7f7;
+}
+section.barbers .container, section.barbers .header-container, section.barbers .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+section.barbers .flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 44px;
+}
+
+.team-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
 }
 
 .team-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
-.name {
+.team-card-meta {
+  padding-top: 30px;
+}
+
+.team-card-name {
   line-height: 1.3888888889;
   margin-bottom: 8px;
   color: #303030;
 }
 
-.position {
+.team-card-position {
   font-size: 0.875rem;
   line-height: 1.3571428571;
   color: #ff6c00;
 }
 
 .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 30px;
   gap: 10px;
 }
 
-/* Social media links */
 .social-link {
   color: #303030;
   background-color: #fff;
@@ -817,71 +873,27 @@ section.why-us .container, section.why-us .header-container, section.why-us .her
   color: #ff6c00;
 }
 
-/* SVG icons */
-.icon {
-  fill: currentColor;
-}
-
-.icon-logo {
-  fill: #303030;
-}
-
-.contacts-icon {
-  fill: transparent;
-  stroke: currentColor;
-}
-
-.social-icon {
+.social-link-icon {
   width: 20px;
   height: 20px;
 }
-.footer .social-icon {
+.footer .social-link-icon {
   fill: #fff;
 }
 
-.rotatable {
+.rotatable, .social-link-icon {
   -webkit-transition: -webkit-transform 200ms ease-in-out 10ms;
   transition: -webkit-transform 200ms ease-in-out 10ms;
   transition: transform 200ms ease-in-out 10ms;
   transition: transform 200ms ease-in-out 10ms, -webkit-transform 200ms ease-in-out 10ms;
 }
-.w-transformable-icon:hover .rotatable, .w-transformable-icon:focus .rotatable {
+.w-transformable-icon:hover .rotatable, .social-link-icon:hover .rotatable, .w-transformable-icon:hover .social-link-icon, .social-link-icon:hover .social-link-icon, .w-transformable-icon:focus .rotatable, .social-link-icon:focus .rotatable, .w-transformable-icon:focus .social-link-icon, .social-link-icon:focus .social-link-icon {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-/* ---------- Contact us ---------- */
-section.contact-us .overlay {
-  background-color: #191c26;
-  background-position: calc(100% + 30px) 0%;
-  background-repeat: no-repeat;
-  background-size: 50% 100%;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/contacts/bg.webp");
-  background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/contacts/bg.webp");
-}
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  section.contact-us .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/contacts/bg@2x.webp");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/contacts/bg@2x.webp");
-  }
-}
-@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-  section.contact-us .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/contacts/bg@3x.webp");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/contacts/bg@3x.webp");
-  }
-}
-section.contact-us .container, section.contact-us .header-container, section.contact-us .hero {
-  padding-top: 130px;
-  padding-bottom: 120px;
-}
-
-.half-sized {
-  width: 50%;
-}
-
-/* Left block - Online-booking */
-.text-fields {
+/* ---------- Gallery ---------- */
+section.gallery .container, section.gallery .header-container, section.gallery .hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -892,24 +904,99 @@ section.contact-us .container, section.contact-us .header-container, section.con
   gap: 44px;
 }
 
+.gallery-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+/* ---------- Booking and contacts block ---------- */
+.booking-and-contacts-block .overlay {
+  background-color: #191c26;
+  background-position: calc(100% + 30px) 0%;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/contacts/bg.webp");
+  background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/contacts/bg.webp");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .booking-and-contacts-block .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/contacts/bg@2x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/contacts/bg@2x.webp");
+  }
+}
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .booking-and-contacts-block .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/contacts/bg@3x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/contacts/bg@3x.webp");
+  }
+}
+.booking-and-contacts-block .container, .booking-and-contacts-block .header-container, .booking-and-contacts-block .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+section.online-booking,
+section.contacts {
+  width: 50%;
+  -ms-flex-preferred-size: fill;
+      flex-basis: fill;
+}
+
+/* ---------- Online-booking (left block) ---------- */
+section.online-booking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 44px;
+}
+
+.booking-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 44px;
+}
+
+.text-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 44px;
+}
+
 .text-field-wrapper {
   position: relative;
   color: rgba(157, 164, 189, 0.4);
+  width: 100%;
+}
+.text-field-wrapper.half-sized {
+  width: calc((100% - 30px) / 2);
 }
 .text-field-wrapper:hover, .text-field-wrapper:focus {
   color: #fff;
 }
 
-.narrow {
-  height: 24px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
 .text-field {
   width: 100%;
   height: 100%;
+  min-height: 24px;
   font-size: inherit;
   font-family: "Open Sans";
   background-color: inherit;
@@ -959,12 +1046,11 @@ section.contact-us .container, section.contact-us .header-container, section.con
   resize: none;
 }
 
-/* Right block - Contacts */
-.contacts {
+/* ---------- Contacts (right block) ---------- */
+section.contacts {
   padding-left: 100px;
-  color: #9da4bd;
 }
-.contacts .sup-heading, .contacts .hero-sup-heading {
+section.contacts .sup-heading, section.contacts .hero-sup-heading {
   color: #fff;
 }
 
@@ -980,12 +1066,13 @@ section.contact-us .container, section.contact-us .header-container, section.con
           flex-direction: column;
   gap: 20px;
 }
-.contacts-list .contacts-list-item {
+
+.contacts-item {
   line-height: 1.6666666667;
 }
 
 .contacts-link {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1004,9 +1091,18 @@ section.contact-us .container, section.contact-us .header-container, section.con
           text-decoration-line: underline;
 }
 
-.contacts-list-item:first-child .contacts-icon {
+.contacts-icon {
+  fill: transparent;
+  stroke: currentColor;
+}
+
+.contacts-item:first-child .contacts-icon {
   -webkit-transform: translateY(-13px);
           transform: translateY(-13px);
+}
+
+.working-hours {
+  color: #9da4bd;
 }
 
 /* ---------- Footer ---------- */

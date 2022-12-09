@@ -56,10 +56,6 @@ body {
 	&.light {
 		color: $light;
 	}
-
-	&.overlay-paddings {
-		padding: 0px;
-	}
 }
 
 .section-content {
@@ -67,10 +63,6 @@ body {
 	flex-direction: column;
 	gap: $single-spacing;
 	width: 100%;
-}
-
-.bg-dark {
-	background-color: $bg-dark;
 }
 
 /* Links */

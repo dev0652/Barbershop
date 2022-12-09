@@ -13,6 +13,14 @@
 	// width: calc(100vw - 15px); //to adjust for vertical scroll on Windows 10
 	padding: 40px 17px 20px 0;
 
+	.icon-logo {
+		fill: $darker;
+	}
+
+	.link {
+		color: $contrast;
+	}
+
 	&.no-transparency {
 		background-color: rgba(#111319, 0.8);
 		backdrop-filter: blur(3px);
@@ -20,10 +28,6 @@
 		& .icon-logo {
 			fill: $contrast;
 		}
-	}
-
-	.link {
-		color: $contrast;
 	}
 }
 
@@ -270,10 +274,10 @@ section.about {
 /* ---------- Services and prices ---------- */
 
 section.services {
-	@extend .overlay-paddings, .dark;
+	@extend .dark;
+	padding: 0px;
 
 	.overlay {
-		// padding: 120px 215px;
 		padding-top: 120px;
 		padding-bottom: 120px;
 		margin: 0 auto;
@@ -306,13 +310,17 @@ section.services {
 	}
 }
 
+.services-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: $large-spacing;
+}
+
 /* ---------- Price-list ---------- */
 
 .price-list-wrapper {
 	/* https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css */
 
-	-webkit-columns: 2;
-	-moz-columns: 2;
 	columns: 2;
 	column-gap: 30px;
 
@@ -320,7 +328,7 @@ section.services {
 		linear-gradient(180deg, #090b13 0%, rgba(#090b13, 0.2) 100%);
 	background-repeat: no-repeat;
 	background-position: left, right;
-	background-size: 570px 100%, 570px 100%;
+	background-size: 585px 100%, 585px 100%;
 
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -415,37 +423,66 @@ section.why-us {
 
 /* ---------- Our barbers ---------- */
 
-.barbers {
+section.barbers {
 	background-color: $bg-light;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: $regular-gap;
+	}
+
+	.flex-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: $large-spacing;
+	}
+}
+
+.team-cards {
+	@extend .markup-list;
+	display: flex;
+	gap: $regular-gap;
 }
 
 .team-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 	text-align: center;
 }
 
-.name {
+.team-card-meta {
+	padding-top: $regular-gap;
+}
+
+.team-card-name {
 	line-height: calc(25 / 18);
 	margin-bottom: 8px;
 	color: $darker;
 }
 
-.position {
+.team-card-position {
 	// font-size: 14px;
 	// line-height: calc(19 / 14);
 	@include fz-lh-rem(14, 19);
 	color: $accent;
 }
 
-// Social media links block in each team card
+// Team card social media links
 
 .social-links {
+	@extend .markup-list;
+	display: flex;
+	justify-content: center;
 	margin-top: $regular-gap;
 	gap: $list-spacing;
 }
 
-/* Social media links */
-
 .social-link {
+	@extend .link;
+
 	color: $darker;
 	background-color: $contrast;
 	height: 44px;
@@ -462,22 +499,9 @@ section.why-us {
 	}
 }
 
-/* SVG icons */
+.social-link-icon {
+	@extend .icon, .rotatable, .w-transformable-icon;
 
-.icon {
-	fill: currentColor;
-}
-
-.icon-logo {
-	fill: $darker;
-}
-
-.contacts-icon {
-	fill: transparent;
-	stroke: currentColor;
-}
-
-.social-icon {
 	width: 20px;
 	height: 20px;
 
@@ -496,11 +520,27 @@ section.why-us {
 	}
 }
 
-/* ---------- Contact us ---------- */
+/* ---------- Gallery ---------- */
 
-section.contact-us {
-	@extend .overlay-paddings, .bg-dark;
+section.gallery {
+	//
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: $large-spacing;
+	}
+}
 
+.gallery-list {
+	@extend .markup-list;
+	display: flex;
+	gap: $regular-gap;
+}
+
+/* ---------- Booking and contacts block ---------- */
+
+.booking-and-contacts-block {
+	//
 	.overlay {
 		background-color: $bg-dark;
 		background-position: calc(100% + 30px) 0%;
@@ -521,26 +561,52 @@ section.contact-us {
 	}
 
 	.container {
-		padding-top: 130px;
-		padding-bottom: 120px;
+		display: flex;
+		gap: $regular-gap;
 	}
 }
 
-.half-sized {
+section.online-booking,
+section.contacts {
 	width: 50%;
+	flex-basis: fill;
+	// outline: auto;
 }
 
-/* Left block - Online-booking */
+/* ---------- Online-booking (left block) ---------- */
 
-.text-fields {
+section.online-booking {
+	@extend .dark;
+
 	display: flex;
 	flex-direction: column;
 	gap: $large-spacing;
 }
 
+.booking-form {
+	display: flex;
+	flex-direction: column;
+	gap: $large-spacing;
+}
+
+.text-fields {
+	display: flex;
+	// flex-direction: column;
+	// gap: $large-spacing;
+	flex-wrap: wrap;
+	column-gap: $regular-gap;
+	row-gap: $large-spacing;
+}
+
 .text-field-wrapper {
 	position: relative;
 	color: rgba($light, 0.4);
+
+	width: 100%;
+
+	&.half-sized {
+		width: calc((100% - $regular-gap) / 2);
+	}
 
 	&:hover,
 	&:focus {
@@ -548,14 +614,10 @@ section.contact-us {
 	}
 }
 
-.narrow {
-	height: 24px;
-	flex-grow: 1;
-}
-
 .text-field {
 	width: 100%;
 	height: 100%;
+	min-height: 24px;
 
 	font-size: inherit;
 	font-family: "Open Sans";
@@ -606,11 +668,11 @@ section.contact-us {
 	resize: none;
 }
 
-/* Right block - Contacts */
+/* ---------- Contacts (right block) ---------- */
 
-.contacts {
+section.contacts {
+	@extend .dark;
 	padding-left: 100px;
-	color: $light;
 
 	.sup-heading {
 		color: $contrast;
@@ -618,20 +680,25 @@ section.contact-us {
 }
 
 .contacts-list {
+	@extend .markup-list;
+
 	margin-top: 40px;
 	margin-bottom: 70px;
 
 	display: flex;
 	flex-direction: column;
 	gap: $single-spacing;
+}
 
-	.contacts-list-item {
-		line-height: calc(30 / 18);
-	}
+.contacts-item {
+	line-height: calc(30 / 18);
 }
 
 .contacts-link {
-	font-size: 18px;
+	@extend .link;
+
+	// font-size: 18px;
+	font-size: rem-calc(18);
 	font-weight: 400;
 
 	display: flex;
@@ -649,8 +716,19 @@ section.contact-us {
 	}
 }
 
-.contacts-list-item:first-child .contacts-icon {
+.contacts-icon {
+	@extend .icon;
+
+	fill: transparent;
+	stroke: currentColor;
+}
+
+.contacts-item:first-child .contacts-icon {
 	transform: translateY(-13px);
+}
+
+.working-hours {
+	color: $light;
 }
 
 /* ---------- Footer ---------- */
