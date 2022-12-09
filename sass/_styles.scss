@@ -195,13 +195,13 @@
 	// 		rgba($bg-dark, 0.2),
 	// 		rgba($bg-dark, 0.2)
 	// 	),
-	// 	url("../images/jpeg/slider/slider-img.jpg");
+	// 	url("../images/jpeg/slider/img.jpg");
 
 	// $gradient-color, $path (only additional folders), $filename (without ext), $extension (default: jpg)
 	@include bg-img-retina-2x-3x-w-gradient(
 		rgba($bg-dark, 0.2),
 		images/webp/slider,
-		slider-img3,
+		img3,
 		webp
 	);
 }
