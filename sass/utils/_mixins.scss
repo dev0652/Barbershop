@@ -73,21 +73,15 @@
 	}
 }
 
-// Background image retinization
+// Background image retinization (with gradient as overlay)
 
-@mixin bg-img-retina-2x-3x-w-gradient(
-	$linear-gradient-color,
-	$path,
-	$filename,
-	$extension: jpg
-) {
-	//
-	background-image: linear-gradient(
-			to right,
-			$linear-gradient-color,
-			$linear-gradient-color
-		),
-		url("../#{$path}/#{$filename}.#{$extension}");
+@mixin bg-with-overlay($gradient-color, $folder, $filename, $extension: jpg) {
+	// https://youtu.be/MSpcoXdmPb0?t=4057
+
+	// ****** Mobile ******
+
+	background-image: linear-gradient(to right, $gradient-color, $gradient-color),
+		url("../images/#{$extension}/mobile/#{$folder}/#{$filename}.#{$extension}");
 
 	@media (min-device-pixel-ratio: 2),
 		(min-resolution: 192dpi),
@@ -95,10 +89,10 @@
 		//
 		background-image: linear-gradient(
 				to right,
-				$linear-gradient-color,
-				$linear-gradient-color
+				$gradient-color,
+				$gradient-color
 			),
-			url("../#{$path}/#{$filename}@2x.#{$extension}");
+			url("../images/#{$extension}/mobile/#{$folder}/#{$filename}@2x.#{$extension}");
 	}
 
 	@media (min-device-pixel-ratio: 3),
@@ -107,10 +101,82 @@
 		//
 		background-image: linear-gradient(
 				to right,
-				$linear-gradient-color,
-				$linear-gradient-color
+				$gradient-color,
+				$gradient-color
 			),
-			url("../#{$path}/#{$filename}@3x.#{$extension}");
+			url("../images/#{$extension}/mobile/#{$folder}/#{$filename}@3x.#{$extension}");
+	}
+
+	// ****** Tablet ******
+
+	@media screen and (min-width: ($mobile + 1px)) {
+		//
+		background-image: linear-gradient(
+				to right,
+				$gradient-color,
+				$gradient-color
+			),
+			url("../images/#{$extension}/tablet/#{$folder}/#{$filename}.#{$extension}");
+
+		@media (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			//
+			background-image: linear-gradient(
+					to right,
+					$gradient-color,
+					$gradient-color
+				),
+				url("../images/#{$extension}/tablet/#{$folder}/#{$filename}@2x.#{$extension}");
+		}
+
+		@media (min-device-pixel-ratio: 3),
+			(min-resolution: 288dpi),
+			(min-resolution: 3dppx) {
+			//
+			background-image: linear-gradient(
+					to right,
+					$gradient-color,
+					$gradient-color
+				),
+				url("../images/#{$extension}/tablet/#{$folder}/#{$filename}@3x.#{$extension}");
+		}
+	}
+
+	// ****** Desktop ******
+
+	@media screen and (min-width: ($tablet + 1px)) {
+		//
+		background-image: linear-gradient(
+				to right,
+				$gradient-color,
+				$gradient-color
+			),
+			url("../images/#{$extension}/desktop/#{$folder}/#{$filename}.#{$extension}");
+
+		@media (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			//
+			background-image: linear-gradient(
+					to right,
+					$gradient-color,
+					$gradient-color
+				),
+				url("../images/#{$extension}/desktop/#{$folder}/#{$filename}@2x.#{$extension}");
+		}
+
+		@media (min-device-pixel-ratio: 3),
+			(min-resolution: 288dpi),
+			(min-resolution: 3dppx) {
+			//
+			background-image: linear-gradient(
+					to right,
+					$gradient-color,
+					$gradient-color
+				),
+				url("../images/#{$extension}/desktop/#{$folder}/#{$filename}@3x.#{$extension}");
+		}
 	}
 }
 

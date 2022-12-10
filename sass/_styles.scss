@@ -197,13 +197,8 @@
 	// 	),
 	// 	url("../images/jpeg/slider/img.jpg");
 
-	// $gradient-color, $path (only additional folders), $filename (without ext), $extension (default: jpg)
-	@include bg-img-retina-2x-3x-w-gradient(
-		rgba($bg-dark, 0.2),
-		images/webp/slider,
-		img3,
-		webp
-	);
+	// $gradient-color, $foler (only additional folders), $filename (without ext), $extension (default: jpg)
+	@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
 }
 
 .hero-text-block {
@@ -350,12 +345,7 @@ section.services {
 		// url("../images/jpeg/services.jpg");
 
 		// $linear-gradient-color,	$path, 	$filename, 	$extension: jpg
-		@include bg-img-retina-2x-3x-w-gradient(
-			rgba(#111319, 0.8),
-			images/webp/services,
-			img,
-			webp
-		);
+		@include bg-with-overlay(rgba(#111319, 0.8), services, img, webp);
 	}
 
 	.container {
@@ -619,12 +609,7 @@ section.gallery {
 		// 	url("../images/jpeg/contacts/bg.jpg");
 
 		// $linear-gradient-color,	$path, 	$filename, 	$extension: jpg
-		@include bg-img-retina-2x-3x-w-gradient(
-			rgba(#191c26, 0.9),
-			images/webp/contacts,
-			bg,
-			webp
-		);
+		@include bg-with-overlay(rgba(#191c26, 0.9), contacts, bg, webp);
 	}
 
 	.container {
