@@ -58,6 +58,34 @@ img {
   height: auto;
 }
 
+:root {
+  --container-padding: 31px;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --container-padding: 39px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    --container-padding: 15px;
+  }
+}
+
+:root {
+  --section-padding: 84px;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --section-padding: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    --section-padding: 120px;
+  }
+}
+
 /* Utility classes */
 .markup-list, .contacts-list, .gallery-list, .social-links, .team-cards, .stats, .price-list, .about-images-list, .follow-us {
   list-style: none;
@@ -202,9 +230,8 @@ body.scroll-locked {
 }
 
 .container, .hero, .header-container {
-  outline: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   margin-left: auto;
   margin-right: auto;
 }
@@ -230,7 +257,7 @@ body.scroll-locked {
 }
 
 .section {
-  padding: 84px 0;
+  padding: var(--section-padding) 0;
 }
 .section.dark, section.section.contacts, section.section.online-booking, section.section.services, .section.hero, .section.header {
   color: #555555;
@@ -747,7 +774,7 @@ section.services {
   padding: 0px;
 }
 section.services .overlay {
-  padding: 84px 0;
+  padding: var(--section-padding) 0;
   margin: 0 auto;
   background-color: #191c26;
   background-repeat: no-repeat;
@@ -976,8 +1003,8 @@ section.barbers .flex-wrapper {
 }
 @media screen and (max-width: 767px) {
   .team-card {
-    -ms-flex-preferred-size: 418px;
-        flex-basis: 418px;
+    -ms-flex-preferred-size: calc((100% - 0px) / 1);
+        flex-basis: calc((100% - 0px) / 1);
   }
 }
 @media screen and (max-width: 1199px) {
@@ -988,8 +1015,8 @@ section.barbers .flex-wrapper {
 }
 @media screen and (min-width: 1200px) {
   .team-card {
-    -ms-flex-preferred-size: 370px;
-        flex-basis: 370px;
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
   }
 }
 

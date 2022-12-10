@@ -511,8 +511,8 @@ section.barbers {
 
 	@media screen and (max-width: ($tablet - 1px)) {
 		// width: 450px;
-		// @include flex-basis(1);
-		flex-basis: 418px;
+		@include flex-basis(1);
+		// flex-basis: 418px;
 	}
 
 	@media screen and (max-width: ($desktop - 1px)) {
@@ -523,9 +523,8 @@ section.barbers {
 
 	@media screen and (min-width: $desktop) {
 		// width: 370px;
-		// @include flex-basis(3);
-		flex-basis: 370px;
-		flex-basis: calc((100% - $spacing * ($items-per-row - 1)) / $items-per-row);
+		// flex-basis: 370px;
+		@include flex-basis(3);
 	}
 
 	text-align: center;

@@ -37,42 +37,36 @@ $large-spacing: 44px;
 $list-spacing: 10px;
 $list-icon-spacing: 16px;
 
-$container-padding: 15px;
+// $container-padding: 15px;
 $desktop-version-margin: 215px;
 
-// $container-padding: 31px;
+:root {
+	--container-padding: 31px;
 
-// @media screen and (min-width: $tablet) {
-// 	$container-padding: 39px;
-// }
-// @media screen and (min-width: $desktop) {
-// 	$container-padding: 15px;
-// }
-
-// $container-padding: null;
-// @media screen and (max-width: ($tablet - 1px)) {
-// 	$container-padding: 31px !global;
-// }
-// @media screen and (min-width: $tablet) {
-// 	$container-padding: 39px !global;
-// }
-// @media screen and (min-width: $desktop) {
-// 	$container-padding: 15px !global;
-// }
-
-//
-
-$section-padding: 84px;
-@media screen and (min-width: $tablet) {
-	$section-padding: 100px;
+	@media screen and (min-width: $tablet) {
+		--container-padding: 39px;
+	}
+	@media screen and (min-width: $desktop) {
+		--container-padding: 15px;
+	}
 }
-@media screen and (min-width: $desktop) {
-	$section-padding: 120px;
-}
+$container-padding: var(--container-padding);
 
-$section-padding-mobile: 84px;
-$section-padding-tablet: $single-spacing * 5;
-$section-padding-desktop: $single-spacing * 6;
+:root {
+	--section-padding: 84px;
+
+	@media screen and (min-width: $tablet) {
+		--section-padding: 100px;
+	}
+	@media screen and (min-width: $desktop) {
+		--section-padding: 120px;
+	}
+}
+$section-padding: var(--section-padding);
+
+// $section-padding-mobile: 84px;
+// $section-padding-tablet: $single-spacing * 5;
+// $section-padding-desktop: $single-spacing * 6;
 
 // Positioning
 $z-header: 1;

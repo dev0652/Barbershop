@@ -45,7 +45,6 @@
 
 @mixin flex-basis($items-per-row, $spacing: $regular-gap) {
 	// Number of gaps = items per row - 1;
-
 	flex-basis: calc((100% - $spacing * ($items-per-row - 1)) / $items-per-row);
 }
 
