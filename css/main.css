@@ -202,6 +202,7 @@ body.scroll-locked {
 }
 
 .container, .hero, .header-container {
+  outline: auto;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -955,7 +956,21 @@ section.barbers .flex-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .team-cards {
+    -ms-flex-preferred-size: calc((100% - 0px) / 1);
+        flex-basis: calc((100% - 0px) / 1);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-cards {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .team-card {
@@ -1054,7 +1069,27 @@ section.gallery .container, section.gallery .header-container, section.gallery .
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .gallery-list {
+    -ms-flex-preferred-size: calc((100% - 0px) / 1);
+        flex-basis: calc((100% - 0px) / 1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery-list {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-list {
+    -ms-flex-preferred-size: calc((100% - 90px) / 4);
+        flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 /* ---------- Booking and contacts block ---------- */
