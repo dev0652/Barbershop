@@ -129,11 +129,16 @@
 .hero {
 	@extend .container, .dark;
 
-	min-height: 680px;
 	color: $light;
 
 	display: flex;
 	gap: 0;
+
+	min-height: 580px;
+
+	@media screen and (min-width: $tablet) {
+		min-height: 680px;
+	}
 }
 
 .hero-sup-heading {
