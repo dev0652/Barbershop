@@ -384,7 +384,8 @@ section.services {
 			linear-gradient(180deg, #090b13 0%, rgba(#090b13, 0.2) 100%);
 		background-repeat: no-repeat;
 		background-position: left, right;
-		background-size: 585px 100%, 585px 100%;
+		background-size: calc((100% - $regular-gap) / 2) 100%,
+			calc((100% - $regular-gap) / 2) 100%; // 570px
 	}
 
 	padding-top: 30px;
