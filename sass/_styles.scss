@@ -141,29 +141,7 @@
 	}
 }
 
-.hero-sup-heading {
-	@extend .sup-heading;
-
-	animation: top-to-bottom 1000ms ease 100ms both;
-}
-
-.hero-title {
-	@extend %heading;
-
-	// font-size: 72px;
-	// line-height: calc(85 / 72);
-	@include fz-lh-rem(72, 85);
-
-	animation: left-to-right 1000ms ease 1200ms both;
-}
-
-.hero-subtitle {
-	animation: bottom-to-top 1000ms ease 2200ms both;
-
-	@media screen and (max-width: ($tablet - 1px)) {
-		width: $mobile;
-	}
-}
+// Hero sidebar
 
 .hero-sidebar {
 	width: 100px;
@@ -189,7 +167,15 @@
 	gap: 184px;
 	position: relative;
 
-	padding: 0 20px 40px 100px;
+	// padding: 0 20px 40px 100px;
+
+	@media screen and (min-width: $tablet) {
+		padding-left: 118px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding-left: 100px;
+	}
 
 	background-color: $dark;
 	background-size: cover;
@@ -210,6 +196,35 @@
 	display: flex;
 	flex-direction: column;
 	gap: $single-spacing;
+}
+
+.hero-sup-heading {
+	@extend .sup-heading;
+
+	animation: top-to-bottom 1000ms ease 100ms both;
+}
+
+.hero-title {
+	@extend %heading;
+
+	@include fz-lh-rem(48, 56);
+
+	@media screen and (min-width: $desktop) {
+		// font-size: 72px;
+		// line-height: calc(85 / 72);
+		@include fz-lh-rem(72, 85);
+	}
+
+	animation: left-to-right 1000ms ease 1200ms both;
+}
+
+.hero-subtitle {
+	animation: bottom-to-top 1000ms ease 2200ms both;
+	max-width: 400px;
+
+	@media screen and (max-width: ($tablet - 1px)) {
+		@include fz-lh-rem(16, 26);
+	}
 }
 
 // Slider
@@ -301,7 +316,9 @@ section.about {
 	}
 
 	.section-content {
-		padding-right: 100px;
+		@media screen and (min-width: $desktop) {
+			padding-right: 100px;
+		}
 	}
 
 	.button {
@@ -327,8 +344,11 @@ section.about {
 	// font-size: 14px;
 	// line-height: calc(26 / 14);
 	@include fz-lh-rem(14, 26);
-
 	color: $dark;
+
+	@media screen and (max-width: ($tablet - 1px)) {
+		margin-bottom: 20px; // + 20px flex gap = 40px total
+	}
 }
 
 /* ---------- Services and prices ---------- */
@@ -375,9 +395,14 @@ section.services {
 .price-list-wrapper {
 	// https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css
 
-	columns: 1;
+	// columns: 1;
+	background-image: linear-gradient(
+		180deg,
+		#171a24 0%,
+		rgba(#171a24, 0.2) 100%
+	);
 
-	@media screen and (min-width: ($tablet + 100px)) {
+	@media screen and (min-width: $desktop) {
 		columns: 2;
 		column-gap: 30px;
 
@@ -408,6 +433,10 @@ section.services {
 	gap: $list-spacing;
 	align-items: baseline;
 
+	@media screen and (max-width: ($tablet - 1px)) {
+		@include fz-lh-rem(14, 20);
+	}
+
 	&:not(:last-child) {
 		margin-bottom: 20px;
 	}
@@ -425,18 +454,30 @@ section.services {
 section.why-us {
 	//
 	.container {
-		@extend .flex;
-		gap: $regular-gap;
-	}
+		display: flex;
+		flex-direction: column;
+		gap: $large-spacing;
 
-	.section-content {
-		// padding-right: 70px;
+		@media screen and (min-width: $tablet) {
+			.section-content {
+				max-width: 65%;
+			}
+		}
+
+		@media screen and (min-width: $desktop) {
+			flex-direction: row-reverse;
+			gap: $regular-gap;
+
+			.section-content {
+				max-width: calc((100% - $regular-gap) / 2);
+				padding-right: 70px;
+			}
+		}
 	}
 }
 
 .stats {
 	@extend .markup-list;
-	padding: 0 100px;
 
 	display: flex;
 	justify-content: center;
@@ -444,12 +485,32 @@ section.why-us {
 	gap: $regular-gap;
 
 	padding-top: 30px;
+
+	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+		max-width: 450px;
+		margin-left: auto;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: 0 100px;
+	}
 }
 
 .stat {
-	width: 170px;
 	height: 133px;
-	padding: 20px 24px;
+
+	width: 194px;
+	padding: $single-spacing 32px;
+
+	@media screen and (min-width: $tablet) {
+		width: 210px;
+		padding: $single-spacing $large-spacing;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 170px;
+		padding: $single-spacing 24px;
+	}
 
 	color: $darker;
 	background-color: $bg-light;
@@ -493,6 +554,10 @@ section.barbers {
 		display: flex;
 		flex-direction: column;
 		gap: $regular-gap;
+
+		@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+			padding: 0 calc($container-padding + 120px);
+		}
 	}
 
 	.flex-wrapper {
@@ -508,6 +573,10 @@ section.barbers {
 	display: flex;
 	flex-wrap: wrap;
 	gap: $regular-gap;
+
+	@media screen and (max-width: ($desktop - 1px)) {
+		row-gap: 64px;
+	}
 }
 
 .team-card {
@@ -523,8 +592,8 @@ section.barbers {
 
 	@media screen and (max-width: ($desktop - 1px)) {
 		// width: 450px;
-		// @include flex-basis(1);
-		flex-basis: 450px;
+		@include flex-basis(1);
+		// flex-basis: 450px;
 	}
 
 	@media screen and (min-width: $desktop) {

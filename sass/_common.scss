@@ -145,9 +145,11 @@ body {
 .section-heading {
 	@extend %heading;
 
-	// font-size: 42px;
-	// line-height: calc(49 / 42);
-	@include fz-lh-rem(42, 49);
+	@include fz-lh-rem(40, 47);
+
+	@media screen and (min-width: $tablet) {
+		@include fz-lh-rem(42, 49);
+	}
 }
 
 .sup-heading {

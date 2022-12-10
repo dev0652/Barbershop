@@ -91,62 +91,62 @@ img {
   list-style: none;
 }
 
-.flex, section.why-us .container, section.why-us .header-container, section.why-us .hero, section.services .container, section.services .header-container, section.services .hero, section.about .container, section.about .header-container, section.about .hero, .header-nav-list, .follow-us, .section-content {
+.flex, section.services .container, section.services .header-container, section.services .hero, section.about .container, section.about .header-container, section.about .hero, .header-nav-list, .follow-us, .section-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.flex.column, section.why-us .column.container, section.why-us .column.header-container, section.why-us .column.hero, section.services .column.container, section.services .column.header-container, section.services .column.hero, section.about .column.container, section.about .column.header-container, section.about .column.hero, .column.header-nav-list, .column.follow-us, .column.section-content {
+.flex.column, section.services .column.container, section.services .column.header-container, section.services .column.hero, section.about .column.container, section.about .column.header-container, section.about .column.hero, .column.header-nav-list, .column.follow-us, .column.section-content {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.flex.space-between, section.why-us .space-between.container, section.why-us .space-between.header-container, section.why-us .space-between.hero, section.services .space-between.container, section.services .space-between.header-container, section.services .space-between.hero, section.about .space-between.container, section.about .space-between.header-container, section.about .space-between.hero, .space-between.header-nav-list, .space-between.follow-us, .space-between.section-content {
+.flex.space-between, section.services .space-between.container, section.services .space-between.header-container, section.services .space-between.hero, section.about .space-between.container, section.about .space-between.header-container, section.about .space-between.hero, .space-between.header-nav-list, .space-between.follow-us, .space-between.section-content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.flex.space-around, section.why-us .space-around.container, section.why-us .space-around.header-container, section.why-us .space-around.hero, section.services .space-around.container, section.services .space-around.header-container, section.services .space-around.hero, section.about .space-around.container, section.about .space-around.header-container, section.about .space-around.hero, .space-around.header-nav-list, .space-around.follow-us, .space-around.section-content {
+.flex.space-around, section.services .space-around.container, section.services .space-around.header-container, section.services .space-around.hero, section.about .space-around.container, section.about .space-around.header-container, section.about .space-around.hero, .space-around.header-nav-list, .space-around.follow-us, .space-around.section-content {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.flex.justify-center, section.why-us .justify-center.container, section.why-us .justify-center.header-container, section.why-us .justify-center.hero, section.services .justify-center.container, section.services .justify-center.header-container, section.services .justify-center.hero, section.about .justify-center.container, section.about .justify-center.header-container, section.about .justify-center.hero, .justify-center.header-nav-list, .justify-center.follow-us, .justify-center.section-content {
+.flex.justify-center, section.services .justify-center.container, section.services .justify-center.header-container, section.services .justify-center.hero, section.about .justify-center.container, section.about .justify-center.header-container, section.about .justify-center.hero, .justify-center.header-nav-list, .justify-center.follow-us, .justify-center.section-content {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-.flex.justify-end, section.why-us .justify-end.container, section.why-us .justify-end.header-container, section.why-us .justify-end.hero, section.services .justify-end.container, section.services .justify-end.header-container, section.services .justify-end.hero, section.about .justify-end.container, section.about .justify-end.header-container, section.about .justify-end.hero, .justify-end.header-nav-list, .justify-end.follow-us, .justify-end.section-content {
+.flex.justify-end, section.services .justify-end.container, section.services .justify-end.header-container, section.services .justify-end.hero, section.about .justify-end.container, section.about .justify-end.header-container, section.about .justify-end.hero, .justify-end.header-nav-list, .justify-end.follow-us, .justify-end.section-content {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
 }
-.flex.align-center, section.why-us .align-center.container, section.why-us .align-center.header-container, section.why-us .align-center.hero, section.services .align-center.container, section.services .align-center.header-container, section.services .align-center.hero, section.about .align-center.container, section.about .align-center.header-container, section.about .align-center.hero, .align-center.header-nav-list, .align-center.follow-us, .align-center.section-content {
+.flex.align-center, section.services .align-center.container, section.services .align-center.header-container, section.services .align-center.hero, section.about .align-center.container, section.about .align-center.header-container, section.about .align-center.hero, .align-center.header-nav-list, .align-center.follow-us, .align-center.section-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.flex.align-end, section.why-us .align-end.container, section.why-us .align-end.header-container, section.why-us .align-end.hero, section.services .align-end.container, section.services .align-end.header-container, section.services .align-end.hero, section.about .align-end.container, section.about .align-end.header-container, section.about .align-end.hero, .align-end.header-nav-list, .align-end.follow-us, .align-end.section-content {
+.flex.align-end, section.services .align-end.container, section.services .align-end.header-container, section.services .align-end.hero, section.about .align-end.container, section.about .align-end.header-container, section.about .align-end.hero, .align-end.header-nav-list, .align-end.follow-us, .align-end.section-content {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
 }
-.flex.align-baseline, section.why-us .align-baseline.container, section.why-us .align-baseline.header-container, section.why-us .align-baseline.hero, section.services .align-baseline.container, section.services .align-baseline.header-container, section.services .align-baseline.hero, section.about .align-baseline.container, section.about .align-baseline.header-container, section.about .align-baseline.hero, .align-baseline.header-nav-list, .align-baseline.follow-us, .align-baseline.section-content {
+.flex.align-baseline, section.services .align-baseline.container, section.services .align-baseline.header-container, section.services .align-baseline.hero, section.about .align-baseline.container, section.about .align-baseline.header-container, section.about .align-baseline.hero, .align-baseline.header-nav-list, .align-baseline.follow-us, .align-baseline.section-content {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
 }
-.flex.wrap, section.why-us .wrap.container, section.why-us .wrap.header-container, section.why-us .wrap.hero, section.services .wrap.container, section.services .wrap.header-container, section.services .wrap.hero, section.about .wrap.container, section.about .wrap.header-container, section.about .wrap.hero, .wrap.header-nav-list, .wrap.follow-us, .wrap.section-content {
+.flex.wrap, section.services .wrap.container, section.services .wrap.header-container, section.services .wrap.hero, section.about .wrap.container, section.about .wrap.header-container, section.about .wrap.hero, .wrap.header-nav-list, .wrap.follow-us, .wrap.section-content {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.flex.regular-gap, section.why-us .regular-gap.container, section.why-us .regular-gap.header-container, section.why-us .regular-gap.hero, section.services .regular-gap.container, section.services .regular-gap.header-container, section.services .regular-gap.hero, section.about .regular-gap.container, section.about .regular-gap.header-container, section.about .regular-gap.hero, .regular-gap.header-nav-list, .regular-gap.follow-us, .regular-gap.section-content {
+.flex.regular-gap, section.services .regular-gap.container, section.services .regular-gap.header-container, section.services .regular-gap.hero, section.about .regular-gap.container, section.about .regular-gap.header-container, section.about .regular-gap.hero, .regular-gap.header-nav-list, .regular-gap.follow-us, .regular-gap.section-content {
   gap: 30px;
 }
-.flex.regular-spacing, section.why-us .regular-spacing.container, section.why-us .regular-spacing.header-container, section.why-us .regular-spacing.hero, section.services .regular-spacing.container, section.services .regular-spacing.header-container, section.services .regular-spacing.hero, section.about .regular-spacing.container, section.about .regular-spacing.header-container, section.about .regular-spacing.hero, .regular-spacing.header-nav-list, .regular-spacing.follow-us, .regular-spacing.section-content {
+.flex.regular-spacing, section.services .regular-spacing.container, section.services .regular-spacing.header-container, section.services .regular-spacing.hero, section.about .regular-spacing.container, section.about .regular-spacing.header-container, section.about .regular-spacing.hero, .regular-spacing.header-nav-list, .regular-spacing.follow-us, .regular-spacing.section-content {
   gap: 20px;
 }
-.flex.large-spacing, section.why-us .large-spacing.container, section.why-us .large-spacing.header-container, section.why-us .large-spacing.hero, section.services .large-spacing.container, section.services .large-spacing.header-container, section.services .large-spacing.hero, section.about .large-spacing.container, section.about .large-spacing.header-container, section.about .large-spacing.hero, .large-spacing.header-nav-list, .large-spacing.follow-us, .large-spacing.section-content {
+.flex.large-spacing, section.services .large-spacing.container, section.services .large-spacing.header-container, section.services .large-spacing.hero, section.about .large-spacing.container, section.about .large-spacing.header-container, section.about .large-spacing.hero, .large-spacing.header-nav-list, .large-spacing.follow-us, .large-spacing.section-content {
   gap: 44px;
 }
 
@@ -439,8 +439,14 @@ body.scroll-locked {
 }
 
 .section-heading {
-  font-size: 2.625rem;
-  line-height: 1.1666666667;
+  font-size: 2.5rem;
+  line-height: 1.175;
+}
+@media screen and (min-width: 768px) {
+  .section-heading {
+    font-size: 2.625rem;
+    line-height: 1.1666666667;
+  }
 }
 
 .sup-heading, .hero-sup-heading {
@@ -638,28 +644,6 @@ body.scroll-locked {
   }
 }
 
-.hero-sup-heading {
-  -webkit-animation: top-to-bottom 1000ms ease 100ms both;
-          animation: top-to-bottom 1000ms ease 100ms both;
-}
-
-.hero-title {
-  font-size: 4.5rem;
-  line-height: 1.1805555556;
-  -webkit-animation: left-to-right 1000ms ease 1200ms both;
-          animation: left-to-right 1000ms ease 1200ms both;
-}
-
-.hero-subtitle {
-  -webkit-animation: bottom-to-top 1000ms ease 2200ms both;
-          animation: bottom-to-top 1000ms ease 2200ms both;
-}
-@media screen and (max-width: 767px) {
-  .hero-subtitle {
-    width: 480px;
-  }
-}
-
 .hero-sidebar {
   width: 100px;
   color: #555555;
@@ -691,12 +675,21 @@ body.scroll-locked {
           flex-grow: 1;
   gap: 184px;
   position: relative;
-  padding: 0 20px 40px 100px;
   background-color: #555555;
   background-size: cover;
   background-position: center;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../images/webp/mobile/slider/img3.webp");
   background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/webp/mobile/slider/img3.webp");
+}
+@media screen and (min-width: 768px) {
+  .hero-main {
+    padding-left: 118px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-main {
+    padding-left: 100px;
+  }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero-main {
@@ -756,6 +749,36 @@ body.scroll-locked {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+}
+
+.hero-sup-heading {
+  -webkit-animation: top-to-bottom 1000ms ease 100ms both;
+          animation: top-to-bottom 1000ms ease 100ms both;
+}
+
+.hero-title {
+  font-size: 3rem;
+  line-height: 1.1666666667;
+  -webkit-animation: left-to-right 1000ms ease 1200ms both;
+          animation: left-to-right 1000ms ease 1200ms both;
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 4.5rem;
+    line-height: 1.1805555556;
+  }
+}
+
+.hero-subtitle {
+  -webkit-animation: bottom-to-top 1000ms ease 2200ms both;
+          animation: bottom-to-top 1000ms ease 2200ms both;
+  max-width: 400px;
+}
+@media screen and (max-width: 767px) {
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.625;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -836,8 +859,10 @@ body.scroll-locked {
 section.about .container, section.about .header-container, section.about .hero {
   gap: 30px;
 }
-section.about .section-content {
-  padding-right: 100px;
+@media screen and (min-width: 1200px) {
+  section.about .section-content {
+    padding-right: 100px;
+  }
 }
 section.about .button, section.about .header-button {
   -ms-flex-item-align: start;
@@ -863,6 +888,11 @@ section.about .button, section.about .header-button {
   font-size: 0.875rem;
   line-height: 1.8571428571;
   color: #555555;
+}
+@media screen and (max-width: 767px) {
+  .description {
+    margin-bottom: 20px;
+  }
 }
 
 /* ---------- Services and prices ---------- */
@@ -952,13 +982,12 @@ section.services .button, section.services .header-button {
 
 /* ---------- Price-list ---------- */
 .price-list-wrapper {
-  -webkit-columns: 1;
-     -moz-columns: 1;
-          columns: 1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
   padding-top: 30px;
   padding-bottom: 30px;
 }
-@media screen and (min-width: 868px) {
+@media screen and (min-width: 1200px) {
   .price-list-wrapper {
     -webkit-columns: 2;
        -moz-columns: 2;
@@ -988,6 +1017,12 @@ section.services .button, section.services .header-button {
       -ms-flex-align: baseline;
           align-items: baseline;
 }
+@media screen and (max-width: 767px) {
+  .price-list-item {
+    font-size: 0.875rem;
+    line-height: 1.4285714286;
+  }
+}
 .price-list-item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -1002,10 +1037,35 @@ section.services .button, section.services .header-button {
 
 /* ---------- Why us ---------- */
 section.why-us .container, section.why-us .header-container, section.why-us .hero {
-  gap: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 44px;
 }
+@media screen and (min-width: 768px) {
+  section.why-us .container .section-content, section.why-us .header-container .section-content, section.why-us .hero .section-content {
+    max-width: 65%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.why-us .container, section.why-us .header-container, section.why-us .hero {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 30px;
+  }
+  section.why-us .container .section-content, section.why-us .header-container .section-content, section.why-us .hero .section-content {
+    max-width: calc((100% - 30px) / 2);
+    padding-right: 70px;
+  }
+}
+
 .stats {
-  padding: 0 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1017,14 +1077,37 @@ section.why-us .container, section.why-us .header-container, section.why-us .her
   gap: 30px;
   padding-top: 30px;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .stats {
+    max-width: 450px;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .stats {
+    padding: 0 100px;
+  }
+}
 
 .stat {
-  width: 170px;
   height: 133px;
-  padding: 20px 24px;
+  width: 194px;
+  padding: 20px 32px;
   color: #303030;
   background-color: #f7f7f7;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .stat {
+    width: 210px;
+    padding: 20px 44px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .stat {
+    width: 170px;
+    padding: 20px 24px;
+  }
 }
 .stat:nth-child(odd) {
   margin-top: -30px;
@@ -1064,6 +1147,11 @@ section.barbers .container, section.barbers .header-container, section.barbers .
           flex-direction: column;
   gap: 30px;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  section.barbers .container, section.barbers .header-container, section.barbers .hero {
+    padding: 0 calc(var(--container-padding) + 120px);
+  }
+}
 section.barbers .flex-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1082,6 +1170,11 @@ section.barbers .flex-wrapper {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .team-cards {
+    row-gap: 64px;
+  }
 }
 
 .team-card {
@@ -1105,8 +1198,8 @@ section.barbers .flex-wrapper {
 }
 @media screen and (max-width: 1199px) {
   .team-card {
-    -ms-flex-preferred-size: 450px;
-        flex-basis: 450px;
+    -ms-flex-preferred-size: calc((100% - 0px) / 1);
+        flex-basis: calc((100% - 0px) / 1);
   }
 }
 @media screen and (min-width: 1200px) {
