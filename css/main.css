@@ -960,18 +960,6 @@ section.barbers .flex-wrapper {
       flex-wrap: wrap;
   gap: 30px;
 }
-@media screen and (max-width: 767px) {
-  .team-cards {
-    -ms-flex-preferred-size: calc((100% - 0px) / 1);
-        flex-basis: calc((100% - 0px) / 1);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .team-cards {
-    -ms-flex-preferred-size: calc((100% - 60px) / 3);
-        flex-basis: calc((100% - 60px) / 3);
-  }
-}
 
 .team-card {
   display: -webkit-box;
@@ -985,6 +973,24 @@ section.barbers .flex-wrapper {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .team-card {
+    -ms-flex-preferred-size: 418px;
+        flex-basis: 418px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .team-card {
+    -ms-flex-preferred-size: 450px;
+        flex-basis: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-card {
+    -ms-flex-preferred-size: 370px;
+        flex-basis: 370px;
+  }
 }
 
 .team-card-meta {

@@ -40,6 +40,28 @@ $list-icon-spacing: 16px;
 $container-padding: 15px;
 $desktop-version-margin: 215px;
 
+// $container-padding: 31px;
+
+// @media screen and (min-width: $tablet) {
+// 	$container-padding: 39px;
+// }
+// @media screen and (min-width: $desktop) {
+// 	$container-padding: 15px;
+// }
+
+// $container-padding: null;
+// @media screen and (max-width: ($tablet - 1px)) {
+// 	$container-padding: 31px !global;
+// }
+// @media screen and (min-width: $tablet) {
+// 	$container-padding: 39px !global;
+// }
+// @media screen and (min-width: $desktop) {
+// 	$container-padding: 15px !global;
+// }
+
+//
+
 $section-padding: 84px;
 @media screen and (min-width: $tablet) {
 	$section-padding: 100px;

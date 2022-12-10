@@ -502,22 +502,31 @@ section.barbers {
 	display: flex;
 	flex-wrap: wrap;
 	gap: $regular-gap;
-
-	@media screen and (max-width: ($tablet - 1px)) {
-		// width: 450px;
-		@include flex-basis(1);
-	}
-
-	@media screen and (min-width: $desktop) {
-		// width: 370px;
-		@include flex-basis(3);
-	}
 }
 
 .team-card {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	@media screen and (max-width: ($tablet - 1px)) {
+		// width: 450px;
+		// @include flex-basis(1);
+		flex-basis: 418px;
+	}
+
+	@media screen and (max-width: ($desktop - 1px)) {
+		// width: 450px;
+		// @include flex-basis(1);
+		flex-basis: 450px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		// width: 370px;
+		// @include flex-basis(3);
+		flex-basis: 370px;
+		flex-basis: calc((100% - $spacing * ($items-per-row - 1)) / $items-per-row);
+	}
 
 	text-align: center;
 }
