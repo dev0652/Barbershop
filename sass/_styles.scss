@@ -737,8 +737,8 @@ section.gallery {
 
 		background-position: left 0% bottom 0%;
 		background-repeat: no-repeat;
-		background-size: 100% auto;
-		// background-size: cover;
+		background-size: 100% 50%;
+		// background-size: contain;
 
 		@media screen and (min-width: $desktop) {
 			//

@@ -1324,7 +1324,7 @@ section.gallery .container, section.gallery .header-container, section.gallery .
   background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img.webp");
   background-position: left 0% bottom 0%;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 50%;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .booking-and-contacts-block .overlay {
