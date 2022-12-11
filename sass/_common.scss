@@ -164,6 +164,10 @@ body {
 		color: rgba($light, 0.6);
 	}
 
+	.section-title-block & {
+		margin-bottom: $single-spacing;
+	}
+
 	@extend .prefix;
 }
 

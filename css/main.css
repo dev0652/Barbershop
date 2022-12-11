@@ -91,62 +91,62 @@ img {
   list-style: none;
 }
 
-.flex, section.services .container, section.services .header-container, section.services .hero, section.about .container, section.about .header-container, section.about .hero, .header-nav-list, .follow-us, .section-content {
+.flex, section.about .container, section.about .header-container, section.about .hero, .header-nav-list, .follow-us, .section-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.flex.column, section.services .column.container, section.services .column.header-container, section.services .column.hero, section.about .column.container, section.about .column.header-container, section.about .column.hero, .column.header-nav-list, .column.follow-us, .column.section-content {
+.flex.column, section.about .column.container, section.about .column.header-container, section.about .column.hero, .column.header-nav-list, .column.follow-us, .column.section-content {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.flex.space-between, section.services .space-between.container, section.services .space-between.header-container, section.services .space-between.hero, section.about .space-between.container, section.about .space-between.header-container, section.about .space-between.hero, .space-between.header-nav-list, .space-between.follow-us, .space-between.section-content {
+.flex.space-between, section.about .space-between.container, section.about .space-between.header-container, section.about .space-between.hero, .space-between.header-nav-list, .space-between.follow-us, .space-between.section-content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.flex.space-around, section.services .space-around.container, section.services .space-around.header-container, section.services .space-around.hero, section.about .space-around.container, section.about .space-around.header-container, section.about .space-around.hero, .space-around.header-nav-list, .space-around.follow-us, .space-around.section-content {
+.flex.space-around, section.about .space-around.container, section.about .space-around.header-container, section.about .space-around.hero, .space-around.header-nav-list, .space-around.follow-us, .space-around.section-content {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.flex.justify-center, section.services .justify-center.container, section.services .justify-center.header-container, section.services .justify-center.hero, section.about .justify-center.container, section.about .justify-center.header-container, section.about .justify-center.hero, .justify-center.header-nav-list, .justify-center.follow-us, .justify-center.section-content {
+.flex.justify-center, section.about .justify-center.container, section.about .justify-center.header-container, section.about .justify-center.hero, .justify-center.header-nav-list, .justify-center.follow-us, .justify-center.section-content {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-.flex.justify-end, section.services .justify-end.container, section.services .justify-end.header-container, section.services .justify-end.hero, section.about .justify-end.container, section.about .justify-end.header-container, section.about .justify-end.hero, .justify-end.header-nav-list, .justify-end.follow-us, .justify-end.section-content {
+.flex.justify-end, section.about .justify-end.container, section.about .justify-end.header-container, section.about .justify-end.hero, .justify-end.header-nav-list, .justify-end.follow-us, .justify-end.section-content {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
 }
-.flex.align-center, section.services .align-center.container, section.services .align-center.header-container, section.services .align-center.hero, section.about .align-center.container, section.about .align-center.header-container, section.about .align-center.hero, .align-center.header-nav-list, .align-center.follow-us, .align-center.section-content {
+.flex.align-center, section.about .align-center.container, section.about .align-center.header-container, section.about .align-center.hero, .align-center.header-nav-list, .align-center.follow-us, .align-center.section-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.flex.align-end, section.services .align-end.container, section.services .align-end.header-container, section.services .align-end.hero, section.about .align-end.container, section.about .align-end.header-container, section.about .align-end.hero, .align-end.header-nav-list, .align-end.follow-us, .align-end.section-content {
+.flex.align-end, section.about .align-end.container, section.about .align-end.header-container, section.about .align-end.hero, .align-end.header-nav-list, .align-end.follow-us, .align-end.section-content {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
 }
-.flex.align-baseline, section.services .align-baseline.container, section.services .align-baseline.header-container, section.services .align-baseline.hero, section.about .align-baseline.container, section.about .align-baseline.header-container, section.about .align-baseline.hero, .align-baseline.header-nav-list, .align-baseline.follow-us, .align-baseline.section-content {
+.flex.align-baseline, section.about .align-baseline.container, section.about .align-baseline.header-container, section.about .align-baseline.hero, .align-baseline.header-nav-list, .align-baseline.follow-us, .align-baseline.section-content {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
 }
-.flex.wrap, section.services .wrap.container, section.services .wrap.header-container, section.services .wrap.hero, section.about .wrap.container, section.about .wrap.header-container, section.about .wrap.hero, .wrap.header-nav-list, .wrap.follow-us, .wrap.section-content {
+.flex.wrap, section.about .wrap.container, section.about .wrap.header-container, section.about .wrap.hero, .wrap.header-nav-list, .wrap.follow-us, .wrap.section-content {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.flex.regular-gap, section.services .regular-gap.container, section.services .regular-gap.header-container, section.services .regular-gap.hero, section.about .regular-gap.container, section.about .regular-gap.header-container, section.about .regular-gap.hero, .regular-gap.header-nav-list, .regular-gap.follow-us, .regular-gap.section-content {
+.flex.regular-gap, section.about .regular-gap.container, section.about .regular-gap.header-container, section.about .regular-gap.hero, .regular-gap.header-nav-list, .regular-gap.follow-us, .regular-gap.section-content {
   gap: 30px;
 }
-.flex.regular-spacing, section.services .regular-spacing.container, section.services .regular-spacing.header-container, section.services .regular-spacing.hero, section.about .regular-spacing.container, section.about .regular-spacing.header-container, section.about .regular-spacing.hero, .regular-spacing.header-nav-list, .regular-spacing.follow-us, .regular-spacing.section-content {
+.flex.regular-spacing, section.about .regular-spacing.container, section.about .regular-spacing.header-container, section.about .regular-spacing.hero, .regular-spacing.header-nav-list, .regular-spacing.follow-us, .regular-spacing.section-content {
   gap: 20px;
 }
-.flex.large-spacing, section.services .large-spacing.container, section.services .large-spacing.header-container, section.services .large-spacing.hero, section.about .large-spacing.container, section.about .large-spacing.header-container, section.about .large-spacing.hero, .large-spacing.header-nav-list, .large-spacing.follow-us, .large-spacing.section-content {
+.flex.large-spacing, section.about .large-spacing.container, section.about .large-spacing.header-container, section.about .large-spacing.hero, .large-spacing.header-nav-list, .large-spacing.follow-us, .large-spacing.section-content {
   gap: 44px;
 }
 
@@ -458,6 +458,9 @@ body.scroll-locked {
 }
 .dark .sup-heading, section.contacts .sup-heading, section.online-booking .sup-heading, section.services .sup-heading, .dark .hero-sup-heading, section.contacts .hero-sup-heading, section.online-booking .hero-sup-heading, section.services .hero-sup-heading, .hero .sup-heading, .hero .hero-sup-heading, .header .sup-heading, .header .hero-sup-heading {
   color: rgba(157, 164, 189, 0.6);
+}
+.section-title-block .sup-heading, .section-title-block .hero-sup-heading {
+  margin-bottom: 20px;
 }
 
 .prefix, .follow-us, .sup-heading, .hero-sup-heading {
@@ -957,13 +960,6 @@ section.services .overlay {
     background-image: linear-gradient(to right, rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)), url("../images/webp/desktop/services/img@3x.webp");
   }
 }
-section.services .container, section.services .header-container, section.services .hero {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 30px;
-}
 section.services .button, section.services .header-button {
   -ms-flex-item-align: center;
       align-self: center;
@@ -1145,22 +1141,12 @@ section.barbers .container, section.barbers .header-container, section.barbers .
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 30px;
+  gap: 44px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   section.barbers .container, section.barbers .header-container, section.barbers .hero {
     padding: 0 calc(var(--container-padding) + 120px);
   }
-}
-section.barbers .flex-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 44px;
 }
 
 .team-cards {
@@ -1192,18 +1178,21 @@ section.barbers .flex-wrapper {
 }
 @media screen and (max-width: 767px) {
   .team-card {
+    max-width: 418px;
     -ms-flex-preferred-size: calc((100% - 0px) / 1);
         flex-basis: calc((100% - 0px) / 1);
   }
 }
 @media screen and (max-width: 1199px) {
   .team-card {
+    max-width: 450px;
     -ms-flex-preferred-size: calc((100% - 0px) / 1);
         flex-basis: calc((100% - 0px) / 1);
   }
 }
 @media screen and (min-width: 1200px) {
   .team-card {
+    max-width: 370px;
     -ms-flex-preferred-size: calc((100% - 60px) / 3);
         flex-basis: calc((100% - 60px) / 3);
   }

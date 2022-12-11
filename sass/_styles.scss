@@ -373,11 +373,11 @@ section.services {
 		@include bg-with-overlay(rgba(#111319, 0.8), services, img, webp);
 	}
 
-	.container {
-		@extend .flex;
-		flex-direction: column;
-		gap: $regular-gap;
-	}
+	// .container {
+	// 	@extend .flex;
+	// 	flex-direction: column;
+	// 	gap: $regular-gap;
+	// }
 
 	.button {
 		align-self: center;
@@ -553,17 +553,15 @@ section.barbers {
 	.container {
 		display: flex;
 		flex-direction: column;
-		gap: $regular-gap;
+		gap: $large-spacing;
 
 		@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
 			padding: 0 calc($container-padding + 120px);
 		}
-	}
 
-	.flex-wrapper {
-		display: flex;
-		flex-direction: column;
-		gap: $large-spacing;
+		// @media screen and (min-width: $desktop) {
+		// 	gap: $regular-gap;
+		// }
 	}
 }
 
@@ -585,19 +583,19 @@ section.barbers {
 	align-items: center;
 
 	@media screen and (max-width: ($tablet - 1px)) {
-		// width: 450px;
+		max-width: 418px;
 		@include flex-basis(1);
 		// flex-basis: 418px;
 	}
 
 	@media screen and (max-width: ($desktop - 1px)) {
-		// width: 450px;
+		max-width: 450px;
 		@include flex-basis(1);
 		// flex-basis: 450px;
 	}
 
 	@media screen and (min-width: $desktop) {
-		// width: 370px;
+		max-width: 370px;
 		// flex-basis: 370px;
 		@include flex-basis(3);
 	}
