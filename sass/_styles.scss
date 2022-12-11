@@ -321,11 +321,20 @@ section.about {
 		}
 	}
 
+	.section-heading {
+		@media screen and (max-width: ($desktop - 1px)) {
+			@include fz-lh-rem(28, 33);
+			max-width: 330px;
+		}
+	}
+
 	.button {
 		align-self: flex-start;
 		margin-top: auto;
 	}
 }
+
+// About - left block
 
 .about-images-list {
 	@extend .markup-list;
@@ -337,6 +346,25 @@ section.about {
 	@media screen and (min-width: $tablet) {
 		display: flex;
 		gap: $regular-gap;
+		flex-direction: column;
+	}
+
+	@media screen and (min-width: $desktop) {
+		flex-direction: row;
+	}
+}
+
+// .about-image {
+// 	width: 100%;
+// }
+
+.about-images-item {
+	@media screen and (min-width: $tablet) {
+		width: 330px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 270px;
 	}
 }
 

@@ -52,7 +52,8 @@ address {
   font-style: normal;
 }
 
-img {
+img,
+picture {
   display: block;
   max-width: 100%;
   height: auto;
@@ -867,6 +868,13 @@ section.about .container, section.about .header-container, section.about .hero {
     padding-right: 100px;
   }
 }
+@media screen and (max-width: 1199px) {
+  section.about .section-heading {
+    font-size: 1.75rem;
+    line-height: 1.1785714286;
+    max-width: 330px;
+  }
+}
 section.about .button, section.about .header-button {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -884,6 +892,29 @@ section.about .button, section.about .header-button {
     display: -ms-flexbox;
     display: flex;
     gap: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-images-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-images-item {
+    width: 330px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-images-item {
+    width: 270px;
   }
 }
 
