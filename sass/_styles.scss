@@ -167,11 +167,7 @@
 	gap: 184px;
 	position: relative;
 
-	// padding: 0 20px 40px 100px;
-
-	@media screen and (min-width: $tablet) {
-		padding-left: 118px;
-	}
+	// @media screen and (min-width: $tablet) {}
 
 	@media screen and (min-width: $desktop) {
 		padding-left: 100px;
@@ -457,12 +453,16 @@ section.services {
 }
 
 .price-list-item {
-	margin: 0 20px;
+	margin: 0 $single-spacing;
 	display: flex;
 	gap: $list-spacing;
 	align-items: baseline;
 
-	@media screen and (max-width: ($tablet - 1px)) {
+	@media screen and (max-width: ($mobile - 1px)) {
+		@include fz-lh-rem(11, 15);
+	}
+
+	@media screen and (min-width: $mobile) and (max-width: ($tablet - 1px)) {
 		@include fz-lh-rem(14, 20);
 	}
 
@@ -546,8 +546,10 @@ section.why-us {
 
 	text-align: center;
 
-	&:nth-child(odd) {
-		margin-top: -30px;
+	@media screen and (min-width: $mobile) {
+		&:nth-child(odd) {
+			margin-top: -30px;
+		}
 	}
 }
 
