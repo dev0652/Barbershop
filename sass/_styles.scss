@@ -37,17 +37,15 @@
 
 .header-container {
 	@extend .container;
-
 	display: flex;
 	align-items: center;
-	// outline: auto;
 }
 
 .header-logo {
 	@extend .link;
 
 	@media screen and (min-width: $tablet) {
-		margin-right: 70px;
+		margin-right: $regular-gap;
 	}
 
 	@media screen and (min-width: $desktop) {
@@ -58,7 +56,17 @@
 // Header menu wrapper
 
 .header-menu-wrapper {
+	// outline: auto;
 	//
+	.link {
+		@include fz-lh-rem(12, 16);
+		letter-spacing: 0.1em;
+	}
+
+	.button {
+		@include fz-lh-rem(12, 16);
+	}
+
 	@media screen and (max-width: ($tablet - 1px)) {
 		//
 		position: fixed;
@@ -97,6 +105,10 @@
 		justify-content: space-between;
 		flex-grow: 1;
 
+		// margin-left: 20px;
+	}
+
+	@media screen and (min-width: $desktop) {
 		margin-right: 17px;
 	}
 }
@@ -118,6 +130,21 @@
 	align-items: center;
 	gap: $large-spacing;
 	margin-left: auto;
+
+	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+		position: relative;
+		justify-content: center;
+		margin-right: 5px;
+	}
+}
+
+.header-telephone {
+	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+		position: absolute;
+		top: calc(100% + 20px);
+		// left: 50%;
+		// transform: translateX(-50%);
+	}
 }
 
 .header-button {
@@ -143,6 +170,8 @@
 
 .hero {
 	//
+	// padding-right: 30px;
+
 	@media screen and (max-width: ($tablet - 1px)) {
 		// background-color: $dark;
 		background-size: cover;
@@ -154,27 +183,23 @@
 
 	.container {
 		@extend .dark;
+		// outline: auto;
 		color: $light;
 
 		display: flex;
 		gap: 0;
 
 		min-height: 580px;
+
 		@media screen and (min-width: $tablet) {
 			min-height: 680px;
 		}
 
-		@media screen and (min-width: $tablet) {
-			// background-color: $dark;
+		@media screen and (min-width: $desktop) {
 			@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
 
-			background-position: top 0 left calc(90px + $container-padding),
-				top 0 left calc(90px + $container-padding);
-			background-repeat: no-repeat, no-repeat;
+			background-repeat: no-repeat;
 			background-size: cover;
-		}
-
-		@media screen and (min-width: $desktop) {
 			background-position: top 0 left calc(100px + $container-padding);
 		}
 	}
@@ -209,6 +234,14 @@
 	flex-grow: 1;
 	gap: 184px;
 	position: relative;
+
+	@media screen and (min-width: $tablet) {
+		@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
+
+		// background-position: top 0 left calc(90px + $container-padding);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 
 	@media screen and (min-width: $tablet) {
 		// padding-left: 118px; // це виглядає потворно :)
@@ -278,6 +311,10 @@
 
 		position: absolute;
 		top: calc(50% - 15px);
+		right: 37px;
+	}
+
+	@media screen and (min-width: $desktop) {
 		right: 20px;
 	}
 }
@@ -777,7 +814,7 @@ section.gallery {
 
 		background-position: left 0% bottom 0%;
 		background-repeat: no-repeat;
-		background-size: 100% 50%;
+		background-size: 100% 45%;
 		// background-size: contain;
 
 		@media screen and (min-width: $desktop) {
