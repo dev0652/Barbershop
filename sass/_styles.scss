@@ -582,20 +582,12 @@ section.barbers {
 	flex-direction: column;
 	align-items: center;
 
-	@media screen and (max-width: ($tablet - 1px)) {
-		max-width: 418px;
-		@include flex-basis(1);
-		// flex-basis: 418px;
-	}
-
 	@media screen and (max-width: ($desktop - 1px)) {
-		max-width: 450px;
 		@include flex-basis(1);
-		// flex-basis: 450px;
 	}
 
 	@media screen and (min-width: $desktop) {
-		max-width: 370px;
+		// max-width: 370px;
 		// flex-basis: 370px;
 		@include flex-basis(3);
 	}
@@ -686,7 +678,9 @@ section.gallery {
 	display: flex;
 	flex-wrap: wrap;
 	gap: $regular-gap;
+}
 
+.gallery-item {
 	@media screen and (max-width: ($tablet - 1px)) {
 		// width: 418px;
 		@include flex-basis(1);
@@ -718,7 +712,8 @@ section.gallery {
 		// 	url("../images/jpeg/contacts/bg.jpg");
 
 		// $linear-gradient-color,	$path, 	$filename, 	$extension: jpg
-		@include bg-with-overlay(rgba(#191c26, 0.9), contacts, bg, webp);
+
+		@include bg-with-overlay(rgba(#191c26, 0.9), contacts, img, webp);
 	}
 
 	.container {
