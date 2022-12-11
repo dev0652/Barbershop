@@ -459,7 +459,7 @@ body.scroll-locked {
 .dark .sup-heading, section.contacts .sup-heading, section.online-booking .sup-heading, section.services .sup-heading, .dark .hero-sup-heading, section.contacts .hero-sup-heading, section.online-booking .hero-sup-heading, section.services .hero-sup-heading, .hero .sup-heading, .hero .hero-sup-heading, .header .sup-heading, .header .hero-sup-heading {
   color: rgba(157, 164, 189, 0.6);
 }
-.section-title-block .sup-heading, .section-title-block .hero-sup-heading {
+.section-title-block .sup-heading, .section-title-block .hero-sup-heading, section.contacts .sup-heading, section.contacts .hero-sup-heading {
   margin-bottom: 20px;
 }
 
@@ -1296,13 +1296,15 @@ section.gallery .container, section.gallery .header-container, section.gallery .
 }
 
 /* ---------- Booking and contacts block ---------- */
-.booking-and-contacts-block .overlay {
+.booking-and-contacts-block {
   background-color: #191c26;
-  background-position: calc(100% + 30px) 0%;
-  background-repeat: no-repeat;
-  background-size: 50% 100%;
+}
+.booking-and-contacts-block .overlay {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img.webp");
   background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img.webp");
+  background-position: left 0% bottom 0%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .booking-and-contacts-block .overlay {
@@ -1352,18 +1354,46 @@ section.gallery .container, section.gallery .header-container, section.gallery .
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img@3x.webp");
   }
 }
+@media screen and (min-width: 1200px) {
+  .booking-and-contacts-block .overlay {
+    background-position: calc(100% + 30px) 0%;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+  }
+}
 .booking-and-contacts-block .container, .booking-and-contacts-block .header-container, .booking-and-contacts-block .hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .booking-and-contacts-block .container, .booking-and-contacts-block .header-container, .booking-and-contacts-block .hero {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
+  }
 }
 
-section.online-booking,
+@media screen and (min-width: 1200px) {
+  section.online-booking,
 section.contacts {
-  width: 50%;
-  -ms-flex-preferred-size: fill;
-      flex-basis: fill;
+    width: 50%;
+    -ms-flex-preferred-size: fill;
+        flex-basis: fill;
+  }
+}
+@media screen and (max-width: 767px) {
+  section.online-booking .section-heading,
+section.contacts .section-heading {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 
 /* ---------- Online-booking (left block) ---------- */
@@ -1388,6 +1418,16 @@ section.online-booking {
           flex-direction: column;
   gap: 44px;
 }
+.booking-form .button, .booking-form .header-button {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+@media screen and (min-width: 768px) {
+  .booking-form .button, .booking-form .header-button {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
 
 .text-fields {
   display: -webkit-box;
@@ -1406,8 +1446,10 @@ section.online-booking {
   color: rgba(157, 164, 189, 0.4);
   width: 100%;
 }
-.text-field-wrapper.half-sized {
-  width: calc((100% - 30px) / 2);
+@media screen and (min-width: 768px) {
+  .text-field-wrapper.half-sized {
+    width: calc((100% - 30px) / 2);
+  }
 }
 .text-field-wrapper:hover, .text-field-wrapper:focus {
   color: #fff;
@@ -1467,16 +1509,48 @@ section.online-booking {
 }
 
 /* ---------- Contacts (right block) ---------- */
-section.contacts {
-  padding-left: 100px;
+section.contacts .section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  section.contacts .section-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.contacts .section-content {
+    padding-left: 100px;
+  }
+}
+section.contacts .section-heading {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  section.contacts .section-heading {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.contacts .section-heading {
+    padding-left: 100px;
+  }
 }
 section.contacts .sup-heading, section.contacts .hero-sup-heading {
   color: #fff;
 }
 
 .contacts-list {
-  margin-top: 40px;
-  margin-bottom: 70px;
+  min-width: 330px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1485,6 +1559,16 @@ section.contacts .sup-heading, section.contacts .hero-sup-heading {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .contacts-list {
+    margin-bottom: 44px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-list {
+    margin-bottom: 70px;
+  }
 }
 
 .contacts-item {
@@ -1521,7 +1605,7 @@ section.contacts .sup-heading, section.contacts .hero-sup-heading {
           transform: translateY(-13px);
 }
 
-.working-hours {
+.working-hours .working-hours-text {
   color: #9da4bd;
 }
 

@@ -701,32 +701,51 @@ section.gallery {
 
 .booking-and-contacts-block {
 	//
+	background-color: $bg-dark;
+
 	.overlay {
-		background-color: $bg-dark;
-		background-position: calc(100% + 30px) 0%;
-		// background-position: 100% top;
-		background-repeat: no-repeat;
-		background-size: 50% 100%;
-
-		// background-image: linear-gradient(rgba(#191c26, 0.9), rgba(#191c26, 0.9)),
-		// 	url("../images/jpeg/contacts/bg.jpg");
-
-		// $linear-gradient-color,	$path, 	$filename, 	$extension: jpg
-
 		@include bg-with-overlay(rgba(#191c26, 0.9), contacts, img, webp);
+
+		background-position: left 0% bottom 0%;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		// background-size: cover;
+
+		@media screen and (min-width: $desktop) {
+			//
+			background-position: calc(100% + 30px) 0%;
+			background-repeat: no-repeat;
+			background-size: 50% 100%;
+
+			// @include bg-with-overlay(rgba(#191c26, 0.9), contacts, img, webp);
+		}
 	}
 
 	.container {
 		display: flex;
-		gap: $regular-gap;
+		flex-direction: column;
+
+		@media screen and (min-width: $desktop) {
+			//
+			flex-direction: row;
+			gap: $regular-gap;
+		}
 	}
 }
 
 section.online-booking,
 section.contacts {
-	width: 50%;
-	flex-basis: fill;
-	// outline: auto;
+	//
+	@media screen and (min-width: $desktop) {
+		width: 50%;
+		flex-basis: fill;
+	}
+
+	.section-heading {
+		@media screen and (max-width: ($tablet - 1px)) {
+			align-self: center;
+		}
+	}
 }
 
 /* ---------- Online-booking (left block) ---------- */
@@ -743,6 +762,14 @@ section.online-booking {
 	display: flex;
 	flex-direction: column;
 	gap: $large-spacing;
+
+	.button {
+		align-self: center;
+
+		@media screen and (min-width: $tablet) {
+			align-self: flex-start;
+		}
+	}
 }
 
 .text-fields {
@@ -761,7 +788,9 @@ section.online-booking {
 	width: 100%;
 
 	&.half-sized {
-		width: calc((100% - $regular-gap) / 2);
+		@media screen and (min-width: $tablet) {
+			width: calc((100% - $regular-gap) / 2);
+		}
 	}
 
 	&:hover,
@@ -828,7 +857,32 @@ section.online-booking {
 
 section.contacts {
 	@extend .dark;
-	padding-left: 100px;
+
+	.section-content {
+		display: flex;
+		flex-direction: column;
+
+		@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+			flex-direction: row;
+			gap: $regular-gap;
+		}
+
+		@media screen and (min-width: $desktop) {
+			padding-left: 100px;
+		}
+	}
+
+	.section-heading {
+		margin-bottom: 40px;
+
+		@media screen and (max-width: ($tablet - 1px)) {
+			text-align: center;
+		}
+
+		@media screen and (min-width: $desktop) {
+			padding-left: 100px;
+		}
+	}
 
 	.sup-heading {
 		color: $contrast;
@@ -837,9 +891,15 @@ section.contacts {
 
 .contacts-list {
 	@extend .markup-list;
+	min-width: 330px;
 
-	margin-top: 40px;
-	margin-bottom: 70px;
+	@media screen and (max-width: ($tablet - 1px)) {
+		margin-bottom: $large-spacing;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 70px;
+	}
 
 	display: flex;
 	flex-direction: column;
@@ -884,7 +944,12 @@ section.contacts {
 }
 
 .working-hours {
-	color: $light;
+	// display: flex;
+	// flex-direction: column;
+
+	.working-hours-text {
+		color: $light;
+	}
 }
 
 /* ---------- Footer ---------- */
