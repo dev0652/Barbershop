@@ -126,18 +126,57 @@
 
 /* ---------- Hero ---------- */
 
+// .hero {
+// 	@extend .container, .dark;
+
+// 	color: $light;
+
+// 	display: flex;
+// 	gap: 0;
+
+// 	min-height: 580px;
+
+// 	@media screen and (min-width: $tablet) {
+// 		min-height: 680px;
+// 	}
+// }
+
 .hero {
-	@extend .container, .dark;
+	//
+	@media screen and (max-width: ($tablet - 1px)) {
+		// background-color: $dark;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 
-	color: $light;
+		@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
+	}
 
-	display: flex;
-	gap: 0;
+	.container {
+		@extend .dark;
+		color: $light;
 
-	min-height: 580px;
+		display: flex;
+		gap: 0;
 
-	@media screen and (min-width: $tablet) {
-		min-height: 680px;
+		min-height: 580px;
+		@media screen and (min-width: $tablet) {
+			min-height: 680px;
+		}
+
+		@media screen and (min-width: $tablet) {
+			// background-color: $dark;
+			@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
+
+			background-position: top 0 left calc(90px + $container-padding),
+				top 0 left calc(90px + $container-padding);
+			background-repeat: no-repeat, no-repeat;
+			background-size: cover;
+		}
+
+		@media screen and (min-width: $desktop) {
+			background-position: top 0 left calc(100px + $container-padding);
+		}
 	}
 }
 
@@ -154,6 +193,10 @@
 	@media screen and (max-width: ($tablet - 1px)) {
 		display: none;
 	}
+
+	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+		width: 90px;
+	}
 }
 
 // Hero main
@@ -167,25 +210,20 @@
 	gap: 184px;
 	position: relative;
 
-	// @media screen and (min-width: $tablet) {}
+	@media screen and (min-width: $tablet) {
+		// padding-left: 118px; // це виглядає потворно :)
+		padding-left: 90px;
+	}
 
 	@media screen and (min-width: $desktop) {
 		padding-left: 100px;
 	}
 
-	background-color: $dark;
-	background-size: cover;
-	background-position: center;
+	// background-color: $dark;
+	// background-size: cover;
+	// background-position: center;
 
-	// background-image: linear-gradient(
-	// 		to right,
-	// 		rgba($bg-dark, 0.2),
-	// 		rgba($bg-dark, 0.2)
-	// 	),
-	// 	url("../images/jpeg/slider/img.jpg");
-
-	// $gradient-color, $foler (only additional folders), $filename (without ext), $extension (default: jpg)
-	@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
+	// @include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
 }
 
 .hero-text-block {
