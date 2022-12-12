@@ -77,10 +77,16 @@
 @mixin bg-with-overlay($gradient-color, $folder, $filename, $extension: jpg) {
 	// https://youtu.be/MSpcoXdmPb0?t=4057
 
+	$img-type: jpg;
+
+	@if $extension == webp {
+		$img-type: webp;
+	}
+
 	// ****** Mobile ******
 
 	background-image: linear-gradient(to right, $gradient-color, $gradient-color),
-		url("../images/#{$extension}/mobile/#{$folder}/#{$filename}.#{$extension}");
+		url("../images/#{$img-type}/mobile/#{$folder}/#{$filename}.#{$extension}");
 
 	@media (min-device-pixel-ratio: 2),
 		(min-resolution: 192dpi),
@@ -91,7 +97,7 @@
 				$gradient-color,
 				$gradient-color
 			),
-			url("../images/#{$extension}/mobile/#{$folder}/#{$filename}@2x.#{$extension}");
+			url("../images/#{$img-type}/mobile/#{$folder}/#{$filename}@2x.#{$extension}");
 	}
 
 	@media (min-device-pixel-ratio: 3),
@@ -103,7 +109,7 @@
 				$gradient-color,
 				$gradient-color
 			),
-			url("../images/#{$extension}/mobile/#{$folder}/#{$filename}@3x.#{$extension}");
+			url("../images/#{$img-type}/mobile/#{$folder}/#{$filename}@3x.#{$extension}");
 	}
 
 	// ****** Tablet ******
@@ -115,7 +121,7 @@
 				$gradient-color,
 				$gradient-color
 			),
-			url("../images/#{$extension}/tablet/#{$folder}/#{$filename}.#{$extension}");
+			url("../images/#{$img-type}/tablet/#{$folder}/#{$filename}.#{$extension}");
 
 		@media (min-device-pixel-ratio: 2),
 			(min-resolution: 192dpi),
@@ -126,7 +132,7 @@
 					$gradient-color,
 					$gradient-color
 				),
-				url("../images/#{$extension}/tablet/#{$folder}/#{$filename}@2x.#{$extension}");
+				url("../images/#{$img-type}/tablet/#{$folder}/#{$filename}@2x.#{$extension}");
 		}
 
 		@media (min-device-pixel-ratio: 3),
@@ -138,7 +144,7 @@
 					$gradient-color,
 					$gradient-color
 				),
-				url("../images/#{$extension}/tablet/#{$folder}/#{$filename}@3x.#{$extension}");
+				url("../images/#{$img-type}/tablet/#{$folder}/#{$filename}@3x.#{$extension}");
 		}
 	}
 
@@ -151,7 +157,7 @@
 				$gradient-color,
 				$gradient-color
 			),
-			url("../images/#{$extension}/desktop/#{$folder}/#{$filename}.#{$extension}");
+			url("../images/#{$img-type}/desktop/#{$folder}/#{$filename}.#{$extension}");
 
 		@media (min-device-pixel-ratio: 2),
 			(min-resolution: 192dpi),
@@ -162,7 +168,7 @@
 					$gradient-color,
 					$gradient-color
 				),
-				url("../images/#{$extension}/desktop/#{$folder}/#{$filename}@2x.#{$extension}");
+				url("../images/#{$img-type}/desktop/#{$folder}/#{$filename}@2x.#{$extension}");
 		}
 
 		@media (min-device-pixel-ratio: 3),
@@ -174,7 +180,7 @@
 					$gradient-color,
 					$gradient-color
 				),
-				url("../images/#{$extension}/desktop/#{$folder}/#{$filename}@3x.#{$extension}");
+				url("../images/#{$img-type}/desktop/#{$folder}/#{$filename}@3x.#{$extension}");
 		}
 	}
 }
