@@ -20,7 +20,7 @@
 	.icon-logo {
 		fill: $darker;
 
-		@media screen and (max-width: ($tablet - 1px)) {
+		@include media(tablet, max) {
 			fill: $contrast;
 		}
 	}
@@ -37,6 +37,7 @@
 
 .header-container {
 	@extend .container;
+
 	display: flex;
 	align-items: center;
 }
@@ -44,72 +45,12 @@
 .header-logo {
 	@extend .link;
 
-	@media screen and (min-width: $tablet) {
+	@include media(tablet) {
 		margin-right: $regular-gap;
 	}
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		margin-right: 70px;
-	}
-}
-
-// Header menu wrapper
-
-.header-menu-wrapper {
-	// outline: auto;
-	//
-	.link {
-		@include fz-lh-rem(12, 16);
-		letter-spacing: 0.1em;
-	}
-
-	.button {
-		@include fz-lh-rem(12, 16);
-	}
-
-	@media screen and (max-width: ($tablet - 1px)) {
-		//
-		position: fixed;
-		top: 100%; // якщо буде виводитись під футером
-		top: 0; // якщо буде виводитись поверх футера
-		left: 20vw;
-		width: 100%;
-		z-index: 2;
-
-		width: 80vw;
-		height: 100vh;
-		padding: 48px 40px;
-
-		@media screen and (max-width: ($mobile - 1px)) {
-			padding: 48px 20px;
-		}
-
-		display: flex;
-		flex-direction: column;
-
-		background-color: #fff;
-
-		transform: translateX(100%);
-		@include transition(transform);
-
-		&.is-open {
-			// display: block;
-			transform: translateX(0);
-			transition-delay: 100ms;
-		}
-	}
-
-	@media screen and (min-width: $tablet) {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-grow: 1;
-
-		// margin-left: 20px;
-	}
-
-	@media screen and (min-width: $desktop) {
-		margin-right: 17px;
 	}
 }
 
@@ -153,26 +94,8 @@
 
 /* ---------- Hero ---------- */
 
-// .hero {
-// 	@extend .container, .dark;
-
-// 	color: $light;
-
-// 	display: flex;
-// 	gap: 0;
-
-// 	min-height: 580px;
-
-// 	@media screen and (min-width: $tablet) {
-// 		min-height: 680px;
-// 	}
-// }
-
 .hero {
-	//
-	// padding-right: 30px;
-
-	@media screen and (max-width: ($tablet - 1px)) {
+	@include media(tablet, max) {
 		// background-color: $dark;
 		background-size: cover;
 		background-position: center;
@@ -191,11 +114,11 @@
 
 		min-height: 580px;
 
-		@media screen and (min-width: $tablet) {
+		@include media(tablet) {
 			min-height: 680px;
 		}
 
-		@media screen and (min-width: $desktop) {
+		@include media(desktop) {
 			@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
 
 			background-repeat: no-repeat;
@@ -215,12 +138,24 @@
 	padding-left: 27px;
 	display: flex;
 
-	@media screen and (max-width: ($tablet - 1px)) {
+	@include media(tablet, max) {
 		display: none;
 	}
 
 	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
 		width: 90px;
+	}
+}
+
+.follow-us {
+	//
+
+	&.vertical {
+		transform: translateY(100%) rotate(270deg);
+		transform-origin: top left;
+
+		align-items: center;
+		margin-top: auto;
 	}
 }
 
@@ -235,7 +170,7 @@
 	gap: 184px;
 	position: relative;
 
-	@media screen and (min-width: $tablet) {
+	@include media(tablet) {
 		@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
 
 		// background-position: top 0 left calc(90px + $container-padding);
@@ -243,12 +178,12 @@
 		background-size: cover;
 	}
 
-	@media screen and (min-width: $tablet) {
+	@include media(tablet) {
 		// padding-left: 118px; // це виглядає потворно :)
 		padding-left: 90px;
 	}
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		padding-left: 100px;
 	}
 
@@ -276,7 +211,7 @@
 
 	@include fz-lh-rem(48, 56);
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		// font-size: 72px;
 		// line-height: calc(85 / 72);
 		@include fz-lh-rem(72, 85);
@@ -289,7 +224,7 @@
 	animation: bottom-to-top 1000ms ease 2200ms both;
 	max-width: 400px;
 
-	@media screen and (max-width: ($tablet - 1px)) {
+	@include media(tablet, max) {
 		@include fz-lh-rem(16, 26);
 	}
 }
@@ -299,11 +234,11 @@
 .slider-pagination {
 	@extend %markup-list;
 
-	@media screen and (max-width: ($tablet - 1px)) {
+	@include media(tablet, max) {
 		display: none;
 	}
 
-	@media screen and (min-width: $tablet) {
+	@include media(tablet) {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
@@ -314,7 +249,7 @@
 		right: 37px;
 	}
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		right: 20px;
 	}
 }
@@ -333,11 +268,11 @@
 .slider-buttons {
 	@extend %markup-list;
 
-	@media screen and (max-width: ($tablet - 1px)) {
+	@include media(tablet, max) {
 		display: none;
 	}
 
-	@media screen and (min-width: $tablet) {
+	@include media(tablet) {
 		display: flex;
 		gap: 24px;
 
@@ -387,13 +322,13 @@ section.about {
 	}
 
 	.section-content {
-		@media screen and (min-width: $desktop) {
+		@include media(desktop) {
 			padding-right: 100px;
 		}
 	}
 
 	.section-heading {
-		@media screen and (max-width: ($desktop - 1px)) {
+		@include media(desktop, max) {
 			@include fz-lh-rem(28, 33);
 			max-width: 330px;
 		}
@@ -410,18 +345,18 @@ section.about {
 .about-images-list {
 	@extend .markup-list;
 
-	@media screen and (max-width: ($tablet - 1px)) {
+	@include media(tablet, max) {
 		display: none;
 	}
 
-	@media screen and (min-width: $tablet) {
+	@include media(tablet) {
 		display: flex;
 		gap: $regular-gap;
 		flex-direction: column;
 		min-width: calc((100% - $regular-gap) / 2);
 	}
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		flex-direction: row;
 	}
 }
@@ -431,11 +366,11 @@ section.about {
 // }
 
 // .about-images-item {
-// 	@media screen and (min-width: $tablet) {
+// 	@include media(tablet) {
 // 		width: 330px;
 // 	}
 
-// 	@media screen and (min-width: $desktop) {
+// 	@include media(desktop) {
 // 		width: 270px;
 // 	}
 // }
@@ -446,7 +381,7 @@ section.about {
 	@include fz-lh-rem(14, 26);
 	color: $dark;
 
-	@media screen and (max-width: ($tablet - 1px)) {
+	@include media(tablet, max) {
 		margin-bottom: 20px; // + 20px flex gap = 40px total
 	}
 }
@@ -502,7 +437,7 @@ section.services {
 		rgba(#171a24, 0.2) 100%
 	);
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		columns: 2;
 		column-gap: 30px;
 
@@ -533,7 +468,7 @@ section.services {
 	gap: $list-spacing;
 	align-items: baseline;
 
-	@media screen and (max-width: ($mobile - 1px)) {
+	@include media(mobile, max) {
 		@include fz-lh-rem(11, 15);
 	}
 
@@ -562,13 +497,13 @@ section.why-us {
 		flex-direction: column;
 		gap: $large-spacing;
 
-		@media screen and (min-width: $tablet) {
+		@include media(tablet) {
 			.section-content {
 				max-width: 65%;
 			}
 		}
 
-		@media screen and (min-width: $desktop) {
+		@include media(desktop) {
 			flex-direction: row-reverse;
 			gap: $regular-gap;
 
@@ -595,7 +530,7 @@ section.why-us {
 		margin-left: auto;
 	}
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		padding: 0 100px;
 	}
 }
@@ -606,12 +541,12 @@ section.why-us {
 	width: 194px;
 	padding: $single-spacing 32px;
 
-	@media screen and (min-width: $tablet) {
+	@include media(tablet) {
 		width: 210px;
 		padding: $single-spacing $large-spacing;
 	}
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		width: 170px;
 		padding: $single-spacing 24px;
 	}
@@ -621,7 +556,7 @@ section.why-us {
 
 	text-align: center;
 
-	@media screen and (min-width: $mobile) {
+	@include media(mobile) {
 		&:nth-child(odd) {
 			margin-top: -30px;
 		}
@@ -665,7 +600,7 @@ section.barbers {
 			padding: 0 calc($container-padding + 120px);
 		}
 
-		// @media screen and (min-width: $desktop) {
+		// @include media(desktop) {
 		// 	gap: $regular-gap;
 		// }
 	}
@@ -678,7 +613,7 @@ section.barbers {
 	flex-wrap: wrap;
 	gap: $regular-gap;
 
-	@media screen and (max-width: ($desktop - 1px)) {
+	@include media(desktop, max) {
 		row-gap: 64px;
 	}
 }
@@ -688,11 +623,11 @@ section.barbers {
 	flex-direction: column;
 	align-items: center;
 
-	@media screen and (max-width: ($desktop - 1px)) {
+	@include media(desktop, max) {
 		@include flex-basis(1);
 	}
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		// max-width: 370px;
 		// flex-basis: 370px;
 		@include flex-basis(3);
@@ -787,17 +722,17 @@ section.gallery {
 }
 
 .gallery-item {
-	@media screen and (max-width: ($tablet - 1px)) {
+	@include media(tablet, max) {
 		// width: 418px;
 		@include flex-basis(1);
 	}
 
-	@media screen and (min-width: $tablet) {
+	@include media(tablet) {
 		// width: 330px;
 		@include flex-basis(2);
 	}
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		// width: 270px;
 		@include flex-basis(4);
 	}
@@ -817,7 +752,7 @@ section.gallery {
 		background-size: 100% 45%;
 		// background-size: contain;
 
-		@media screen and (min-width: $desktop) {
+		@include media(desktop) {
 			//
 			background-position: calc(100% + 30px) 0%;
 			background-repeat: no-repeat;
@@ -831,7 +766,7 @@ section.gallery {
 		display: flex;
 		flex-direction: column;
 
-		@media screen and (min-width: $desktop) {
+		@include media(desktop) {
 			//
 			flex-direction: row;
 			gap: $regular-gap;
@@ -842,13 +777,13 @@ section.gallery {
 section.online-booking,
 section.contacts {
 	//
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		width: 50%;
 		flex-basis: fill;
 	}
 
 	.section-heading {
-		@media screen and (max-width: ($tablet - 1px)) {
+		@include media(tablet, max) {
 			align-self: center;
 		}
 	}
@@ -872,7 +807,7 @@ section.online-booking {
 	.button {
 		align-self: center;
 
-		@media screen and (min-width: $tablet) {
+		@include media(tablet) {
 			align-self: flex-start;
 		}
 	}
@@ -894,7 +829,7 @@ section.online-booking {
 	width: 100%;
 
 	&.half-sized {
-		@media screen and (min-width: $tablet) {
+		@include media(tablet) {
 			width: calc((100% - $regular-gap) / 2);
 		}
 	}
@@ -973,7 +908,7 @@ section.contacts {
 			gap: $regular-gap;
 		}
 
-		@media screen and (min-width: $desktop) {
+		@include media(desktop) {
 			padding-left: 100px;
 		}
 	}
@@ -981,11 +916,11 @@ section.contacts {
 	.section-heading {
 		margin-bottom: 40px;
 
-		@media screen and (max-width: ($tablet - 1px)) {
+		@include media(tablet, max) {
 			text-align: center;
 		}
 
-		@media screen and (min-width: $desktop) {
+		@include media(desktop) {
 			padding-left: 100px;
 		}
 	}
@@ -999,11 +934,11 @@ section.contacts {
 	@extend .markup-list;
 	min-width: 330px;
 
-	@media screen and (max-width: ($tablet - 1px)) {
+	@include media(tablet, max) {
 		margin-bottom: $large-spacing;
 	}
 
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		margin-bottom: 70px;
 	}
 
@@ -1020,7 +955,7 @@ section.contacts {
 	@extend .link;
 
 	// font-size: 18px;
-	font-size: rem-calc(18);
+	font-size: rem(18);
 	font-weight: 400;
 
 	display: flex;
@@ -1074,7 +1009,7 @@ section.contacts {
 		padding-top: 56px;
 		padding-bottom: 56px;
 
-		@media screen and (max-width: ($tablet - 1px)) {
+		@include media(tablet, max) {
 			flex-direction: column-reverse;
 			gap: $single-spacing;
 
@@ -1084,7 +1019,7 @@ section.contacts {
 	}
 
 	.follow-us {
-		@media screen and (max-width: ($tablet - 1px)) {
+		@include media(tablet, max) {
 			margin-left: auto;
 		}
 	}
@@ -1145,4 +1080,104 @@ section.contacts {
 	align-items: center;
 
 	background-color: transparent;
+}
+
+// Mobile menu
+
+.menu-burger-button {
+	background-color: transparent;
+	border: none;
+
+	&:hover,
+	&:focus {
+		fill: $accent;
+	}
+
+	@include media(tablet, max) {
+		display: block;
+		margin-left: auto;
+	}
+
+	display: none;
+
+	.menu-burger-icon {
+		@extend .icon;
+
+		// fill: $contrast;
+	}
+}
+
+.menu-close-button {
+	display: none;
+}
+
+// Header menu wrapper
+
+.header-menu-wrapper {
+	// outline: auto;
+	//
+	.link {
+		@include fz-lh-rem(12, 16);
+		letter-spacing: 0.1em;
+	}
+
+	.button {
+		@include fz-lh-rem(12, 16);
+	}
+
+	@include media(tablet, max) {
+		//
+		position: fixed;
+		// top: 100%; // якщо буде виводитись під футером
+		top: 0; // якщо буде виводитись поверх футера
+		left: 20vw;
+		width: 100%;
+		z-index: 2;
+
+		width: 80vw;
+		height: 100vh;
+		padding: 48px 40px;
+
+		@include media(mobile, max) {
+			padding: 48px 20px;
+		}
+
+		display: flex;
+		flex-direction: column;
+
+		background-color: #fff;
+
+		transform: translateX(100%);
+		@include transition(transform);
+
+		&.is-open {
+			// display: block;
+			transform: translateX(0);
+			transition-delay: 100ms;
+		}
+	}
+
+	@include media(tablet) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-grow: 1;
+
+		// margin-left: 20px;
+	}
+
+	@include media(desktop) {
+		margin-right: 17px;
+	}
+}
+
+.follow-us {
+	//
+	&.mobile-menu-only {
+		display: none;
+
+		.header-menu-wrapper.is-open & {
+			display: flex;
+		}
+	}
 }

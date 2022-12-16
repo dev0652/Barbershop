@@ -27,13 +27,13 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 
-	@media screen and (min-width: $mobile) {
+	@include media(mobile) {
 		width: $mobile;
 	}
-	@media screen and (min-width: $tablet) {
+	@include media(tablet) {
 		width: $tablet;
 	}
-	@media screen and (min-width: $desktop) {
+	@include media(desktop) {
 		// width: $desktop + ($container-padding * 2);
 		width: $desktop;
 	}
@@ -47,13 +47,13 @@ body {
 .section {
 	padding: $section-padding 0;
 
-	// @media screen and (max-width: ($tablet - 1px)) {
+	// @include media(tablet, max) {
 	// 	padding: $section-padding-mobile 0;
 	// }
-	// @media screen and (min-width: $tablet) {
+	// @include media(tablet) {
 	// 	padding: $section-padding-tablet 0;
 	// }
-	// @media screen and (min-width: $desktop) {
+	// @include media(desktop) {
 	// 	padding: $section-padding-desktop 0;
 	// }
 
@@ -91,7 +91,6 @@ body {
 /* SVG icons */
 
 .icon {
-	display: block;
 	fill: currentColor;
 
 	@include transition(fill);
@@ -147,7 +146,7 @@ body {
 
 	@include fz-lh-rem(40, 47);
 
-	@media screen and (min-width: $tablet) {
+	@include media(tablet) {
 		@include fz-lh-rem(42, 49);
 	}
 }
@@ -191,19 +190,11 @@ body {
 // Instagram and Youtube links
 
 .follow-us {
-	//
-	@extend .flex, .markup-list, .prefix;
+	@extend .markup-list, .prefix;
 
+	display: flex;
 	gap: $double-spacing;
 	color: $darker;
-
-	&.vertical {
-		transform: translateY(100%) rotate(270deg);
-		transform-origin: top left;
-
-		align-items: center;
-		margin-top: auto;
-	}
 
 	&::before {
 		margin-right: 0;

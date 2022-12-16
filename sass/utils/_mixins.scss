@@ -1,3 +1,38 @@
+// Media queries
+
+@mixin media($device, $min-max: min) {
+	// Borrowed from https://engageinteractive.co.uk/blog/top-10-scss-mixins
+
+	@if map_has_key($breakpoints, $device) {
+		$device: map_get($breakpoints, $device);
+
+		@if $min-max == max {
+			$device: $device - 1px;
+		}
+		@media screen and (#{$min-max}-width: $device) {
+			@content;
+		}
+	}
+}
+
+// Font-size in rem + line height
+
+@mixin fz-lh($fz, $lh: false) {
+	font-size: $fz + px;
+
+	@if ($lh) {
+		line-height: calc($lh / $fz);
+	}
+}
+
+@mixin fz-lh-rem($fz, $lh: false) {
+	font-size: rem($fz);
+
+	@if ($lh) {
+		line-height: calc($lh / $fz);
+	}
+}
+
 // Transition effect for one property with customizable site-global defaults
 
 @mixin transition(
@@ -182,23 +217,5 @@
 				),
 				url("../images/#{$img-type}/desktop/#{$folder}/#{$filename}@3x.#{$extension}");
 		}
-	}
-}
-
-// Font-size in rem + line height
-
-@mixin fz-lh($fz, $lh: false) {
-	font-size: $fz + px;
-
-	@if ($lh) {
-		line-height: calc($lh / $fz);
-	}
-}
-
-@mixin fz-lh-rem($fz, $lh: false) {
-	font-size: rem-calc($fz);
-
-	@if ($lh) {
-		line-height: calc($lh / $fz);
 	}
 }

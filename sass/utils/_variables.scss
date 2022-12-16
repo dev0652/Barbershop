@@ -4,10 +4,17 @@ $mobile: 480px;
 $tablet: 768px;
 $desktop: 1200px;
 
+$breakpoints: (
+	"mobile": 480px,
+	// "phablet": 575px,
+	"tablet": 768px,
+	// "tablet-wide": 992px,
+	"desktop": 1200px,
+);
+
 // Fonts
 $primary-font: "Open Sans", sans-serif;
-// $primary-font-size: 14px;
-$primary-font-size: 14px;
+$primary-font-size: rem(14);
 $secondary-font: "Raleway", sans-serif;
 
 // Colors
@@ -28,17 +35,18 @@ $bg-light: #f7f7f7;
 $standard-radius: 4px;
 
 // Spacings
-$regular-gap: 30px;
+$regular-gap: rem(30);
 
-$single-spacing: 20px;
+$single-spacing: rem(20);
 $double-spacing: $single-spacing * 2;
+$large-spacing: rem(44);
 
-$large-spacing: 44px;
-$list-spacing: 10px;
-$list-icon-spacing: 16px;
-
-// $container-padding: 15px;
-$desktop-version-margin: 215px;
+$list-spacing: rem(10);
+$list-icon-spacing: rem(16);
+$menu-items-spacing: rem(50);
+$footer-items-spacing: rem(80);
+$section-title-spacing: rem(60);
+$desktop-version-margin: rem(215);
 
 :root {
 	--container-padding: 31px;

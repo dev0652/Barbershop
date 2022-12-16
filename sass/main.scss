@@ -3,11 +3,11 @@
 @import "./defaults/my-defaults";
 
 // Utilities and variables
+@import "./utils/functions";
 @import "./utils/variables";
 @import "./utils/utilities";
 @import "./utils/mixins";
 @import "./utils/placeholders";
-@import "./utils/functions";
 @import "./utils/animations";
 
 @import "common";
