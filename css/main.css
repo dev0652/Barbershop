@@ -1411,84 +1411,16 @@ section.gallery .container, section.gallery .header-container {
 .booking-and-contacts-block {
   background-color: #191c26;
 }
-.booking-and-contacts-block .overlay {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img.webp");
-  background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img.webp");
-  background-position: left 0% bottom 0%;
-  background-repeat: no-repeat;
-  background-size: 100% 45%;
-}
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .booking-and-contacts-block .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img@2x.webp");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img@2x.webp");
-  }
-}
-@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-  .booking-and-contacts-block .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img@3x.webp");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img@3x.webp");
-  }
-}
-@media screen and (min-width: 481px) {
-  .booking-and-contacts-block .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img.webp");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img.webp");
-  }
-}
-@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
-  .booking-and-contacts-block .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img@2x.webp");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img@2x.webp");
-  }
-}
-@media screen and (min-width: 481px) and (min-device-pixel-ratio: 3), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 481px) and (min-resolution: 288dpi), screen and (min-width: 481px) and (min-resolution: 3dppx) {
-  .booking-and-contacts-block .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img@3x.webp");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img@3x.webp");
-  }
-}
-@media screen and (min-width: 769px) {
-  .booking-and-contacts-block .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img.webp");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img.webp");
-  }
-}
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
-  .booking-and-contacts-block .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img@2x.webp");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img@2x.webp");
-  }
-}
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 3), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 769px) and (min-resolution: 288dpi), screen and (min-width: 769px) and (min-resolution: 3dppx) {
-  .booking-and-contacts-block .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img@3x.webp");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img@3x.webp");
-  }
-}
 @media screen and (min-width: 1200px) {
-  .booking-and-contacts-block .overlay {
-    background-position: calc(100% + 30px) 0%;
-    background-repeat: no-repeat;
-    background-size: 50% 100%;
-  }
-}
-.booking-and-contacts-block .container, .booking-and-contacts-block .header-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-@media screen and (min-width: 1200px) {
-  .booking-and-contacts-block .container, .booking-and-contacts-block .header-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .booking-and-contacts-block .conditional-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     gap: 1.875rem;
+    width: 1200px;
+    padding: var(--section-padding) var(--container-padding);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1496,8 +1428,34 @@ section.gallery .container, section.gallery .header-container {
   section.online-booking,
 section.contacts {
     width: 50%;
-    -ms-flex-preferred-size: fill;
-        flex-basis: fill;
+  }
+}
+section.online-booking .container, section.online-booking .header-container,
+section.contacts .container,
+section.contacts .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+  max-width: 100%;
+  padding: var(--section-padding) var(--container-padding);
+}
+@media screen and (min-width: 1200px) {
+  section.online-booking .container, section.online-booking .header-container,
+section.contacts .container,
+section.contacts .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.875rem;
+    width: 1200px;
+    padding: 0 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1510,6 +1468,9 @@ section.contacts .section-heading {
 
 /* ---------- Online-booking (left block) ---------- */
 section.online-booking {
+  padding: 0 0;
+}
+section.online-booking .container, section.online-booking .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1530,18 +1491,7 @@ section.online-booking {
           flex-direction: column;
   gap: 2.75rem;
 }
-.booking-form .button, .booking-form .header-button {
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-@media screen and (min-width: 768px) {
-  .booking-form .button, .booking-form .header-button {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-}
-
-.text-fields {
+.booking-form .text-fields {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1552,22 +1502,20 @@ section.online-booking {
           column-gap: 1.875rem;
   row-gap: 2.75rem;
 }
-
-.text-field-wrapper {
+.booking-form .text-field-wrapper {
   position: relative;
   color: rgba(157, 164, 189, 0.4);
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .text-field-wrapper.half-sized {
+  .booking-form .text-field-wrapper.half-sized {
     width: calc((100% - 1.875rem) / 2);
   }
 }
-.text-field-wrapper:hover, .text-field-wrapper:focus {
+.booking-form .text-field-wrapper:hover, .booking-form .text-field-wrapper:focus {
   color: #fff;
 }
-
-.text-field {
+.booking-form .text-field {
   width: 100%;
   height: 100%;
   min-height: 24px;
@@ -1580,11 +1528,10 @@ section.online-booking {
   -webkit-transition: border-color 300ms ease-in-out;
   transition: border-color 300ms ease-in-out;
 }
-.text-field:hover, .text-field:focus {
+.booking-form .text-field:hover, .booking-form .text-field:focus {
   border-color: #fff;
 }
-
-.hovering-label {
+.booking-form .hovering-label {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 0.6875rem;
@@ -1599,28 +1546,102 @@ section.online-booking {
   transition: color 300ms ease-in-out, transform 300ms ease-in-out;
   transition: color 300ms ease-in-out, transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
-.text-field:not(:-moz-placeholder-shown) + .hovering-label {
+.text-field:not(:-moz-placeholder-shown) + .booking-form .hovering-label {
   transform: translateY(-1.4em);
   color: #fff;
 }
-.text-field:not(:-ms-input-placeholder) + .hovering-label {
+.text-field:not(:-ms-input-placeholder) + .booking-form .hovering-label {
   transform: translateY(-1.4em);
   color: #fff;
 }
-.text-field:focus + .hovering-label, .text-field:not(:placeholder-shown) + .hovering-label {
+.text-field:focus + .booking-form .hovering-label, .text-field:not(:placeholder-shown) + .booking-form .hovering-label {
   -webkit-transform: translateY(-1.4em);
           transform: translateY(-1.4em);
   color: #fff;
 }
-.text-field:required + .hovering-label::after {
+.text-field:required + .booking-form .hovering-label::after {
   content: "*";
 }
-
-.message-field {
+.booking-form .message-field {
   resize: none;
+}
+.booking-form .button, .booking-form .header-button {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+@media screen and (min-width: 768px) {
+  .booking-form .button, .booking-form .header-button {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 
 /* ---------- Contacts (right block) ---------- */
+section.contacts {
+  padding: 0 0;
+}
+section.contacts .overlay {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img.webp");
+  background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  section.contacts .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img@2x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img@2x.webp");
+  }
+}
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  section.contacts .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img@3x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img@3x.webp");
+  }
+}
+@media screen and (min-width: 481px) {
+  section.contacts .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img.webp");
+  }
+}
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  section.contacts .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img@2x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img@2x.webp");
+  }
+}
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 3), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 481px) and (min-resolution: 288dpi), screen and (min-width: 481px) and (min-resolution: 3dppx) {
+  section.contacts .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img@3x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img@3x.webp");
+  }
+}
+@media screen and (min-width: 769px) {
+  section.contacts .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img.webp");
+  }
+}
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  section.contacts .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img@2x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img@2x.webp");
+  }
+}
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 3), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 769px) and (min-resolution: 288dpi), screen and (min-width: 769px) and (min-resolution: 3dppx) {
+  section.contacts .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img@3x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img@3x.webp");
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.contacts .overlay {
+    background-position: calc(100% + 30px) 0%;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    max-width: 100%;
+  }
+}
 section.contacts .section-content {
   display: -webkit-box;
   display: -ms-flexbox;

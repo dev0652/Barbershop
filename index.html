@@ -878,11 +878,12 @@
 
 		<!-- ---------- Booking and Contacts block ---------- -->
 		<div class="booking-and-contacts-block" id="booking-and-contacts-block">
-			<div class="overlay">
-				<div class="container">
+			<!-- <div class="conditional-overlay"> -->
+			<div class="conditional-container">
 
-					<!-- ---------- Online-booking ---------- -->
-					<section class="section online-booking">
+				<!-- ---------- Online-booking ---------- -->
+				<section class="section online-booking">
+					<div class="container">
 
 						<!-- Section heading -->
 						<h2 class="section-heading">Online-booking</h2>
@@ -908,7 +909,7 @@
 								</div>
 								<!-- </div> -->
 
-								<div class="text-field-wrapper wide">
+								<div class="text-field-wrapper">
 									<textarea class="text-field message-field" name="message" rows="4" id="message"
 										placeholder=" "></textarea>
 
@@ -922,62 +923,64 @@
 							</button>
 
 						</form>
-					</section>
 
-					<!-- ---------- Contacts ---------- -->
-					<section class="section contacts">
+					</div>
+				</section>
 
-						<!-- Section heading -->
-						<h2 class="section-heading">Contacts</h2>
+				<!-- ---------- Contacts ---------- -->
+				<section class="section contacts">
+					<div class="overlay">
+						<div class="container">
 
-						<div class="section-content">
+							<!-- Section heading -->
+							<h2 class="section-heading">Contacts</h2>
 
-							<!-- Address block -->
-							<address>
-								<ul class="contacts-list">
-									<li class="contacts-item">
-										<a class="contacts-link address-link" href="">
-											<!-- Icon -->
-											<svg class="contacts-icon" width="24" height="24">
-												<use href="./images/icons/symbol-defs.svg#icon-map-pin"></use>
-											</svg>
-											st. Vasilkivska, 7A
-											<br />
-											Kyiv, 08132
-										</a>
-									</li>
-
-									<li class="contacts-item">
-										<a class="contacts-link" href="tel:+380441111111">
-											<svg class="contacts-icon" width="24" height="24">
-												<use href="./images/icons/symbol-defs.svg#icon-phone"></use>
-											</svg>
-											+38 044 111 11 11
-										</a>
-									</li>
-
-									<li class="contacts-item">
-										<a class="contacts-link email-link" href="mailto:barbershop@email.com">
-											<svg class="contacts-icon" width="24" height="24">
-												<use href="./images/icons/symbol-defs.svg#icon-mail"></use>
-											</svg>
-											barbershop@email.com
-										</a>
-									</li>
-								</ul>
-							</address>
-
-							<!-- Working hours block -->
-							<div class="working-hours">
-								<p class="sup-heading">Working hours</p>
-								<p class="working-hours-text">Every day from 9:00 to 22:00</p>
+							<!-- Section content -->
+							<div class="section-content">
+								<!-- Address block -->
+								<address>
+									<ul class="contacts-list">
+										<li class="contacts-item">
+											<a class="contacts-link address-link" href="">
+												<!-- Icon -->
+												<svg class="contacts-icon" width="24" height="24">
+													<use href="./images/icons/symbol-defs.svg#icon-map-pin"></use>
+												</svg>
+												st. Vasilkivska, 7A
+												<br />
+												Kyiv, 08132
+											</a>
+										</li>
+										<li class="contacts-item">
+											<a class="contacts-link" href="tel:+380441111111">
+												<svg class="contacts-icon" width="24" height="24">
+													<use href="./images/icons/symbol-defs.svg#icon-phone"></use>
+												</svg>
+												+38 044 111 11 11
+											</a>
+										</li>
+										<li class="contacts-item">
+											<a class="contacts-link email-link" href="mailto:barbershop@email.com">
+												<svg class="contacts-icon" width="24" height="24">
+													<use href="./images/icons/symbol-defs.svg#icon-mail"></use>
+												</svg>
+												barbershop@email.com
+											</a>
+										</li>
+									</ul>
+								</address>
+								<!-- Working hours block -->
+								<div class="working-hours">
+									<p class="sup-heading">Working hours</p>
+									<p class="working-hours-text">Every day from 9:00 to 22:00</p>
+								</div>
 							</div>
 
 						</div>
-
-					</section>
-				</div>
+					</div>
+				</section>
 			</div>
+			<!-- </div> -->
 		</div>
 	</main>
 
