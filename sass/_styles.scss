@@ -744,6 +744,35 @@ section.gallery {
 	//
 	background-color: $bg-dark;
 
+	.conditional-overlay {
+		//
+		@include media(desktop) {
+			//
+			max-width: 1600px;
+			margin: 0 auto;
+
+			@include bg-with-overlay(rgba(#191c26, 0.9), contacts, img, webp);
+			background-repeat: no-repeat;
+
+			// If both values are <length> or <percentage> values, then the first defines X and the second Y
+			// a value of 50% horizontally or vertically centers the background image as the 50% of the image will be at the 50% mark of the container
+			background-position: calc(
+					50% + (785px / 2) + $regular-gap + $container-padding
+				)
+				0%;
+
+			// first value: width of the image, second value: height
+			// background-size: 50% 100%;
+			background-size: auto 100%;
+			// background-size: contain;
+
+			// max-width: 100%;
+			// max-width: calc(1600px / 2 - $regular-gap);
+			// max-width: 785px;
+			// aspect-ratio: 1/1;
+		}
+	}
+
 	.conditional-container {
 		//
 		@include media(desktop) {
@@ -752,7 +781,8 @@ section.gallery {
 
 			width: $desktop;
 
-			padding: $section-padding $container-padding;
+			// padding: $section-padding $container-padding;
+			padding: 0 $container-padding;
 
 			margin-left: auto;
 			margin-right: auto;
@@ -763,7 +793,6 @@ section.gallery {
 section.online-booking,
 section.contacts {
 	//
-
 	@include media(desktop) {
 		width: 50%;
 	}
@@ -775,13 +804,6 @@ section.contacts {
 
 		max-width: 100%;
 
-		// @include media(desktop, max) {
-		// 	padding: $section-padding $container-padding;
-
-		// 	margin-left: auto;
-		// 	margin-right: auto;
-		// }
-
 		padding: $section-padding $container-padding;
 
 		@include media(desktop) {
@@ -790,8 +812,7 @@ section.contacts {
 
 			width: $desktop;
 
-			// padding: 0 $container-padding;
-			padding: 0 0;
+			padding: $section-padding 0;
 
 			margin-left: auto;
 			margin-right: auto;
@@ -805,7 +826,7 @@ section.contacts {
 	}
 }
 
-/* ---------- Online-booking (left block) ---------- */
+/* ------ Online-booking (left block) ------ */
 
 section.online-booking {
 	@extend .dark;
@@ -912,7 +933,7 @@ section.online-booking {
 	}
 }
 
-/* ---------- Contacts (right block) ---------- */
+/* ------ Contacts (right block) ------ */
 
 section.contacts {
 	@extend .dark;
@@ -920,35 +941,11 @@ section.contacts {
 
 	.overlay {
 		//
-		@include bg-with-overlay(rgba(#191c26, 0.9), contacts, img, webp);
-
-		// background-position: left 0% bottom 0%;
-		// background-position: center;
-		background-repeat: no-repeat;
-		// background-size: 100% 45%;
-		background-size: cover;
-
-		// @include media(tablet, max) {
-		// 	//
-		// 	max-width: $mobile;
-		// 	aspect-ratio: 1/1;
-		// }
-
-		// @include media(desktop, max) {
-		// 	//
-		// 	max-width: $tablet;
-		// 	aspect-ratio: 1/1;
-		// }
-
-		@include media(desktop) {
+		@include media(desktop, max) {
 			//
-			background-position: calc(100% + 30px) 0%;
+			@include bg-with-overlay(rgba(#191c26, 0.9), contacts, img, webp);
 			background-repeat: no-repeat;
-			background-size: 50% 100%;
-
-			// @include bg-with-overlay(rgba(#191c26, 0.9), contacts, img, webp);
-
-			max-width: 100%;
+			background-size: cover;
 		}
 	}
 

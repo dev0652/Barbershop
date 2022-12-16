@@ -1412,13 +1412,72 @@ section.gallery .container, section.gallery .header-container {
   background-color: #191c26;
 }
 @media screen and (min-width: 1200px) {
+  .booking-and-contacts-block .conditional-overlay {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img.webp");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 392.5px + 1.875rem + var(--container-padding)) 0%;
+    background-size: auto 100%;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .booking-and-contacts-block .conditional-overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img@2x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img@2x.webp");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
+  .booking-and-contacts-block .conditional-overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img@3x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img@3x.webp");
+  }
+}
+@media screen and (min-width: 1200px) and (min-width: 481px) {
+  .booking-and-contacts-block .conditional-overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img.webp");
+  }
+}
+@media screen and (min-width: 1200px) and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-width: 481px) and (min-resolution: 2dppx) {
+  .booking-and-contacts-block .conditional-overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img@2x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img@2x.webp");
+  }
+}
+@media screen and (min-width: 1200px) and (min-width: 481px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-width: 481px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-width: 481px) and (min-resolution: 3dppx) {
+  .booking-and-contacts-block .conditional-overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img@3x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img@3x.webp");
+  }
+}
+@media screen and (min-width: 1200px) and (min-width: 769px) {
+  .booking-and-contacts-block .conditional-overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img.webp");
+  }
+}
+@media screen and (min-width: 1200px) and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-width: 769px) and (min-resolution: 2dppx) {
+  .booking-and-contacts-block .conditional-overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img@2x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img@2x.webp");
+  }
+}
+@media screen and (min-width: 1200px) and (min-width: 769px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-width: 769px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-width: 769px) and (min-resolution: 3dppx) {
+  .booking-and-contacts-block .conditional-overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img@3x.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img@3x.webp");
+  }
+}
+@media screen and (min-width: 1200px) {
   .booking-and-contacts-block .conditional-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 1.875rem;
     width: 1200px;
-    padding: var(--section-padding) var(--container-padding);
+    padding: 0 var(--container-padding);
     margin-left: auto;
     margin-right: auto;
   }
@@ -1453,7 +1512,7 @@ section.contacts .header-container {
     display: flex;
     gap: 1.875rem;
     width: 1200px;
-    padding: 0 0;
+    padding: var(--section-padding) 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1466,7 +1525,7 @@ section.contacts .section-heading {
   }
 }
 
-/* ---------- Online-booking (left block) ---------- */
+/* ------ Online-booking (left block) ------ */
 section.online-booking {
   padding: 0 0;
 }
@@ -1576,70 +1635,64 @@ section.online-booking .container, section.online-booking .header-container {
   }
 }
 
-/* ---------- Contacts (right block) ---------- */
+/* ------ Contacts (right block) ------ */
 section.contacts {
   padding: 0 0;
 }
-section.contacts .overlay {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img.webp");
-  background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
+@media screen and (max-width: 1199px) {
+  section.contacts .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img.webp");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-resolution: 192dpi), screen and (max-width: 1199px) and (min-resolution: 2dppx) {
   section.contacts .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img@2x.webp");
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img@2x.webp");
   }
 }
-@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+@media screen and (max-width: 1199px) and (min-device-pixel-ratio: 3), screen and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 1199px) and (min-resolution: 288dpi), screen and (max-width: 1199px) and (min-resolution: 3dppx) {
   section.contacts .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img@3x.webp");
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img@3x.webp");
   }
 }
-@media screen and (min-width: 481px) {
+@media screen and (max-width: 1199px) and (min-width: 481px) {
   section.contacts .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img.webp");
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img.webp");
   }
 }
-@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 1199px) and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-width: 481px) and (min-resolution: 192dpi), screen and (max-width: 1199px) and (min-width: 481px) and (min-resolution: 2dppx) {
   section.contacts .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img@2x.webp");
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img@2x.webp");
   }
 }
-@media screen and (min-width: 481px) and (min-device-pixel-ratio: 3), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 481px) and (min-resolution: 288dpi), screen and (min-width: 481px) and (min-resolution: 3dppx) {
+@media screen and (max-width: 1199px) and (min-width: 481px) and (min-device-pixel-ratio: 3), screen and (max-width: 1199px) and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 1199px) and (min-width: 481px) and (min-resolution: 288dpi), screen and (max-width: 1199px) and (min-width: 481px) and (min-resolution: 3dppx) {
   section.contacts .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/tablet/contacts/img@3x.webp");
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/tablet/contacts/img@3x.webp");
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 1199px) and (min-width: 769px) {
   section.contacts .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img.webp");
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img.webp");
   }
 }
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 1199px) and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-width: 769px) and (min-resolution: 192dpi), screen and (max-width: 1199px) and (min-width: 769px) and (min-resolution: 2dppx) {
   section.contacts .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img@2x.webp");
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img@2x.webp");
   }
 }
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 3), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 769px) and (min-resolution: 288dpi), screen and (min-width: 769px) and (min-resolution: 3dppx) {
+@media screen and (max-width: 1199px) and (min-width: 769px) and (min-device-pixel-ratio: 3), screen and (max-width: 1199px) and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 1199px) and (min-width: 769px) and (min-resolution: 288dpi), screen and (max-width: 1199px) and (min-width: 769px) and (min-resolution: 3dppx) {
   section.contacts .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/desktop/contacts/img@3x.webp");
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/desktop/contacts/img@3x.webp");
-  }
-}
-@media screen and (min-width: 1200px) {
-  section.contacts .overlay {
-    background-position: calc(100% + 30px) 0%;
-    background-repeat: no-repeat;
-    background-size: 50% 100%;
-    max-width: 100%;
   }
 }
 section.contacts .section-content {
