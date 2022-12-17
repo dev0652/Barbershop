@@ -28,6 +28,30 @@
 
 	.header-menu-wrapper.is-open & {
 		display: block;
+		position: fixed;
+		top: 48px;
+		right: 31px;
+	}
+
+	background-color: transparent;
+	border: none;
+
+	&:hover,
+	&:focus {
+		fill: $accent;
+	}
+
+	@include media(tablet, max) {
+		display: block;
+		margin-left: auto;
+	}
+
+	display: none;
+
+	.menu-burger-icon {
+		@extend .icon;
+
+		fill: $contrast;
 	}
 }
 

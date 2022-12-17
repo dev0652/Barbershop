@@ -417,7 +417,7 @@ section.services .header-logo,
 }
 
 /* SVG icons */
-.icon, .contacts-icon, .social-link-icon, .menu-burger-button .menu-burger-icon {
+.icon, .contacts-icon, .social-link-icon, .menu-close-button .menu-burger-icon, .menu-burger-button .menu-burger-icon {
   fill: currentColor;
   -webkit-transition-property: fill;
   transition-property: fill;
@@ -689,9 +689,27 @@ section.services .header-logo,
 
 .menu-close-button {
   display: none;
+  background-color: transparent;
+  border: none;
+  display: none;
 }
 .header-menu-wrapper.is-open .menu-close-button {
   display: block;
+  position: fixed;
+  top: 48px;
+  right: 31px;
+}
+.menu-close-button:hover, .menu-close-button:focus {
+  fill: #ff6c00;
+}
+@media screen and (max-width: 767px) {
+  .menu-close-button {
+    display: block;
+    margin-left: auto;
+  }
+}
+.menu-close-button .menu-burger-icon {
+  fill: #fff;
 }
 
 .header-menu-wrapper {
