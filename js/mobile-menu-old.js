@@ -16,8 +16,6 @@
 
 		mobileMenuRef.classList.toggle('is-open');
 
-		mobileMenuRef.classList.toggle('dark');
-
 		bodyScrollRef.classList.toggle('scroll-locked');
 	});
 
