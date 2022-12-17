@@ -51,6 +51,29 @@
 	}
 }
 
+.header-menu-wrapper {
+	display: flex;
+
+	@include media(tablet) {
+		align-items: center;
+		justify-content: space-between;
+		flex-grow: 1;
+	}
+
+	@include media(desktop) {
+		margin-right: 17px;
+	}
+
+	.link {
+		@include fz-lh-rem(12, 16);
+		letter-spacing: 0.1em;
+	}
+
+	.button {
+		@include fz-lh-rem(12, 16);
+	}
+}
+
 .header-nav-list {
 	display: flex;
 	flex-direction: column;
@@ -70,10 +93,10 @@
 	@extend %link;
 
 	@include fz-lh-rem(18, 25);
+	letter-spacing: 0.1em;
 
 	@include media(tablet) {
 		@include fz-lh-rem(12, 16);
-		letter-spacing: 0.1em;
 	}
 
 	@include media(desktop) {

@@ -1,8 +1,6 @@
 /* ---------- Mobile menu ---------- */
 
 .header-menu-wrapper {
-	display: flex;
-
 	@include media(tablet, max) {
 		flex-direction: column;
 		gap: 64px;
@@ -28,28 +26,6 @@
 			transform: translateX(0);
 			transition-delay: 100ms;
 		}
-	}
-
-	@include media(tablet) {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-grow: 1;
-	}
-
-	@include media(desktop) {
-		margin-right: 17px;
-	}
-
-	.link {
-		@include fz-lh-rem(12, 16);
-		letter-spacing: 0.1em;
-
-		color: $darker;
-	}
-
-	.button {
-		@include fz-lh-rem(12, 16);
 	}
 }
 
@@ -119,6 +95,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		row-gap: 24px;
+
+		.follow-us-link {
+			@include fz-lh-rem(14, 19);
+			color: $darker;
+		}
 
 		li:last-child {
 			@media screen and (max-width: 560px) {
