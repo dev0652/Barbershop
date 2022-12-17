@@ -13,10 +13,6 @@
 	// width: calc(100vw - 15px); //to adjust for  scrollbar width on Windows 10
 	padding: 40px 17px 20px 0;
 
-	.link {
-		color: $contrast;
-	}
-
 	.icon-logo {
 		fill: $darker;
 
@@ -43,7 +39,7 @@
 }
 
 .header-logo {
-	@extend .link;
+	@extend %link;
 
 	@include media(tablet) {
 		margin-right: $regular-gap;
@@ -59,9 +55,6 @@
 	flex-direction: column;
 	gap: 24px;
 
-	@include media(tablet, max) {
-	}
-
 	@include media(tablet) {
 		flex-direction: row;
 		gap: $regular-gap;
@@ -70,8 +63,7 @@
 	}
 }
 
-// .header-nav-item {
-// }
+// .header-nav-item {}
 
 .header-nav-link {
 	@extend %link;

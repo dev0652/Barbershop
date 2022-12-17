@@ -881,17 +881,15 @@ section.contacts {
 }
 
 .contacts-link {
-	@extend .link;
-
-	// font-size: 18px;
-	font-size: rem(18);
-	font-weight: 400;
-
+	// @extend %link; // Don't enable!
 	display: flex;
 	align-items: center;
 	gap: 16px;
 
 	color: $light;
+
+	font-size: rem(18);
+	font-weight: 400;
 
 	&.address-link {
 		font-weight: 700;
@@ -913,11 +911,6 @@ section.contacts {
 	transform: translateY(-13px);
 }
 
-.working-hours {
-	// display: flex;
-	// flex-direction: column;
-
-	.working-hours-text {
-		color: $light;
-	}
+.working-hours-text {
+	color: $light;
 }

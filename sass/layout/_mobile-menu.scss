@@ -34,8 +34,6 @@
 // Header menu wrapper
 
 .header-menu-wrapper {
-	// @extend .dark;
-	//
 	display: flex;
 
 	@include media(tablet, max) {

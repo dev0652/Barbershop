@@ -369,9 +369,10 @@ body.scroll-locked {
 }
 
 /* Links */
-.link, .contacts-link, .social-link, .header-logo, .follow-us-link,
+.link, .social-link, .follow-us-link,
 .header-telephone,
-.header-nav-link {
+.header-nav-link,
+.header-logo {
   font-weight: 600;
   font-size: 16px;
   color: #303030;
@@ -384,11 +385,37 @@ body.scroll-locked {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
-.link:hover, .contacts-link:hover, .social-link:hover, .header-logo:hover, .follow-us-link:hover, .link:focus, .contacts-link:focus, .social-link:focus, .header-logo:focus, .follow-us-link:focus,
+.dark .link, section.contacts .link, section.online-booking .link, .dark .social-link, section.contacts .social-link, section.online-booking .social-link, section.services .link, section.services .social-link, .hero .container .link, .hero .container .social-link, .hero .header-container .link, .hero .header-container .social-link, .header .link, .header .social-link, .dark .follow-us-link, section.contacts .follow-us-link, section.online-booking .follow-us-link, section.services .follow-us-link, .hero .container .follow-us-link, .hero .header-container .follow-us-link, .header .follow-us-link,
+.dark .header-telephone,
+section.contacts .header-telephone,
+section.online-booking .header-telephone,
+section.services .header-telephone,
+.hero .container .header-telephone,
+.hero .header-container .header-telephone,
+.dark .header-nav-link,
+section.contacts .header-nav-link,
+section.online-booking .header-nav-link,
+section.services .header-nav-link,
+.hero .container .header-nav-link,
+.hero .header-container .header-nav-link,
+.dark .header-logo,
+section.contacts .header-logo,
+section.online-booking .header-logo,
+section.services .header-logo,
+.hero .container .header-logo,
+.hero .header-container .header-logo,
+.header .header-telephone,
+.header .header-nav-link,
+.header .header-logo {
+  color: #fff;
+}
+.link:hover, .social-link:hover, .follow-us-link:hover, .link:focus, .social-link:focus, .follow-us-link:focus,
 .header-telephone:hover,
 .header-nav-link:hover,
+.header-logo:hover,
 .header-telephone:focus,
-.header-nav-link:focus {
+.header-nav-link:focus,
+.header-logo:focus {
   color: #ff6c00;
 }
 
@@ -512,9 +539,6 @@ body.scroll-locked {
   z-index: 1;
   width: 100vw;
   padding: 40px 17px 20px 0;
-}
-.header .link, .header .contacts-link, .header .social-link, .header .header-logo, .header .follow-us-link {
-  color: #fff;
 }
 .header .icon-logo {
   fill: #303030;
@@ -723,7 +747,7 @@ body.scroll-locked {
     margin-right: 17px;
   }
 }
-.header-menu-wrapper .link, .header-menu-wrapper .contacts-link, .header-menu-wrapper .social-link, .header-menu-wrapper .follow-us-link, .header-menu-wrapper .header-logo {
+.header-menu-wrapper .link, .header-menu-wrapper .social-link, .header-menu-wrapper .follow-us-link {
   font-size: 0.75rem;
   line-height: 1.3333333333;
   letter-spacing: 0.1em;
@@ -1935,8 +1959,6 @@ section.contacts .sup-heading, section.contacts .hero-sup-heading {
 }
 
 .contacts-link {
-  font-size: 1.125rem;
-  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1945,6 +1967,8 @@ section.contacts .sup-heading, section.contacts .hero-sup-heading {
           align-items: center;
   gap: 16px;
   color: #9da4bd;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 .contacts-link.address-link {
   font-weight: 700;
@@ -1964,7 +1988,7 @@ section.contacts .sup-heading, section.contacts .hero-sup-heading {
           transform: translateY(-13px);
 }
 
-.working-hours .working-hours-text {
+.working-hours-text {
   color: #9da4bd;
 }
 

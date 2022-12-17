@@ -73,6 +73,10 @@ body {
 
 	@include transition(color);
 
+	.dark & {
+		color: $contrast;
+	}
+
 	&:hover,
 	&:focus {
 		color: $accent;
