@@ -129,14 +129,14 @@
 
 .hero {
 	// bg
-	// @include media(tablet, max) {
-	// 	background-color: $dark;
-	// 	background-size: cover;
-	// 	background-position: center;
-	// 	background-repeat: no-repeat;
+	@include media(tablet, max) {
+		background-color: $dark;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 
-	// 	@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
-	// }
+		@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
+	}
 
 	.container {
 		@extend .dark;
@@ -204,7 +204,7 @@
 	gap: 184px;
 	position: relative;
 
-	@include media(desktop, max) {
+	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
 		@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
 
 		// background-position: top 0 left calc(90px + $container-padding);
