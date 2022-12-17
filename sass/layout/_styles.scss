@@ -403,9 +403,24 @@ section.why-us {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: $regular-gap;
 
-	padding-top: 30px;
+	gap: $regular-gap;
+	padding-top: $regular-gap;
+
+	@media screen and (min-width: 360px) {
+		gap: $list-spacing;
+		padding-top: $list-spacing;
+	}
+
+	@media screen and (min-width: 385px) {
+		gap: $single-spacing;
+		padding-top: $single-spacing;
+	}
+
+	@media screen and (min-width: $mobile) {
+		gap: $regular-gap;
+		padding-top: $regular-gap;
+	}
 
 	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
 		max-width: 450px;
@@ -418,10 +433,31 @@ section.why-us {
 }
 
 .stat {
+	// Mobile narrow
 	height: 133px;
-
 	width: 194px;
 	padding: $single-spacing 32px;
+	// flex-grow: 1;
+
+	@media screen and (min-width: 360px) {
+		padding: 10px;
+		flex-basis: 125px;
+		height: 125px;
+		flex-grow: 1;
+	}
+
+	@media screen and (min-width: 385px) {
+		padding: 10px;
+		flex-basis: 140px;
+		height: 133px;
+		flex-grow: 1;
+	}
+
+	@include media(mobile) {
+		height: 133px;
+		width: 194px;
+		padding: $single-spacing 32px;
+	}
 
 	@include media(tablet) {
 		width: 210px;
@@ -438,9 +474,17 @@ section.why-us {
 
 	text-align: center;
 
-	@include media(mobile) {
-		&:nth-child(odd) {
-			margin-top: -30px;
+	&:nth-child(odd) {
+		@media screen and (min-width: 360px) {
+			margin-top: calc($list-spacing * -1);
+		}
+
+		@media screen and (min-width: 385px) {
+			margin-top: calc($single-spacing * -1);
+		}
+
+		@media screen and (min-width: $mobile) {
+			margin-top: calc($regular-gap * -1);
 		}
 	}
 }
