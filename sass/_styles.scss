@@ -204,7 +204,7 @@
 	gap: 184px;
 	position: relative;
 
-	@include media(tablet) {
+	@include media(desktop, max) {
 		@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
 
 		// background-position: top 0 left calc(90px + $container-padding);
