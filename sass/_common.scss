@@ -38,7 +38,7 @@ body {
 		width: $desktop;
 	}
 }
-// ???
+
 .overlay {
 	max-width: 1600px;
 	margin: 0 auto;
@@ -65,7 +65,8 @@ body {
 
 /* Links */
 
-.link {
+.link,
+%link {
 	font-weight: 600;
 	font-size: 16px;
 	color: $darker;
@@ -88,7 +89,8 @@ body {
 
 /* Buttons */
 
-.button {
+.button,
+%button {
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
 
@@ -103,7 +105,8 @@ body {
 	@include transition-multiple(color, background-color);
 }
 
-.button--accented {
+.button--accented,
+%button--accented {
 	border-color: $accent;
 	color: $darker;
 
@@ -180,7 +183,7 @@ body {
 // Instagram and Youtube links
 
 .follow-us {
-	@extend .markup-list, .prefix;
+	@extend .prefix;
 
 	display: flex;
 	gap: $double-spacing;
