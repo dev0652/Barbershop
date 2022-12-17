@@ -69,8 +69,14 @@
 .header-nav-link {
 	@extend %link;
 
-	@include media(tablet, max) {
-		//
+	@include fz-lh-rem(18, 25);
+
+	@include media(tablet) {
+		@include fz-lh-rem(12, 16);
+		letter-spacing: 0.1em;
+	}
+
+	@include media(desktop) {
 		@include fz-lh-rem(18, 25);
 	}
 }

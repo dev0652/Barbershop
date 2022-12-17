@@ -352,7 +352,7 @@ body.scroll-locked {
 .section {
   padding: var(--section-padding) 0;
 }
-.section.dark, section.section.contacts, section.section.online-booking, section.section.services, .hero .section.container, .hero .section.header-container, .section.header {
+.section.dark, section.section.contacts, section.section.online-booking, section.section.services, .section.hero-main, .section.header {
   color: #555555;
 }
 .section.light {
@@ -385,25 +385,22 @@ body.scroll-locked {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
-.dark .link, section.contacts .link, section.online-booking .link, .dark .social-link, section.contacts .social-link, section.online-booking .social-link, section.services .link, section.services .social-link, .hero .container .link, .hero .container .social-link, .hero .header-container .link, .hero .header-container .social-link, .header .link, .header .social-link, .dark .follow-us-link, section.contacts .follow-us-link, section.online-booking .follow-us-link, section.services .follow-us-link, .hero .container .follow-us-link, .hero .header-container .follow-us-link, .header .follow-us-link,
+.dark .link, section.contacts .link, section.online-booking .link, .dark .social-link, section.contacts .social-link, section.online-booking .social-link, section.services .link, section.services .social-link, .hero-main .link, .hero-main .social-link, .header .link, .header .social-link, .dark .follow-us-link, section.contacts .follow-us-link, section.online-booking .follow-us-link, section.services .follow-us-link, .hero-main .follow-us-link, .header .follow-us-link,
 .dark .header-telephone,
 section.contacts .header-telephone,
 section.online-booking .header-telephone,
 section.services .header-telephone,
-.hero .container .header-telephone,
-.hero .header-container .header-telephone,
+.hero-main .header-telephone,
 .dark .header-nav-link,
 section.contacts .header-nav-link,
 section.online-booking .header-nav-link,
 section.services .header-nav-link,
-.hero .container .header-nav-link,
-.hero .header-container .header-nav-link,
+.hero-main .header-nav-link,
 .dark .header-logo,
 section.contacts .header-logo,
 section.online-booking .header-logo,
 section.services .header-logo,
-.hero .container .header-logo,
-.hero .header-container .header-logo,
+.hero-main .header-logo,
 .header .header-telephone,
 .header .header-nav-link,
 .header .header-logo {
@@ -457,7 +454,7 @@ section.services .header-logo,
   color: #fff;
   background-color: #ff6c00;
 }
-.dark .button--accented, section.contacts .button--accented, section.online-booking .button--accented, section.services .button--accented, .hero .container .button--accented, .hero .header-container .button--accented, .dark .header-button, section.contacts .header-button, section.online-booking .header-button, section.services .header-button, .hero .container .header-button, .hero .header-container .header-button, .header .button--accented, .header .header-button {
+.dark .button--accented, section.contacts .button--accented, section.online-booking .button--accented, section.services .button--accented, .hero-main .button--accented, .dark .header-button, section.contacts .header-button, section.online-booking .header-button, section.services .header-button, .hero-main .header-button, .header .button--accented, .header .header-button {
   color: #fff;
 }
 
@@ -468,7 +465,7 @@ section.services .header-logo,
   letter-spacing: 0.05em;
   color: #303030;
 }
-.dark .hero-title, section.contacts .hero-title, section.online-booking .hero-title, section.services .hero-title, .hero .container .hero-title, .hero .header-container .hero-title, .header .hero-title, .dark .section-heading, section.contacts .section-heading, section.online-booking .section-heading, section.services .section-heading, .hero .container .section-heading, .hero .header-container .section-heading, .header .section-heading {
+.dark .hero-title, section.contacts .hero-title, section.online-booking .hero-title, section.services .hero-title, .hero-main .hero-title, .header .hero-title, .dark .section-heading, section.contacts .section-heading, section.online-booking .section-heading, section.services .section-heading, .hero-main .section-heading, .header .section-heading {
   color: #fff;
 }
 
@@ -490,7 +487,7 @@ section.services .header-logo,
   text-transform: uppercase;
   color: #303030;
 }
-.dark .sup-heading, section.contacts .sup-heading, section.online-booking .sup-heading, section.services .sup-heading, .dark .hero-sup-heading, section.contacts .hero-sup-heading, section.online-booking .hero-sup-heading, section.services .hero-sup-heading, .hero .container .sup-heading, .hero .container .hero-sup-heading, .hero .header-container .sup-heading, .hero .header-container .hero-sup-heading, .header .sup-heading, .header .hero-sup-heading {
+.dark .sup-heading, section.contacts .sup-heading, section.online-booking .sup-heading, section.services .sup-heading, .dark .hero-sup-heading, section.contacts .hero-sup-heading, section.online-booking .hero-sup-heading, section.services .hero-sup-heading, .hero-main .sup-heading, .hero-main .hero-sup-heading, .header .sup-heading, .header .hero-sup-heading {
   color: rgba(157, 164, 189, 0.6);
 }
 .section-title-block .sup-heading, .section-title-block .hero-sup-heading, section.contacts .sup-heading, section.contacts .hero-sup-heading {
@@ -599,7 +596,18 @@ section.services .header-logo,
   }
 }
 
-@media screen and (max-width: 767px) {
+.header-nav-link {
+  font-size: 1.125rem;
+  line-height: 1.3888888889;
+}
+@media screen and (min-width: 768px) {
+  .header-nav-link {
+    font-size: 0.75rem;
+    line-height: 1.3333333333;
+    letter-spacing: 0.1em;
+  }
+}
+@media screen and (min-width: 1200px) {
   .header-nav-link {
     font-size: 1.125rem;
     line-height: 1.3888888889;
@@ -934,6 +942,7 @@ section.services .header-logo,
       -ms-flex-align: center;
           align-items: center;
   margin-top: auto;
+  color: #303030;
 }
 
 .hero-main {

@@ -12,7 +12,7 @@
 	}
 
 	.container {
-		@extend .dark;
+		// @extend .dark;
 		// outline: auto;
 		color: $light;
 
@@ -63,12 +63,16 @@
 
 		align-items: center;
 		margin-top: auto;
+
+		color: $darker;
 	}
 }
 
 // Hero main
 
 .hero-main {
+	@extend .dark;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
