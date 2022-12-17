@@ -1,6 +1,9 @@
 (() => {
+
 	const menuBtnRef = document.querySelector("[data-menu-button]");
+
 	const mobileMenuRef = document.querySelector("[data-menu]");
+
 	const bodyScrollRef = document.querySelector("body");
 
 	menuBtnRef.addEventListener('click', () => {
@@ -13,6 +16,10 @@
 
 		mobileMenuRef.classList.toggle('is-open');
 
+		mobileMenuRef.classList.toggle('dark');
+
 		bodyScrollRef.classList.toggle('scroll-locked');
 	});
+
+
 })();

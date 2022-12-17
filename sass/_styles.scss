@@ -55,22 +55,44 @@
 }
 
 .header-nav-list {
-	@extend %markup-list, .flex;
-	gap: $regular-gap;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	@include media(tablet, max) {
+	}
+
+	@include media(tablet) {
+		flex-direction: row;
+		gap: $regular-gap;
+
+		margin-bottom: 0;
+	}
 }
 
 // .header-nav-item {
 // }
 
 .header-nav-link {
-	@extend .link;
+	@extend %link;
+
+	@include media(tablet, max) {
+		//
+		@include fz-lh-rem(18, 25);
+	}
 }
 
 .header-right {
 	display: flex;
-	align-items: center;
-	gap: $large-spacing;
-	margin-left: auto;
+	flex-direction: column;
+	gap: 24px;
+
+	@include media(tablet) {
+		flex-direction: row;
+		align-items: center;
+		gap: $large-spacing;
+		margin-left: auto;
+	}
 
 	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
 		position: relative;
@@ -80,6 +102,12 @@
 }
 
 .header-telephone {
+	@extend %link;
+
+	@include media(tablet, max) {
+		@include fz-lh-rem(18, 25);
+	}
+
 	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
 		position: absolute;
 		top: calc(100% + 20px);
@@ -89,20 +117,26 @@
 }
 
 .header-button {
-	@extend .button;
+	@extend .button, .button--accented;
+
+	@include media(tablet, max) {
+		align-self: start;
+		padding: 12px 37px;
+	}
 }
 
 /* ---------- Hero ---------- */
 
 .hero {
-	@include media(tablet, max) {
-		// background-color: $dark;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
+	// bg
+	// @include media(tablet, max) {
+	// 	background-color: $dark;
+	// 	background-size: cover;
+	// 	background-position: center;
+	// 	background-repeat: no-repeat;
 
-		@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
-	}
+	// 	@include bg-with-overlay(rgba($bg-dark, 0.2), slider, img3, webp);
+	// }
 
 	.container {
 		@extend .dark;
@@ -232,8 +266,6 @@
 // Slider
 
 .slider-pagination {
-	@extend %markup-list;
-
 	@include media(tablet, max) {
 		display: none;
 	}
@@ -266,8 +298,6 @@
 }
 
 .slider-buttons {
-	@extend %markup-list;
-
 	@include media(tablet, max) {
 		display: none;
 	}
@@ -343,8 +373,6 @@ section.about {
 // About - left block
 
 .about-images-list {
-	@extend .markup-list;
-
 	@include media(tablet, max) {
 		display: none;
 	}
@@ -360,20 +388,6 @@ section.about {
 		flex-direction: row;
 	}
 }
-
-// .about-image {
-// 	width: 100%;
-// }
-
-// .about-images-item {
-// 	@include media(tablet) {
-// 		width: 330px;
-// 	}
-
-// 	@include media(desktop) {
-// 		width: 270px;
-// 	}
-// }
 
 .description {
 	// font-size: 14px;
@@ -458,7 +472,6 @@ section.services {
 }
 
 .price-list {
-	@extend .markup-list;
 	color: $light;
 }
 
@@ -516,8 +529,6 @@ section.why-us {
 }
 
 .stats {
-	@extend .markup-list;
-
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -607,8 +618,6 @@ section.barbers {
 }
 
 .team-cards {
-	@extend .markup-list;
-
 	display: flex;
 	flex-wrap: wrap;
 	gap: $regular-gap;
@@ -656,7 +665,6 @@ section.barbers {
 // Team card social media links
 
 .social-links {
-	@extend .markup-list;
 	display: flex;
 	justify-content: center;
 	margin-top: $regular-gap;
@@ -715,7 +723,6 @@ section.gallery {
 }
 
 .gallery-list {
-	@extend .markup-list;
 	display: flex;
 	flex-wrap: wrap;
 	gap: $regular-gap;
@@ -981,7 +988,6 @@ section.contacts {
 }
 
 .contacts-list {
-	@extend .markup-list;
 	min-width: 330px;
 
 	@include media(tablet, max) {
@@ -1153,7 +1159,7 @@ section.contacts {
 	.menu-burger-icon {
 		@extend .icon;
 
-		// fill: $contrast;
+		fill: $contrast;
 	}
 }
 
@@ -1164,23 +1170,20 @@ section.contacts {
 // Header menu wrapper
 
 .header-menu-wrapper {
-	// outline: auto;
+	// @extend .dark;
 	//
-	.link {
-		@include fz-lh-rem(12, 16);
-		letter-spacing: 0.1em;
-	}
-
-	.button {
-		@include fz-lh-rem(12, 16);
-	}
+	display: flex;
 
 	@include media(tablet, max) {
 		//
+		flex-direction: column;
+		gap: 64px;
+
+		background-color: #fff;
+
 		position: fixed;
-		// top: 100%; // якщо буде виводитись під футером
-		top: 0; // якщо буде виводитись поверх футера
-		left: 20vw;
+		top: 0;
+		left: 30vw;
 		width: 100%;
 		z-index: 2;
 
@@ -1188,20 +1191,10 @@ section.contacts {
 		height: 100vh;
 		padding: 48px 40px;
 
-		@include media(mobile, max) {
-			padding: 48px 20px;
-		}
-
-		display: flex;
-		flex-direction: column;
-
-		background-color: #fff;
-
 		transform: translateX(100%);
 		@include transition(transform);
 
 		&.is-open {
-			// display: block;
 			transform: translateX(0);
 			transition-delay: 100ms;
 		}
@@ -1212,22 +1205,35 @@ section.contacts {
 		align-items: center;
 		justify-content: space-between;
 		flex-grow: 1;
-
-		// margin-left: 20px;
 	}
 
 	@include media(desktop) {
 		margin-right: 17px;
 	}
+
+	.link {
+		@include fz-lh-rem(12, 16);
+		letter-spacing: 0.1em;
+
+		color: $darker;
+	}
+
+	.button {
+		@include fz-lh-rem(12, 16);
+	}
 }
 
-.follow-us {
-	//
-	&.mobile-menu-only {
-		display: none;
+.follow-us.mobile-menu-only {
+	display: none;
 
-		.header-menu-wrapper.is-open & {
-			display: flex;
+	.header-menu-wrapper.is-open & {
+		display: flex;
+		flex-wrap: wrap;
+
+		li:last-child {
+			@media screen and (max-width: 560px) {
+				margin-left: 100px;
+			}
 		}
 	}
 }
