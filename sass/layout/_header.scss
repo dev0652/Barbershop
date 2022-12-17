@@ -10,7 +10,6 @@
 	z-index: $z-header;
 
 	width: 100vw;
-	// width: calc(100vw - 15px); //to adjust for  scrollbar width on Windows 10
 	padding: 40px 17px 20px 0;
 
 	.icon-logo {
@@ -24,6 +23,8 @@
 	&.no-transparency {
 		background-color: rgba(#111319, 0.8);
 		backdrop-filter: blur(3px);
+
+		padding: 10px 17px 10px 0;
 
 		& .icon-logo {
 			fill: $contrast;

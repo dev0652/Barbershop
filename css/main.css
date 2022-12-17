@@ -552,6 +552,7 @@ section.services .header-logo,
   background-color: rgba(17, 19, 25, 0.8);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+  padding: 10px 17px 10px 0;
 }
 .header.no-transparency .icon-logo {
   fill: #fff;
