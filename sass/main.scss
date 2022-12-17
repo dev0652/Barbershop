@@ -10,5 +10,10 @@
 @import "./utils/placeholders";
 @import "./utils/animations";
 
-@import "common";
-@import "styles";
+// Layout
+@import "./layout/common";
+@import "./layout/header";
+@import "./layout/mobile-menu";
+@import "./layout/styles";
+@import "./layout/footer";
+@import "./layout/modal";
