@@ -1318,7 +1318,6 @@ section.services .button, section.services .header-button {
   gap: 2.75rem;
 }
 
-/* ---------- Price-list ---------- */
 .price-list-wrapper {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
@@ -1357,8 +1356,8 @@ section.services .button, section.services .header-button {
 }
 @media screen and (max-width: 479px) {
   .price-list-item {
-    font-size: 0.6875rem;
-    line-height: 1.3636363636;
+    font-size: 0.75rem;
+    line-height: 1.3333333333;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {

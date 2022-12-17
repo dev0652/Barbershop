@@ -54,9 +54,9 @@
 	}
 }
 
-.follow-us {
-	//
+// Youtube and Instagram links (vertical))
 
+.follow-us {
 	&.vertical {
 		transform: translateY(100%) rotate(270deg);
 		transform-origin: top left;
@@ -299,12 +299,6 @@ section.services {
 		@include bg-with-overlay(rgba(#111319, 0.8), services, img, webp);
 	}
 
-	// .container {
-	// 	@extend .flex;
-	// 	flex-direction: column;
-	// 	gap: $regular-gap;
-	// }
-
 	.button {
 		align-self: center;
 	}
@@ -316,7 +310,7 @@ section.services {
 	gap: $large-spacing;
 }
 
-/* ---------- Price-list ---------- */
+// Price-list
 
 .price-list-wrapper {
 	// https://stackoverflow.com/questions/43726696/splitting-list-of-items-in-two-columns-with-css
@@ -359,7 +353,7 @@ section.services {
 	align-items: baseline;
 
 	@include media(mobile, max) {
-		@include fz-lh-rem(11, 15);
+		@include fz-lh-rem(12, 16);
 	}
 
 	@media screen and (min-width: $mobile) and (max-width: ($tablet - 1px)) {
