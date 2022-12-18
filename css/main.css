@@ -1746,7 +1746,7 @@ section.gallery .container, section.gallery .header-container {
 }
 
 /* ---------- Booking and contacts block ---------- */
-.booking-and-contacts-block {
+.booking-and-contacts-block .conditional-overlay {
   background-color: #191c26;
 }
 @media screen and (min-width: 1200px) {

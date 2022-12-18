@@ -292,9 +292,6 @@ section.services {
 		background-position: center;
 		background-size: cover;
 
-		// background-image: linear-gradient(rgba(#111319, 0.8), rgba(#111319, 0.8)),
-		// url("../images/jpeg/services.jpg");
-
 		// $linear-gradient-color,	$path, 	$filename, 	$extension: jpg
 		@include bg-with-overlay(rgba(#111319, 0.8), services, img, webp);
 	}
@@ -664,10 +661,9 @@ section.gallery {
 
 .booking-and-contacts-block {
 	//
-	background-color: $bg-dark;
-
 	.conditional-overlay {
-		//
+		background-color: $bg-dark;
+
 		@include media(desktop) {
 			//
 			max-width: 1600px;
