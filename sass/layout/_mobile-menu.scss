@@ -14,17 +14,16 @@
 		height: 100vh;
 		overflow-y: scroll;
 
+		// Per layout:
 		// background: rgba(25, 28, 38, 0.2);
 		// box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
 		// 	0px 1px 3px rgba(0, 0, 0, 0.16);
 
+		// I like these better:
 		background: rgba(25, 28, 38, 0.4);
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6), 0px 2px 4px rgba(0, 0, 0, 0.6),
 			0px 1px 3px rgba(0, 0, 0, 0.6);
-		backdrop-filter: blur(3px);
-
-		// opacity: 1;
-		// @include transition(opacity, 500ms, linear);
+		backdrop-filter: blur(2px);
 	}
 }
 
@@ -48,7 +47,7 @@
 		padding-top: 118px;
 
 		background-color: $contrast;
-		color: $darker;
+		// color: $darker;
 
 		transform: translateX(100%);
 		@include transition(transform);
@@ -62,30 +61,26 @@
 
 // Buttons
 
-.menu-burger-button {
+.menu-open-button {
 	background-color: transparent;
 	border: none;
-
-	&:hover,
-	&:focus {
-		fill: $accent;
-	}
 
 	@include media(tablet, max) {
 		display: block;
 		margin-left: auto;
-
-		.header-menu-wrapper.is-open & {
-			opacity: 0;
-		}
 	}
 
 	display: none;
+}
 
-	.menu-burger-icon {
-		@extend .icon;
+.menu-burger-icon {
+	@extend .icon;
 
-		fill: $contrast;
+	fill: $contrast;
+
+	.menu-open-button:hover &,
+	.menu-open-button:focus & {
+		fill: $accent;
 	}
 }
 
@@ -133,7 +128,14 @@
 
 		.follow-us-link {
 			@include fz-lh-rem(14, 19);
-			color: $darker;
+			// color: $darker;
+
+			color: currentColor;
+
+			&:hover,
+			&:focus {
+				color: $accent;
+			}
 		}
 
 		li:last-child {

@@ -95,6 +95,10 @@ body {
 
 .button,
 %button {
+	// Specifying line-height breaks vertical text centering in Edge 108
+	@include fz-lh-rem(12, 16);
+
+	font-weight: 600;
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
 

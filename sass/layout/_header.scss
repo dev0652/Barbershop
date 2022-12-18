@@ -92,8 +92,6 @@
 	}
 }
 
-// .header-nav-item {}
-
 .header-nav-link {
 	@extend %link;
 
@@ -109,7 +107,12 @@
 	}
 
 	.header-menu-wrapper.is-open & {
-		color: $darker;
+		color: currentColor;
+
+		&:hover,
+		&:focus {
+			color: $accent;
+		}
 	}
 }
 
@@ -152,7 +155,7 @@
 }
 
 .header-button {
-	@extend .button, .button--accented;
+	@extend %button, %button--accented;
 
 	@include media(tablet, max) {
 		align-self: start;

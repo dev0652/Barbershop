@@ -31,17 +31,10 @@
 				</svg>
 			</a>
 
-			<!-- Burger -->
-			<button class="menu-burger-button" id="menu-open-button" aria-label="Open mobile menu" js-open-menu>
-
-				<svg class="menu-burger-icon" width="40" height="40">
-					<use href="./images/icons/symbol-defs.svg#icon-menu-burger"></use>
-				</svg>
-
-			</button>
-
-			<!-- Header menu wrapper -->
+			<!-- Mobile menu backdrop -->
 			<div class="header-menu-backdrop" js-menu-backdrop>
+
+				<!-- Header menu wrapper -->
 				<div class="header-menu-wrapper" js-menu-container>
 
 					<!-- Header navigation -->
@@ -104,7 +97,19 @@
 					</button>
 
 				</div>
+
 			</div>
+
+			<!-- Burger menu button (mobile view only) -->
+			<button class="menu-open-button" id="menu-open-button" aria-label="Open mobile menu" js-open-menu>
+
+				<!-- Burger menu icon -->
+				<svg class="menu-burger-icon" width="40" height="40">
+					<use href="./images/icons/symbol-defs.svg#icon-menu-burger"></use>
+				</svg>
+
+			</button>
+
 		</div>
 	</header>
 
@@ -891,13 +896,13 @@
 						<div class="container">
 
 							<!-- Section heading -->
-							<h2 class="section-heading">Online-booking</h2>
+							<h2 class="section-heading" id="booking-form-title">Online-booking</h2>
 
 							<!-- Booking form -->
 							<form class="booking-form" name="booking_form" autocomplete="off">
 
 								<!-- Group of text fields -->
-								<div class="text-fields" role="group">
+								<div class="text-fields" role="group" aria-labelledby="#booking-form-title">
 
 									<div class="text-field-wrapper half-sized">
 										<input class="text-field" type="text" name="name" id="name" placeholder=" " autocomplete="off"
