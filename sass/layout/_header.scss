@@ -155,7 +155,7 @@
 }
 
 .header-button {
-	@extend %button, %button--accented;
+	@extend %button, %button-accented;
 
 	@include media(tablet, max) {
 		align-self: start;

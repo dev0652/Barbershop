@@ -322,6 +322,21 @@ body.scroll-locked {
   overflow: hidden;
 }
 
+.section {
+  padding: var(--section-padding) 0;
+}
+.section.dark, section.section.contacts, section.section.online-booking, section.section.services, .section.hero-main, .section.header {
+  color: #555555;
+}
+.section.light {
+  color: #9da4bd;
+}
+
+.overlay {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 .container, .header-container {
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
@@ -342,21 +357,6 @@ body.scroll-locked {
   .container, .header-container {
     width: 1200px;
   }
-}
-
-.overlay {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.section {
-  padding: var(--section-padding) 0;
-}
-.section.dark, section.section.contacts, section.section.online-booking, section.section.services, .section.hero-main, .section.header {
-  color: #555555;
-}
-.section.light {
-  color: #9da4bd;
 }
 
 .section-content {
@@ -450,18 +450,18 @@ section.services .header-logo,
           transition-timing-function: ease-in-out;
 }
 
-.button--accented,
+.button-accented,
 .header-button {
   border-color: #ff6c00;
   color: #303030;
 }
-.button--accented:hover, .button--accented:focus,
+.button-accented:hover, .button-accented:focus,
 .header-button:hover,
 .header-button:focus {
   color: #fff;
   background-color: #ff6c00;
 }
-.dark .button--accented, section.contacts .button--accented, section.online-booking .button--accented, section.services .button--accented, .hero-main .button--accented, .header .button--accented,
+.dark .button-accented, section.contacts .button-accented, section.online-booking .button-accented, section.services .button-accented, .hero-main .button-accented, .header .button-accented,
 .dark .header-button,
 section.contacts .header-button,
 section.online-booking .header-button,

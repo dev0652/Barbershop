@@ -18,9 +18,24 @@ body {
 	}
 }
 
-.container {
-	// outline: auto;
+.section {
+	padding: $section-padding 0;
 
+	&.dark {
+		color: $dark;
+	}
+
+	&.light {
+		color: $light;
+	}
+}
+
+.overlay {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.container {
 	padding-left: $container-padding;
 	padding-right: $container-padding;
 
@@ -34,25 +49,7 @@ body {
 		width: $tablet;
 	}
 	@include media(desktop) {
-		// width: $desktop + ($container-padding * 2);
 		width: $desktop;
-	}
-}
-
-.overlay {
-	max-width: 1600px;
-	margin: 0 auto;
-}
-
-.section {
-	padding: $section-padding 0;
-
-	&.dark {
-		color: $dark;
-	}
-
-	&.light {
-		color: $light;
 	}
 }
 
@@ -113,8 +110,8 @@ body {
 	@include transition-multiple(color, background-color);
 }
 
-.button--accented,
-%button--accented {
+.button-accented,
+%button-accented {
 	border-color: $accent;
 	color: $darker;
 
