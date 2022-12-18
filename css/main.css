@@ -575,6 +575,14 @@ section.services .header-logo,
   }
 }
 
+@media screen and (min-width: 768px) {
+  .header-menu-backdrop {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
 .header-menu-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -711,7 +719,7 @@ section.services .header-logo,
 }
 
 /* ---------- Mobile menu ---------- */
-.header-menu-backdrop {
+.header-menu-backdrop.is-shown {
   position: fixed;
   top: 0;
   left: 0;
@@ -724,19 +732,6 @@ section.services .header-logo,
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
-  opacity: 1;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
-.header-menu-backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -750,6 +745,8 @@ section.services .header-logo,
     top: 0;
     right: 0;
     z-index: 3;
+    opacity: 1;
+    pointer-events: all;
     width: 70vw;
     height: 100vh;
     padding-left: 40px;

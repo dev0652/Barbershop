@@ -9,7 +9,7 @@
 			openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
 		openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
 		mobileMenu.classList.toggle('is-open');
-		mobileMenuBackdrop.classList.toggle('is-hidden');
+		mobileMenuBackdrop.classList.toggle('is-shown');
 
 		const scrollLockMethod = !isMenuOpen
 			? 'disableBodyScroll'
@@ -24,23 +24,16 @@
 	window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
 		if (!e.matches) return;
 		mobileMenu.classList.remove('is-open');
-		mobileMenuBackdrop.classList.add('is-hidden');
+		mobileMenuBackdrop.classList.remove('is-shown');
 		openMenuBtn.setAttribute('aria-expanded', false);
 		bodyScrollLock.enableBodyScroll(document.body);
 	});
 
 	// Temporary solution to close menu when a button or link is clicked
-	// function closeMenu() {
-	// 	mobileMenu.classList.remove('is-open');
-	// 	mobileMenuBackdrop.classList.add('is-hidden');
-	// 	openMenuBtn.setAttribute('aria-expanded', false);
-	// 	bodyScrollLock.enableBodyScroll(document.body);
-	// }
-
 	document.querySelectorAll('[js-close-on-click]').forEach(item => {
 		item.addEventListener('click', event => {
 			mobileMenu.classList.remove('is-open');
-			mobileMenuBackdrop.classList.add('is-hidden');
+			mobileMenuBackdrop.classList.remove('is-shown');
 			openMenuBtn.setAttribute('aria-expanded', false);
 			bodyScrollLock.enableBodyScroll(document.body);
 		})

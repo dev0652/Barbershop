@@ -51,6 +51,11 @@
 	}
 }
 
+.header-menu-backdrop {
+	@include media(tablet) {
+		flex-grow: 1;
+	}
+}
 .header-menu-wrapper {
 	display: flex;
 
