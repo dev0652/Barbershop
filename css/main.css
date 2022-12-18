@@ -1454,7 +1454,7 @@ section.why-us .container, section.why-us .header-container {
     padding-top: 0.625rem;
   }
 }
-@media screen and (min-width: 385px) {
+@media screen and (min-width: 384px) {
   .stats {
     gap: 1.25rem;
     padding-top: 1.25rem;
