@@ -790,6 +790,9 @@ section.services .header-logo,
     display: block;
     margin-left: auto;
   }
+  .header-menu-wrapper.is-open .menu-burger-button {
+    opacity: 0;
+  }
 }
 .menu-burger-button .menu-burger-icon {
   fill: #fff;

@@ -69,6 +69,10 @@
 	@include media(tablet, max) {
 		display: block;
 		margin-left: auto;
+
+		.header-menu-wrapper.is-open & {
+			opacity: 0;
+		}
 	}
 
 	display: none;

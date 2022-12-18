@@ -11,7 +11,6 @@
 		mobileMenu.classList.toggle('is-open');
 		mobileMenuBackdrop.classList.toggle('is-hidden');
 
-
 		const scrollLockMethod = !isMenuOpen
 			? 'disableBodyScroll'
 			: 'enableBodyScroll';
@@ -29,4 +28,21 @@
 		openMenuBtn.setAttribute('aria-expanded', false);
 		bodyScrollLock.enableBodyScroll(document.body);
 	});
+
+	// Temporary solution to close menu when a button or link is clicked
+	// function closeMenu() {
+	// 	mobileMenu.classList.remove('is-open');
+	// 	mobileMenuBackdrop.classList.add('is-hidden');
+	// 	openMenuBtn.setAttribute('aria-expanded', false);
+	// 	bodyScrollLock.enableBodyScroll(document.body);
+	// }
+
+	document.querySelectorAll('[js-close-on-click]').forEach(item => {
+		item.addEventListener('click', event => {
+			mobileMenu.classList.remove('is-open');
+			mobileMenuBackdrop.classList.add('is-hidden');
+			openMenuBtn.setAttribute('aria-expanded', false);
+			bodyScrollLock.enableBodyScroll(document.body);
+		})
+	})
 })();
