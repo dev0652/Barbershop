@@ -627,6 +627,7 @@ section.barbers {
 
 section.gallery {
 	//
+
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -662,15 +663,15 @@ section.gallery {
 .booking-and-contacts-block {
 	//
 	.conditional-overlay {
-		background-color: $bg-dark;
-
 		@include media(desktop) {
 			//
 			max-width: 1600px;
 			margin: 0 auto;
 
 			@include bg-with-overlay(rgba(#191c26, 0.9), contacts, img, webp);
+			background-color: $bg-dark;
 			background-repeat: no-repeat;
+			background-size: calc(50% + $regular-gap) 100%; // first value: width of the image, second value: height
 
 			// If both values are <length> or <percentage> values, then the first defines X and the second Y
 			// a value of 50% horizontally or vertically centers the background image as the 50% of the image will be at the 50% mark of the container
@@ -678,16 +679,6 @@ section.gallery {
 					50% + (785px / 2) + $regular-gap + $container-padding
 				)
 				0%;
-
-			// first value: width of the image, second value: height
-			// background-size: 50% 100%;
-			background-size: auto 100%;
-			// background-size: contain;
-
-			// max-width: 100%;
-			// max-width: calc(1600px / 2 - $regular-gap);
-			// max-width: 785px;
-			// aspect-ratio: 1/1;
 		}
 	}
 
@@ -698,10 +689,7 @@ section.gallery {
 			gap: $regular-gap;
 
 			width: $desktop;
-
-			// padding: $section-padding $container-padding;
 			padding: 0 $container-padding;
-
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -749,6 +737,8 @@ section.contacts {
 section.online-booking {
 	@extend .dark;
 	padding: 0 0;
+
+	background-color: $bg-dark;
 
 	.container {
 		display: flex;

@@ -1746,18 +1746,16 @@ section.gallery .container, section.gallery .header-container {
 }
 
 /* ---------- Booking and contacts block ---------- */
-.booking-and-contacts-block .conditional-overlay {
-  background-color: #191c26;
-}
 @media screen and (min-width: 1200px) {
   .booking-and-contacts-block .conditional-overlay {
     max-width: 1600px;
     margin: 0 auto;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.9)), to(rgba(25, 28, 38, 0.9))), url("../images/webp/mobile/contacts/img.webp");
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.9), rgba(25, 28, 38, 0.9)), url("../images/webp/mobile/contacts/img.webp");
+    background-color: #191c26;
     background-repeat: no-repeat;
+    background-size: calc(50% + 1.875rem) 100%;
     background-position: calc(50% + 392.5px + 1.875rem + var(--container-padding)) 0%;
-    background-size: auto 100%;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -1866,6 +1864,7 @@ section.contacts .section-heading {
 /* ------ Online-booking (left block) ------ */
 section.online-booking {
   padding: 0 0;
+  background-color: #191c26;
 }
 section.online-booking .container, section.online-booking .header-container {
   display: -webkit-box;
